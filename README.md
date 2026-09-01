@@ -1,24 +1,47 @@
 # Cornerstone Construct
 
-i want a very good and standard website in react for a construction company details in this pdf white any good color theme dont do over style i want standard and proffessional lvel site
+A professional website for **Terrestrial Contracting W.L.L.** — a civil contracting, MEP, interior fit-out, manpower supply, and general trading company based in Doha, Qatar.
 
-This project was built with [Lovable](https://lovable.dev).
+## Tech Stack
 
-## Build with Lovable
+- **Framework**: [TanStack Start](https://tanstack.com/start) (React, file-based routing)
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/) + [shadcn/ui](https://ui.shadcn.com/)
+- **Animations**: [Motion](https://motion.dev/)
+- **Build Tool**: [Vite](https://vitejs.dev/)
 
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/b5e2197c-8adc-4e49-b86b-9748dab66bcf).
+## Getting Started
 
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
-
-## Development
-
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+Requires [Node.js](https://nodejs.org/) (v18+) and [Bun](https://bun.sh/) (or npm).
 
 ```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
-npm run dev
+# Install dependencies
+bun install
+
+# Start the development server
+bun run dev
 ```
+
+The dev server runs at `http://localhost:3000`.
+
+## Project Structure
+
+```
+src/
+├── routes/         # File-based routes (index.tsx → /, about.tsx → /about, …)
+│   └── __root.tsx  # App shell — wraps every page (header, footer, providers)
+├── components/
+│   ├── site/       # Layout components (SiteHeader, SiteFooter, PageHero, …)
+│   └── ui/         # shadcn/ui primitive components
+├── hooks/          # Custom React hooks
+├── lib/            # Shared utilities
+└── styles.css      # Global Tailwind CSS styles
+```
+
+## Available Scripts
+
+| Command | Description |
+|---|---|
+| `bun run dev` | Start the local dev server |
+| `bun run build` | Production build |
+| `bun run lint` | Run ESLint |
+| `bun run format` | Format with Prettier |
