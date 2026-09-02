@@ -124,20 +124,22 @@ const ADVANTAGES = [
 function HomePage() {
   return (
     <>
-      {/* ── 1. HERO SECTION WITH RICH BACKGROUND BANNER IMAGE ──────────── */}
-      <section className="relative isolate overflow-hidden bg-[#DFE5EA] py-16 sm:py-24 lg:py-28 border-b border-[#CBD2D9]">
-        {/* Full Background Banner Image */}
-        <img
-          src={heroImage}
-          alt="Modern construction and engineering project banner in Doha Qatar"
-          width={1920}
-          height={1088}
-          className="absolute inset-0 -z-30 size-full object-cover object-center opacity-30 brightness-95 filter"
-        />
+      {/* ── 1. HERO SECTION (With subtle whitish low-opacity background image) ──────────── */}
+      <section className="relative isolate overflow-hidden bg-[#EAEFF2] py-16 sm:py-24 lg:py-28 border-b border-[#CBD2D9]">
+        {/* Full Construction Background Banner with Whitish Low Opacity */}
+        <div className="absolute inset-0 -z-30 overflow-hidden">
+          <img
+            src={heroImage}
+            alt="Construction background"
+            width={1920}
+            height={1088}
+            className="size-full object-cover object-[center_35%] opacity-20 filter contrast-125"
+          />
+        </div>
 
-        {/* Architectural Palette Gradient Overlay */}
-        <div className="absolute inset-0 -z-20 bg-gradient-to-r from-[#DFE5EA] via-[#DFE5EA]/92 to-[#DFE5EA]/80" />
-        <div className="absolute inset-0 -z-10 bg-gradient-to-t from-[#DFE5EA] via-transparent to-transparent" />
+        {/* Whitish Architectural Mist Gradient Overlay */}
+        <div className="absolute inset-0 -z-20 bg-gradient-to-r from-[#EAEFF2]/95 via-[#EAEFF2]/80 to-[#EAEFF2]/85" />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-t from-[#EAEFF2] via-transparent to-transparent" />
 
         <div className="container-custom relative z-10 w-full">
           <div className="grid items-center gap-12 lg:grid-cols-12">
