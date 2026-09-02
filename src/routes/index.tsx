@@ -124,7 +124,7 @@ const ADVANTAGES = [
 function HomePage() {
   return (
     <>
-      {/* ── 1. HERO SECTION (With prominent whitish low-opacity background image) ──────────── */}
+      {/* ── 1. HERO SECTION (With vivid background banner image) ──────────── */}
       <section className="relative isolate overflow-hidden bg-[#EAEFF2] py-16 sm:py-24 lg:py-28 border-b border-[#CBD2D9]">
         {/* Full Construction Background Banner */}
         <div className="absolute inset-0 -z-30 overflow-hidden pointer-events-none">
@@ -133,13 +133,13 @@ function HomePage() {
             alt="Construction background banner"
             width={1920}
             height={1088}
-            className="size-full object-cover object-[center_35%] opacity-45 filter contrast-110 brightness-105"
+            className="size-full object-cover object-[center_35%] opacity-75 filter contrast-115 brightness-100"
           />
         </div>
 
-        {/* Whitish Architectural Mist Gradient Overlay (Soft and translucent) */}
-        <div className="absolute inset-0 -z-20 bg-gradient-to-r from-[#EAEFF2]/90 via-[#EAEFF2]/65 to-[#EAEFF2]/75 pointer-events-none" />
-        <div className="absolute inset-0 -z-10 bg-gradient-to-t from-[#EAEFF2] via-transparent to-[#EAEFF2]/40 pointer-events-none" />
+        {/* Whitish Architectural Mist Gradient Overlay */}
+        <div className="absolute inset-0 -z-20 bg-gradient-to-r from-[#EAEFF2]/80 via-[#EAEFF2]/45 to-[#EAEFF2]/60 pointer-events-none" />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-t from-[#EAEFF2] via-transparent to-[#EAEFF2]/30 pointer-events-none" />
 
         <div className="container-custom relative z-10 w-full">
           <div className="grid items-center gap-12 lg:grid-cols-12">
