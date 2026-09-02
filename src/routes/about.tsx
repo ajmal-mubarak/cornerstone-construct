@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { CheckCircle2, ArrowRight } from "lucide-react";
+import { CheckCircle2, ArrowUpRight, Award, ShieldCheck, Target, Eye, Compass, Building2, Users } from "lucide-react";
 
 import { PageHero, SectionLabel } from "@/components/site/PageHero";
 import { Reveal } from "@/components/site/Reveal";
@@ -11,137 +11,175 @@ export const Route = createFileRoute("/about")({
 });
 
 const PILLARS = [
-  ["Single-Source Support", "Technical personnel, manpower rental and project delivery under one roof."],
-  ["Practical Positioning", "Prompt service, flexible support and a solution-oriented approach."],
-  ["Qatar Market Expertise", "Deep understanding of local regulations, procurement channels and supplier networks."],
-  ["Trading + Contracting", "A combined approach that gives clients a seamless single-source experience."],
+  {
+    title: "Single-Source Sovereign Delivery",
+    desc: "Technical workforce, MEP engineering, heavy equipment, and commercial execution integrated under one contract.",
+  },
+  {
+    title: "Qatar Market Precision",
+    desc: "A decade of deep regulatory familiarity, municipal permits, local supply chains, and established vendor relationships.",
+  },
+  {
+    title: "Practical & Proactive Problem Solving",
+    desc: "Agile site mobilization and direct executive management oversight on every construction site.",
+  },
+  {
+    title: "Integrated Trading & Contracting",
+    desc: "Direct procurement networks ensuring high-spec material availability without third-party markup friction.",
+  },
 ];
 
 const VALUES = [
-  "Urgency of Work",
-  "Integrity & Honesty",
-  "Commitment",
-  "Accountability",
-  "Respect & Mutual Trust",
-  "Excellence",
+  { name: "Urgency of Work", desc: "Fast-track mobilization and milestone commitments without compromising safety." },
+  { name: "Integrity & Transparency", desc: "Open-book commercial estimates, authentic certifications, and verified compliance." },
+  { name: "Commitment to Specification", desc: "Precision alignment with architectural drawings and consulting engineer requirements." },
+  { name: "Accountability", desc: "Single-point project management taking full ownership from ground-break to handover." },
+  { name: "Respect & Mutual Trust", desc: "Long-term relationships with clients, sub-contractors, and our valued workforce." },
+  { name: "Excellence in Craftsmanship", desc: "Hospitality-grade finishing quality delivered across every sector." },
 ];
 
 function AboutPage() {
   return (
     <>
       <PageHero
-        eyebrow="Who We Are"
-        title="A trusted trading & contracting partner"
-        text="Terrestrial Contracting W.L.L. is a premier Doha-based contracting company specialising in manpower, high-end civil construction, advanced MEP systems and interior fit-out solutions."
+        eyebrow="Company Profile"
+        title="Engineering Excellence & Craftsmanship in Qatar"
+        text="Established in Doha in 2014, Terrestrial Contracting W.L.L. has grown into a multi-disciplinary contracting and trading powerhouse trusted across the State of Qatar."
+        badge="CR No. 65663 · Founded 2014 in Doha"
       />
 
-      {/* Story */}
-      <section className="section-pad">
-        <div className="container-pad grid items-center gap-14 lg:grid-cols-2">
-          <Reveal>
-            <SectionLabel>Our Story</SectionLabel>
-            <h2 className="mt-5 text-3xl font-semibold uppercase text-foreground">
-              Built on craftsmanship and reliability
-            </h2>
-            <p className="mt-5 text-muted-foreground leading-relaxed">
-              Since 2014 we have combined technical expertise with refined craftsmanship to deliver
-              exceptional projects for hospitality groups, luxury developers, educational
-              institutions and industrial clients across Qatar.
-            </p>
-            <p className="mt-4 text-muted-foreground leading-relaxed">
-              We bridge the gap between global suppliers and local project needs — ensuring quality
-              materials and equipment reach the right place at the right time.
-            </p>
+      {/* ── Story Section ────────────────────────────────────────────── */}
+      <section className="section-spacing bg-slate-950">
+        <div className="container-custom">
+          <div className="grid items-center gap-14 lg:grid-cols-12">
+            <Reveal direction="right" className="lg:col-span-6">
+              <SectionLabel>Our Story & Journey</SectionLabel>
+              <h2 className="font-display text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
+                A Decade of Dependable Construction Delivery
+              </h2>
 
-            <div className="mt-10 grid gap-5 sm:grid-cols-2">
-              {PILLARS.map(([title, text]) => (
-                <div key={title} className="rounded-xl border border-border bg-card p-5 shadow-[var(--shadow-sm)]">
-                  <div className="mb-3 h-0.5 w-8 rounded-full bg-accent" />
-                  <h3 className="font-display text-base font-semibold uppercase text-foreground">{title}</h3>
-                  <p className="mt-1.5 text-sm text-muted-foreground">{text}</p>
+              <p className="mt-5 text-base leading-relaxed text-slate-300">
+                Founded in 2014, <strong className="text-white">Terrestrial Contracting W.L.L.</strong> was established with a singular objective: to provide developers, hospitality brands, and industrial clients in Qatar with a truly dependable, single-source construction and trading partner.
+              </p>
+
+              <p className="mt-4 text-base leading-relaxed text-slate-400">
+                Over the past 10+ years, we have built a solid reputation across Doha by bridging the gap between international supply specifications and local construction demands — delivering turn-key civil, MEP, fit-out, and manpower solutions on time and on budget.
+              </p>
+
+              <div className="mt-8 grid gap-4 sm:grid-cols-2">
+                {PILLARS.map((item) => (
+                  <div key={item.title} className="glass-card rounded-xl p-5 border border-white/5">
+                    <div className="mb-2.5 h-1 w-6 rounded-full bg-sky-400" />
+                    <h3 className="font-display text-sm font-bold uppercase text-white">{item.title}</h3>
+                    <p className="mt-1.5 text-xs text-slate-400 leading-relaxed">{item.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </Reveal>
+
+            <Reveal direction="left" className="lg:col-span-6">
+              <div className="relative">
+                <div className="relative overflow-hidden rounded-3xl border border-white/10 shadow-2xl">
+                  <img
+                    src={fitoutImage}
+                    alt="Luxury hospitality interior fit-out by Terrestrial Contracting"
+                    loading="lazy"
+                    width={1280}
+                    height={912}
+                    className="size-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent" />
                 </div>
+
+                <div className="absolute -bottom-6 -right-6 rounded-2xl border border-sky-500/30 bg-slate-900/90 p-5 shadow-2xl backdrop-blur-xl">
+                  <p className="font-display text-3xl font-black text-sky-400">2014</p>
+                  <p className="text-xs font-semibold text-slate-300">Founded in Doha, Qatar</p>
+                </div>
+              </div>
+            </Reveal>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Vision & Mission ────────────────────────────────────────── */}
+      <section className="section-spacing bg-slate-900/40 relative">
+        <div className="container-custom">
+          <div className="grid gap-8 lg:grid-cols-2">
+            <Reveal>
+              <div className="glass-card h-full rounded-2xl p-8 lg:p-10 border border-sky-500/20 relative overflow-hidden">
+                <div className="absolute right-0 top-0 size-32 bg-sky-500/5 rounded-full blur-2xl" />
+                <div className="flex size-12 items-center justify-center rounded-xl bg-sky-500/10 text-sky-400 mb-6">
+                  <Eye className="size-6" />
+                </div>
+                <h3 className="font-display text-2xl font-bold text-white">Our Strategic Vision</h3>
+                <p className="mt-4 text-sm leading-relaxed text-slate-300">
+                  To stand as Qatar’s most reliable, single-source engineering, contracting, and trading partner — recognized across the GCC for uncompromising technical precision, safety integrity, and seamless project execution.
+                </p>
+              </div>
+            </Reveal>
+
+            <Reveal delay={0.1}>
+              <div className="glass-card h-full rounded-2xl p-8 lg:p-10 border border-blue-500/20 relative overflow-hidden">
+                <div className="absolute right-0 top-0 size-32 bg-blue-500/5 rounded-full blur-2xl" />
+                <div className="flex size-12 items-center justify-center rounded-xl bg-blue-500/10 text-blue-400 mb-6">
+                  <Target className="size-6" />
+                </div>
+                <h3 className="font-display text-2xl font-bold text-white">Our Core Mission</h3>
+                <p className="mt-4 text-sm leading-relaxed text-slate-300">
+                  To execute every commercial, hospitality, and civil assignment safely, on schedule, and strictly to specification by deploying certified professionals, disciplined controls, and transparent commercial practices.
+                </p>
+              </div>
+            </Reveal>
+          </div>
+
+          {/* U & I CARE Core Values */}
+          <div className="mt-16">
+            <Reveal className="text-center max-w-2xl mx-auto">
+              <SectionLabel>Guiding Principles</SectionLabel>
+              <h3 className="font-display text-3xl font-extrabold text-white">
+                The "U & I CARE" Operating Code
+              </h3>
+              <p className="mt-3 text-sm text-slate-400">
+                Our workforce values govern all client agreements, safety practices, and site operations.
+              </p>
+            </Reveal>
+
+            <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {VALUES.map((val, idx) => (
+                <Reveal key={val.name} delay={idx * 0.05}>
+                  <div className="glass-card rounded-xl p-5 transition-all hover:border-sky-500/30">
+                    <div className="flex items-center gap-2.5">
+                      <CheckCircle2 className="size-4 shrink-0 text-sky-400" />
+                      <h4 className="font-display text-base font-bold text-white">{val.name}</h4>
+                    </div>
+                    <p className="mt-2 text-xs text-slate-400 leading-relaxed pl-6.5">
+                      {val.desc}
+                    </p>
+                  </div>
+                </Reveal>
               ))}
             </div>
-          </Reveal>
-
-          <Reveal delay={0.12}>
-            <img
-              src={fitoutImage}
-              alt="Luxury hotel interior fit-out delivered by Terrestrial Contracting"
-              loading="lazy"
-              width={1280}
-              height={912}
-              className="w-full rounded-2xl object-cover shadow-[var(--shadow-elevated)]"
-            />
-          </Reveal>
-        </div>
-      </section>
-
-      {/* Vision, Mission, Values */}
-      <section className="section-pad bg-secondary">
-        <div className="container-pad">
-          <Reveal>
-            <SectionLabel>Vision, Mission & Values</SectionLabel>
-          </Reveal>
-
-          <div className="mt-10 grid gap-6 lg:grid-cols-2">
-            <Reveal>
-              <div className="h-full rounded-xl border border-border bg-card p-8 shadow-[var(--shadow-card)]">
-                <div className="mb-4 inline-flex size-10 items-center justify-center rounded-lg bg-accent/10">
-                  <div className="size-3 rounded-full bg-accent" />
-                </div>
-                <h3 className="text-xl font-semibold uppercase text-foreground">Our Vision</h3>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                  To be Qatar's most dependable single-source partner for contracting, trading
-                  and project support — recognised for engineering quality, safety and integrity.
-                </p>
-              </div>
-            </Reveal>
-            <Reveal delay={0.08}>
-              <div className="h-full rounded-xl border border-border bg-card p-8 shadow-[var(--shadow-card)]">
-                <div className="mb-4 inline-flex size-10 items-center justify-center rounded-lg bg-primary/10">
-                  <div className="size-3 rounded-full bg-primary" />
-                </div>
-                <h3 className="text-xl font-semibold uppercase text-foreground">Our Mission</h3>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                  To deliver every project safely, on time and to specification through skilled
-                  people, disciplined management and transparent commercial practice.
-                </p>
-              </div>
-            </Reveal>
-          </div>
-
-          <Reveal delay={0.1}>
-            <h3 className="mt-14 font-display text-lg font-semibold uppercase tracking-wide text-foreground">
-              U & I CARE Values
-            </h3>
-          </Reveal>
-          <div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-            {VALUES.map((value, i) => (
-              <Reveal key={value} delay={i * 0.05}>
-                <div className="flex items-center gap-3 rounded-xl border border-border bg-card px-5 py-4 transition-all duration-200 hover:border-accent/40 hover:shadow-[var(--shadow-sm)]">
-                  <CheckCircle2 className="size-4 shrink-0 text-accent" strokeWidth={2} />
-                  <span className="text-sm font-medium text-foreground">{value}</span>
-                </div>
-              </Reveal>
-            ))}
           </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="section-pad">
-        <div className="container-pad text-center">
+      {/* ── Ready to Work CTA ────────────────────────────────────────── */}
+      <section className="section-spacing bg-slate-950">
+        <div className="container-custom text-center max-w-3xl">
           <Reveal>
-            <h2 className="text-2xl font-semibold uppercase text-foreground sm:text-3xl">
-              Ready to work with us?
+            <h2 className="font-display text-3xl font-extrabold text-white sm:text-4xl">
+              Partner With Terrestrial Contracting in Qatar
             </h2>
-            <p className="mt-3 text-muted-foreground">Share your project scope and we'll get back to you.</p>
-            <Button asChild size="lg" className="mt-7">
-              <Link to="/contact">
-                Get in touch <ArrowRight className="ml-1 size-4" />
-              </Link>
-            </Button>
+            <p className="mt-4 text-base text-slate-400">
+              Let's evaluate your upcoming project requirements. Our technical estimation team is ready to assist with detailed BOQ and site analysis.
+            </p>
+            <div className="mt-8 flex justify-center gap-4">
+              <Button asChild size="lg" className="bg-sky-500 text-white hover:bg-sky-400 font-bold">
+                <Link to="/contact">
+                  Initiate RFP / Contact <ArrowUpRight className="ml-1.5 size-4" />
+                </Link>
+              </Button>
+            </div>
           </Reveal>
         </div>
       </section>

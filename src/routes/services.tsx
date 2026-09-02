@@ -1,6 +1,21 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "motion/react";
-import { Building2, Cog, Sofa, Waves, Warehouse, Users, ArrowRight } from "lucide-react";
+import {
+  Building2,
+  Cog,
+  Sofa,
+  Waves,
+  Warehouse,
+  Users,
+  ArrowUpRight,
+  CheckCircle2,
+  ShieldCheck,
+  Flame,
+  Droplets,
+  Zap,
+  Layers,
+  Wrench
+} from "lucide-react";
 
 import { PageHero, SectionLabel } from "@/components/site/PageHero";
 import { Reveal } from "@/components/site/Reveal";
@@ -14,192 +29,276 @@ export const Route = createFileRoute("/services")({
 const SERVICES = [
   {
     icon: Building2,
-    title: "Civil Contracting",
-    text: "High-end villa development, hotel maintenance, schools, structural and architectural works, renovations, labour camps, fencing and paving.",
+    title: "Civil Contracting & Construction",
+    tag: "Heavy Civil & Structural",
+    text: "High-end luxury villa developments, educational institutions, commercial towers, structural concrete, foundations, site leveling, paving, and boundary walls.",
+    items: ["Structural Concrete & Formwork", "Luxury Residential Villas", "Commercial Renovations & Extensions", "Site Infrastructure & Paving"],
   },
   {
     icon: Cog,
-    title: "MEP / Electrical Systems",
-    text: "HVAC for large-scale facilities, electrical systems and smart controls, plumbing and drainage, fire alarm and firefighting, testing and commissioning.",
+    title: "MEP & Electrical Engineering",
+    tag: "Electro-Mechanical",
+    text: "Large-scale HVAC plant installations, smart electrical distribution boards, primary & secondary plumbing, drainage, and fire safety systems.",
+    items: ["Central HVAC & Chillers", "Low Voltage (LV) & High Voltage Switchgear", "Plumbing & Drainage Engineering", "Fire Suppression & Detection (QCDD Aligned)"],
   },
   {
     icon: Sofa,
-    title: "Interior Fit-Out (Turnkey)",
-    text: "Five-star hotel interiors, villa and institutional fit-outs, gypsum and acoustic ceilings, premium flooring and custom joinery.",
+    title: "Luxury Interior Fit-Out (Turnkey)",
+    tag: "Bespoke Interiors",
+    text: "Turnkey five-star hotel lobbies, luxury suites, executive corporate offices, bespoke gypsum & acoustic ceilings, Italian marble flooring, and custom joinery.",
+    items: ["5-Star Hospitality Fit-Outs", "Acoustic Ceilings & Partitions", "Marble, Granite & Premium Flooring", "Bespoke Joinery & Millwork"],
   },
   {
     icon: Users,
-    title: "Manpower Support",
-    text: "Skilled, semi-skilled and professional staff supplied with valid Qatar ID, medical insurance and relevant trade certifications.",
+    title: "Certified Manpower Supply",
+    tag: "Technical Workforce",
+    text: "Skilled, certified, and fully documented workforce with valid Qatar ID, health insurance, and site safety inductions ready for short and long-term contracts.",
+    items: ["Electricians & HVAC Techs", "Masons, Carpenters & Steel Fixers", "Site Engineers & QA/QC Officers", "HSE Supervisors & Foremen"],
   },
   {
     icon: Warehouse,
-    title: "General Trading & Supply",
-    text: "Mechanical, electrical and instrumentation components, hardware, tools, aggregates and project goods.",
+    title: "General Trading & Industrial Supply",
+    tag: "Direct Procurement",
+    text: "Direct sourcing of mechanical components, electrical hardware, pipes, fittings, industrial instrumentation, aggregates, and construction materials.",
+    items: ["Mechanical Valves, Pumps & Pipes", "Electrical Cables & Containment", "Industrial Gauges & Instrumentation", "Construction Hardware & Consumables"],
   },
   {
     icon: Waves,
-    title: "Waste Management & Water",
-    text: "Drinking water, sewage and vacuum tankers, skip removal, dewatering, TSE water, wastewater and jetting services.",
+    title: "Environmental & Site Water Services",
+    tag: "Support Fleet",
+    text: "Fleet operations supplying drinking water, vacuum sewage evacuation, dewatering systems, TSE treated water, skip bins, and high-pressure jetting.",
+    items: ["Potable Water Tankers", "Sewage Evacuation Fleets", "Site Dewatering Solutions", "Skip Bin Waste Logistics"],
   },
 ];
 
-const CIVIL_LIST = [
-  "Hotel service & maintenance",
-  "High-end villa development",
-  "Schools & institutional buildings",
-  "Structural & architectural works",
-  "Renovations & extensions",
-  "Labour camps, fencing & paving",
+const CIVIL_SPECS = [
+  "Turnkey hotel and commercial renovations",
+  "High-end bespoke villa construction",
+  "Educational and healthcare building works",
+  "Structural concrete, sub-structures and super-structures",
+  "Boundary wall fencing, asphalt paving and external works",
+  "Labour camp construction and facility upgrades",
 ];
 
-const MEP_LIST = [
-  "HVAC for large-scale facilities",
-  "Electrical systems & smart controls",
-  "Plumbing & drainage systems",
-  "Fire alarm & firefighting systems",
-  "Testing, commissioning & maintenance",
-  "Supply of M&E and fire safety items",
+const MEP_SPECS = [
+  "Industrial HVAC, ducting, VRF and chilled water systems",
+  "Electrical distribution boards, DB dressing, and cabling",
+  "Sanitary plumbing, drainage, booster pumps and filtration",
+  "Qatar Civil Defence (QCDD) approved firefighting & alarms",
+  "Comprehensive testing, commissioning and maintenance",
+  "Supply of certified M&E items and safety accessories",
 ];
 
 function ServicesPage() {
   return (
     <>
       <PageHero
-        eyebrow="Our Core Services"
-        title="Comprehensive solutions, one accountable partner"
-        text="From civil construction to MEP systems, interior fit-out to general trading — delivered to hospitality-grade standards."
+        eyebrow="Our Services"
+        title="Comprehensive Contracting & Engineering Solutions"
+        text="From heavy civil construction to high-precision MEP systems, luxury interior fit-outs to environmental logistics — executed to 5-star international standards in Qatar."
+        badge="Full-Scope Civil, MEP & Fit-Out Delivery"
       />
 
-      {/* Service cards */}
-      <section className="section-pad">
-        <div className="container-pad">
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      {/* ── 1. Services Grid ────────────────────────────────────────── */}
+      <section className="section-spacing bg-slate-950">
+        <div className="container-custom">
+          <Reveal className="max-w-2xl mb-12">
+            <SectionLabel>Core Disciplines</SectionLabel>
+            <h2 className="font-display text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
+              Turnkey Contracting Without Subcontractor Gaps
+            </h2>
+          </Reveal>
+
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {SERVICES.map((service, i) => (
               <Reveal key={service.title} delay={i * 0.06}>
-                <motion.article
-                  whileHover={{ y: -5, boxShadow: "var(--shadow-elevated)" }}
-                  transition={{ type: "spring", stiffness: 300, damping: 24 }}
-                  className="group h-full rounded-xl border border-border bg-card p-7 shadow-[var(--shadow-card)] cursor-default"
+                <motion.div
+                  whileHover={{ y: -6 }}
+                  transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                  className="glass-card glass-card-hover group relative flex h-full flex-col justify-between rounded-2xl p-7 lg:p-8"
                 >
-                  <span className="inline-flex size-12 items-center justify-center rounded-xl bg-accent/10 ring-1 ring-accent/20 transition-colors group-hover:bg-accent/15">
-                    <service.icon className="size-5 text-accent" strokeWidth={1.8} />
-                  </span>
-                  <h2 className="mt-5 text-lg font-semibold uppercase text-foreground">
-                    {service.title}
-                  </h2>
-                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                    {service.text}
-                  </p>
-                </motion.article>
+                  <div>
+                    <div className="flex items-center justify-between">
+                      <div className="flex size-14 items-center justify-center rounded-2xl bg-sky-500/10 text-sky-400 ring-1 ring-sky-500/20 group-hover:scale-110 transition-transform">
+                        <service.icon className="size-7" strokeWidth={1.8} />
+                      </div>
+                      <span className="rounded-full bg-slate-800/80 px-3 py-1 text-[0.6875rem] font-semibold text-slate-300 border border-white/5">
+                        {service.tag}
+                      </span>
+                    </div>
+
+                    <h3 className="mt-6 font-display text-xl font-bold tracking-tight text-white group-hover:text-sky-400 transition-colors">
+                      {service.title}
+                    </h3>
+
+                    <p className="mt-3 text-xs leading-relaxed text-slate-400">
+                      {service.text}
+                    </p>
+
+                    <div className="mt-6 space-y-2 border-t border-white/[0.06] pt-5">
+                      {service.items.map((item) => (
+                        <div key={item} className="flex items-center gap-2 text-xs text-slate-300">
+                          <CheckCircle2 className="size-3.5 text-sky-400 shrink-0" />
+                          <span>{item}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="mt-8 pt-4">
+                    <Link
+                      to="/contact"
+                      className="inline-flex items-center gap-1 text-xs font-bold uppercase tracking-wider text-sky-400 hover:text-sky-300"
+                    >
+                      <span>Inquire About This Service</span>
+                      <ArrowUpRight className="size-3.5" />
+                    </Link>
+                  </div>
+                </motion.div>
               </Reveal>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Civil & MEP deep-dive */}
-      <section className="section-pad bg-surface text-surface-foreground">
-        <div className="container-pad grid items-center gap-14 lg:grid-cols-2">
-          <Reveal>
-            <img
-              src={mepImage}
-              alt="Engineer inspecting HVAC ducting and electrical panels in a plant room"
-              loading="lazy"
-              width={1280}
-              height={912}
-              className="w-full rounded-2xl object-cover"
-            />
-          </Reveal>
-          <Reveal delay={0.1}>
-            <SectionLabel>Civil & MEP Capability</SectionLabel>
-            <h2 className="mt-5 text-3xl font-semibold uppercase">
-              Engineering depth on every discipline
-            </h2>
-            <div className="mt-10 grid gap-8 sm:grid-cols-2">
-              <div>
-                <h3 className="font-display text-base font-semibold uppercase text-accent">
-                  Civil Contracting
-                </h3>
-                <ul className="mt-4 space-y-2.5">
-                  {CIVIL_LIST.map((item) => (
-                    <li key={item} className="flex items-start gap-2 text-sm text-surface-foreground/75">
-                      <span className="mt-1.5 size-1.5 shrink-0 rounded-full bg-accent" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
+      {/* ── 2. Civil & MEP Engineering Deep-Dive ──────────────────────── */}
+      <section className="section-spacing bg-slate-900/50 relative overflow-hidden">
+        <div className="container-custom">
+          <div className="grid items-center gap-14 lg:grid-cols-12">
+            <Reveal direction="right" className="lg:col-span-6">
+              <div className="relative overflow-hidden rounded-3xl border border-white/10 shadow-2xl">
+                <img
+                  src={mepImage}
+                  alt="MEP plant room and electrical engineering in Doha Qatar"
+                  loading="lazy"
+                  width={1280}
+                  height={912}
+                  className="size-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/75 via-transparent to-transparent" />
               </div>
-              <div>
-                <h3 className="font-display text-base font-semibold uppercase text-accent">
-                  MEP Services
-                </h3>
-                <ul className="mt-4 space-y-2.5">
-                  {MEP_LIST.map((item) => (
-                    <li key={item} className="flex items-start gap-2 text-sm text-surface-foreground/75">
-                      <span className="mt-1.5 size-1.5 shrink-0 rounded-full bg-accent" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </Reveal>
-        </div>
-      </section>
+            </Reveal>
 
-      {/* Facility Management */}
-      <section className="section-pad bg-secondary">
-        <div className="container-pad">
-          <Reveal>
-            <SectionLabel>Facility Management</SectionLabel>
-            <h2 className="mt-5 text-3xl font-semibold uppercase text-foreground">
-              Hard & soft FM under one contract
-            </h2>
-          </Reveal>
-          <div className="mt-12 grid gap-6 lg:grid-cols-2">
-            {[
-              {
-                title: "Hard FM — Physical infrastructure",
-                items: [
-                  "Building maintenance: roofs, walls, flooring",
-                  "M&E systems: HVAC, lighting, elevators",
-                  "Plumbing: water supply, drainage, effluent systems",
-                ],
-              },
-              {
-                title: "Soft FM — People-focused services",
-                items: [
-                  "Cleaning: janitorial, deep cleaning, waste management",
-                  "Housekeeping: daily cleaning, sanitisation, pantry upkeep",
-                  "Waste disposal that protects assets and reduces downtime",
-                ],
-              },
-            ].map((fm, i) => (
-              <Reveal key={fm.title} delay={i * 0.08}>
-                <div className="h-full rounded-xl border border-border bg-card p-8 shadow-[var(--shadow-card)]">
-                  <div className="mb-3 h-0.5 w-8 rounded-full bg-accent" />
-                  <h3 className="text-lg font-semibold uppercase text-foreground">{fm.title}</h3>
-                  <ul className="mt-4 space-y-3">
-                    {fm.items.map((item) => (
-                      <li key={item} className="flex items-start gap-2.5 text-sm text-muted-foreground">
-                        <span className="mt-1.5 size-1.5 shrink-0 rounded-full bg-accent" />
-                        {item}
+            <Reveal direction="left" className="lg:col-span-6">
+              <SectionLabel>Civil & MEP Specialization</SectionLabel>
+              <h2 className="font-display text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
+                Technical Rigor & Authority-Compliant Engineering
+              </h2>
+
+              <div className="mt-8 grid gap-8 sm:grid-cols-2">
+                {/* Civil */}
+                <div className="glass-card rounded-2xl p-6 border border-white/5">
+                  <div className="flex items-center gap-2.5 mb-4 text-sky-400 font-display font-bold text-base uppercase">
+                    <Building2 className="size-5" />
+                    <span>Civil Contracting</span>
+                  </div>
+                  <ul className="space-y-2.5 text-xs text-slate-300">
+                    {CIVIL_SPECS.map((s) => (
+                      <li key={s} className="flex items-start gap-2">
+                        <span className="mt-1 size-1.5 shrink-0 rounded-full bg-sky-400" />
+                        <span>{s}</span>
                       </li>
                     ))}
                   </ul>
                 </div>
-              </Reveal>
-            ))}
+
+                {/* MEP */}
+                <div className="glass-card rounded-2xl p-6 border border-white/5">
+                  <div className="flex items-center gap-2.5 mb-4 text-sky-400 font-display font-bold text-base uppercase">
+                    <Cog className="size-5" />
+                    <span>MEP & Electrical</span>
+                  </div>
+                  <ul className="space-y-2.5 text-xs text-slate-300">
+                    {MEP_SPECS.map((s) => (
+                      <li key={s} className="flex items-start gap-2">
+                        <span className="mt-1 size-1.5 shrink-0 rounded-full bg-sky-400" />
+                        <span>{s}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </Reveal>
+          </div>
+        </div>
+      </section>
+
+      {/* ── 3. Facility Management (FM) ──────────────────────────────── */}
+      <section className="section-spacing bg-slate-950">
+        <div className="container-custom">
+          <Reveal className="max-w-2xl">
+            <SectionLabel>Integrated FM</SectionLabel>
+            <h2 className="font-display text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
+              Hard & Soft Facility Management Under One Service Contract
+            </h2>
+            <p className="mt-3 text-sm text-slate-400">
+              Proactive preventative maintenance, building life-cycle protection, and round-the-clock emergency response for commercial and hospitality properties.
+            </p>
+          </Reveal>
+
+          <div className="mt-12 grid gap-6 lg:grid-cols-2">
+            <Reveal>
+              <div className="glass-card rounded-2xl p-8 border border-white/10">
+                <div className="flex items-center gap-3 text-sky-400 font-display font-bold text-lg uppercase mb-4">
+                  <Wrench className="size-5" />
+                  <span>Hard FM — Physical Asset Maintenance</span>
+                </div>
+                <ul className="space-y-3 text-sm text-slate-300">
+                  <li className="flex items-start gap-2">
+                    <span className="mt-1.5 size-1.5 rounded-full bg-sky-400 shrink-0" />
+                    <span>HVAC chiller plant servicing, duct cleaning & filter replacements</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="mt-1.5 size-1.5 rounded-full bg-sky-400 shrink-0" />
+                    <span>Electrical load testing, thermal imaging, generator & UPS maintenance</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="mt-1.5 size-1.5 rounded-full bg-sky-400 shrink-0" />
+                    <span>Plumbing, booster pumps, sewage ejector & water purification systems</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="mt-1.5 size-1.5 rounded-full bg-sky-400 shrink-0" />
+                    <span>Civil structural repairs, facade upkeep, sealant & roof waterproofing</span>
+                  </li>
+                </ul>
+              </div>
+            </Reveal>
+
+            <Reveal delay={0.1}>
+              <div className="glass-card rounded-2xl p-8 border border-white/10">
+                <div className="flex items-center gap-3 text-blue-400 font-display font-bold text-lg uppercase mb-4">
+                  <ShieldCheck className="size-5" />
+                  <span>Soft FM — Operational & People Services</span>
+                </div>
+                <ul className="space-y-3 text-sm text-slate-300">
+                  <li className="flex items-start gap-2">
+                    <span className="mt-1.5 size-1.5 rounded-full bg-blue-400 shrink-0" />
+                    <span>Comprehensive janitorial, commercial deep cleaning & sanitization</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="mt-1.5 size-1.5 rounded-full bg-blue-400 shrink-0" />
+                    <span>Daily housekeeping, pantry support, and front-of-house attendants</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="mt-1.5 size-1.5 rounded-full bg-blue-400 shrink-0" />
+                    <span>Waste disposal, skip bin removal, and environmental compliance</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="mt-1.5 size-1.5 rounded-full bg-blue-400 shrink-0" />
+                    <span>Site logistics, pest control coordination, and rapid mobilization</span>
+                  </li>
+                </ul>
+              </div>
+            </Reveal>
           </div>
 
-          <Reveal delay={0.1}>
-            <Button asChild className="mt-12">
+          <div className="mt-12 text-center">
+            <Button asChild size="lg" className="bg-sky-500 text-white hover:bg-sky-400 font-bold">
               <Link to="/contact">
-                Discuss your requirements <ArrowRight className="ml-1 size-4" />
+                Request Facility Management RFP <ArrowUpRight className="ml-1.5 size-4" />
               </Link>
             </Button>
-          </Reveal>
+          </div>
         </div>
       </section>
     </>

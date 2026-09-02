@@ -1,4 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <rect width="32" height="32" rx="6" fill="oklch(0.28 0.03 230)"/>
-  <text x="16" y="22" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="oklch(0.68 0.13 48)" text-anchor="middle">TC</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+  <defs>
+    <linearGradient id="tcGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284C7" />
+      <stop offset="100%" stop-color="#2563EB" />
+    </linearGradient>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B132B" />
+      <stop offset="100%" stop-color="#050B1A" />
+    </linearGradient>
+  </defs>
+  <rect width="48" height="48" rx="12" fill="url(#bgGrad)" stroke="#1E293B" stroke-width="1.5" />
+  <!-- Abstract Architectural Monogram TC -->
+  <path d="M12 16H36V21H26.5V36H21.5V21H12V16Z" fill="#F8FAFC" />
+  <path d="M29 25C29 23.5 30 22 32 22H36V26H33C32.5 26 32 26.5 32 27V31C32 31.5 32.5 32 33 32H36V36H32C29.5 36 29 34 29 32.5V25Z" fill="url(#tcGrad)" />
+  <circle cx="37" cy="13" r="2.5" fill="#38BDF8" />
 </svg>
