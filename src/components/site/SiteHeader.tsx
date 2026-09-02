@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Menu, X, Phone, ArrowUpRight, ShieldCheck, Sparkles } from "lucide-react";
+import { Menu, X, Phone, ArrowUpRight, ShieldCheck } from "lucide-react";
 import { Link, useRouterState } from "@tanstack/react-router";
 import { motion, AnimatePresence } from "motion/react";
 
@@ -30,25 +30,25 @@ export function SiteHeader() {
 
   return (
     <>
-      {/* Top micro announcement bar */}
-      <div className="hidden border-b border-white/[0.06] bg-slate-950/80 px-4 py-1.5 text-xs text-slate-400 backdrop-blur-md md:block">
+      {/* Top Announcement / Operational Bar */}
+      <div className="hidden border-b border-white/[0.08] bg-[#141A1F] px-4 py-1.5 text-xs text-[#9AA6B2] md:block">
         <div className="container-custom flex items-center justify-between">
           <div className="flex items-center gap-4">
-            <span className="flex items-center gap-1.5">
-              <span className="glow-dot" />
-              <span className="font-medium text-slate-300">Doha Operations Hub</span>
+            <span className="flex items-center gap-2">
+              <span className="gold-dot" />
+              <span className="font-medium text-[#D3D6DB]">Doha Operations Hub</span>
             </span>
-            <span className="text-slate-600">|</span>
-            <span className="flex items-center gap-1 text-slate-400">
-              <ShieldCheck className="size-3.5 text-sky-400" />
+            <span className="text-[#334756]">|</span>
+            <span className="flex items-center gap-1.5 text-[#9AA6B2]">
+              <ShieldCheck className="size-3.5 text-[#EAB526]" />
               <span>Certified Grade-A Contractor · C.R. No. 65663</span>
             </span>
           </div>
           <div className="flex items-center gap-5">
-            <span className="text-slate-400">Sun - Thu: 07:30 - 17:30 (GMT+3)</span>
+            <span className="text-[#9AA6B2]">Sun - Thu: 07:30 - 17:30</span>
             <a
               href="tel:+97441464546"
-              className="flex items-center gap-1 font-semibold text-sky-400 transition-colors hover:text-sky-300"
+              className="flex items-center gap-1 font-semibold text-[#EAB526] transition-colors hover:text-[#f3c64c]"
             >
               <Phone className="size-3" /> +974 4146 4546
             </a>
@@ -56,35 +56,34 @@ export function SiteHeader() {
         </div>
       </div>
 
-      {/* Main Glass Navbar */}
+      {/* Main Clean Sticky Header */}
       <header
-        className={`sticky top-0 z-50 w-full transition-all duration-300 ${
+        className={`sticky top-0 z-50 w-full transition-all duration-250 ${
           scrolled
-            ? "border-b border-sky-500/15 bg-slate-950/85 shadow-[0_10px_30px_-10px_rgba(2,6,23,0.9)] backdrop-blur-xl"
-            : "border-b border-white/[0.06] bg-slate-950/50 backdrop-blur-md"
+            ? "border-b border-[#334756]/60 bg-[#182026]/95 shadow-lg backdrop-blur-md"
+            : "border-b border-white/[0.08] bg-[#182026]/85 backdrop-blur-sm"
         }`}
       >
         <div className="container-custom flex h-20 items-center justify-between">
-          {/* Brand Logo */}
+          {/* Logo */}
           <Link
             to="/"
             onClick={() => setOpen(false)}
             className="group flex items-center gap-3.5 focus:outline-none"
           >
-            <div className="relative flex size-11 items-center justify-center rounded-xl bg-gradient-to-br from-sky-500 via-blue-600 to-indigo-700 shadow-md shadow-sky-500/20 ring-1 ring-white/20 transition-all duration-300 group-hover:scale-105 group-hover:shadow-sky-500/40">
-              <span className="font-display text-lg font-black tracking-wider text-white">TC</span>
-              <div className="absolute inset-0 rounded-xl bg-white/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+            <div className="flex size-11 items-center justify-center rounded-xl bg-[#285A7E] border border-[#334756] text-white shadow-md transition-transform duration-200 group-hover:scale-105">
+              <span className="font-display text-lg font-black tracking-wider text-[#F0F3F6]">TC</span>
             </div>
             <div className="flex flex-col">
               <div className="flex items-center gap-2">
-                <span className="font-display text-lg font-bold tracking-tight text-white transition-colors group-hover:text-sky-400 sm:text-xl">
+                <span className="font-display text-lg font-bold tracking-tight text-[#F0F3F6] transition-colors group-hover:text-[#EAB526] sm:text-xl">
                   TERRESTRIAL
                 </span>
-                <span className="rounded bg-sky-500/10 px-1.5 py-0.5 text-[0.625rem] font-bold uppercase tracking-wider text-sky-400 border border-sky-500/20">
+                <span className="rounded bg-[#EAB526]/15 px-1.5 py-0.5 text-[0.625rem] font-bold uppercase tracking-wider text-[#EAB526] border border-[#EAB526]/30">
                   W.L.L.
                 </span>
               </div>
-              <span className="text-[0.6875rem] font-medium tracking-[0.18em] uppercase text-slate-400">
+              <span className="text-[0.6875rem] font-medium tracking-[0.16em] uppercase text-[#9AA6B2]">
                 Contracting & Trading · Qatar
               </span>
             </div>
@@ -92,7 +91,7 @@ export function SiteHeader() {
 
           {/* Desktop Nav Items with Sliding Pill Indicator */}
           <nav
-            className="relative hidden items-center gap-1 rounded-full border border-white/[0.08] bg-slate-900/60 p-1.5 backdrop-blur-lg lg:flex"
+            className="relative hidden items-center gap-1 rounded-full border border-[#334756]/80 bg-[#1E2730] p-1.5 lg:flex"
             onMouseLeave={() => setHoveredPath(null)}
           >
             {NAV_ITEMS.map((item) => {
@@ -106,17 +105,15 @@ export function SiteHeader() {
                   to={item.to}
                   onMouseEnter={() => setHoveredPath(item.to)}
                   className={`relative z-10 rounded-full px-4 py-2 text-sm font-medium transition-colors duration-200 focus:outline-none ${
-                    isActive
-                      ? "text-white"
-                      : "text-slate-300 hover:text-white"
+                    isActive ? "text-[#EAB526] font-semibold" : "text-[#D3D6DB] hover:text-white"
                   }`}
                 >
-                  {/* Sliding hover pill indicator */}
+                  {/* Sliding hover indicator */}
                   {isHovered && (
                     <motion.div
                       layoutId="nav-hover-pill"
-                      className="absolute inset-0 z-[-1] rounded-full bg-white/[0.08]"
-                      transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                      className="absolute inset-0 z-[-1] rounded-full bg-[#334756]/70"
+                      transition={{ type: "spring", stiffness: 400, damping: 30 }}
                     />
                   )}
 
@@ -124,8 +121,8 @@ export function SiteHeader() {
                   {isActive && !isHovered && (
                     <motion.div
                       layoutId="nav-active-pill"
-                      className="absolute inset-0 z-[-1] rounded-full bg-gradient-to-r from-sky-600/30 to-blue-600/30 border border-sky-400/30 shadow-[0_0_15px_rgba(56,189,248,0.2)]"
-                      transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                      className="absolute inset-0 z-[-1] rounded-full bg-[#285A7E]/60 border border-[#EAB526]/30"
+                      transition={{ type: "spring", stiffness: 400, damping: 30 }}
                     />
                   )}
 
@@ -135,15 +132,14 @@ export function SiteHeader() {
             })}
           </nav>
 
-          {/* Right Action buttons */}
+          {/* Right Action Button */}
           <div className="hidden items-center gap-3 md:flex">
             <Link
               to="/contact"
-              className="group relative inline-flex items-center gap-2 overflow-hidden rounded-xl bg-gradient-to-r from-sky-500 to-blue-600 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-sky-500/25 transition-all duration-300 hover:shadow-sky-500/40 hover:brightness-110 active:scale-95"
+              className="group inline-flex items-center gap-2 rounded-xl bg-[#EAB526] px-5 py-2.5 text-sm font-bold text-[#182026] shadow-md transition-all duration-200 hover:bg-[#f3c64c] hover:shadow-lg active:scale-95"
             >
-              <Sparkles className="size-4 text-sky-200 transition-transform duration-300 group-hover:rotate-12" />
-              <span>Request Quotation</span>
-              <ArrowUpRight className="size-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+              <span>Request Quote</span>
+              <ArrowUpRight className="size-4 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </Link>
           </div>
 
@@ -152,7 +148,7 @@ export function SiteHeader() {
             type="button"
             aria-label="Toggle navigation menu"
             onClick={() => setOpen((prev) => !prev)}
-            className="flex size-11 items-center justify-center rounded-xl border border-white/10 bg-slate-900/80 text-slate-200 transition-colors hover:bg-slate-800 hover:text-white lg:hidden"
+            className="flex size-11 items-center justify-center rounded-xl border border-[#334756] bg-[#202A32] text-[#D3D6DB] transition-colors hover:text-white lg:hidden"
           >
             <AnimatePresence mode="wait" initial={false}>
               {open ? (
@@ -163,7 +159,7 @@ export function SiteHeader() {
                   exit={{ rotate: 90, opacity: 0 }}
                   transition={{ duration: 0.15 }}
                 >
-                  <X className="size-6 text-sky-400" />
+                  <X className="size-6 text-[#EAB526]" />
                 </motion.div>
               ) : (
                 <motion.div
@@ -187,8 +183,8 @@ export function SiteHeader() {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-              className="overflow-hidden border-b border-sky-500/20 bg-slate-950/95 shadow-2xl backdrop-blur-2xl lg:hidden"
+              transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
+              className="overflow-hidden border-b border-[#334756] bg-[#182026] shadow-2xl lg:hidden"
             >
               <div className="container-custom flex flex-col gap-2 py-6">
                 {NAV_ITEMS.map((item, index) => {
@@ -198,21 +194,21 @@ export function SiteHeader() {
                   return (
                     <motion.div
                       key={item.to}
-                      initial={{ opacity: 0, x: -16 }}
+                      initial={{ opacity: 0, x: -12 }}
                       animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: index * 0.05, duration: 0.25 }}
+                      transition={{ delay: index * 0.04, duration: 0.2 }}
                     >
                       <Link
                         to={item.to}
                         onClick={() => setOpen(false)}
-                        className={`flex items-center justify-between rounded-xl px-4 py-3.5 text-base font-semibold transition-all ${
+                        className={`flex items-center justify-between rounded-xl px-4 py-3 text-base font-semibold transition-all ${
                           isActive
-                            ? "bg-sky-500/15 text-sky-400 border border-sky-500/30"
-                            : "text-slate-300 hover:bg-slate-900 hover:text-white"
+                            ? "bg-[#285A7E]/40 text-[#EAB526] border border-[#EAB526]/30"
+                            : "text-[#D3D6DB] hover:bg-[#202A32] hover:text-white"
                         }`}
                       >
                         <span>{item.label}</span>
-                        <ArrowUpRight className={`size-4 ${isActive ? "text-sky-400" : "text-slate-500"}`} />
+                        <ArrowUpRight className={`size-4 ${isActive ? "text-[#EAB526]" : "text-[#9AA6B2]"}`} />
                       </Link>
                     </motion.div>
                   );
@@ -222,19 +218,19 @@ export function SiteHeader() {
                   <Link
                     to="/contact"
                     onClick={() => setOpen(false)}
-                    className="flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-sky-500 to-blue-600 px-5 py-3.5 text-base font-bold text-white shadow-lg shadow-sky-500/25"
+                    className="flex w-full items-center justify-center gap-2 rounded-xl bg-[#EAB526] px-5 py-3.5 text-base font-bold text-[#182026]"
                   >
-                    <span>Request a Proposal</span>
+                    <span>Request a Quotation</span>
                     <ArrowUpRight className="size-4" />
                   </Link>
 
-                  <div className="flex items-center justify-around rounded-xl bg-slate-900/60 p-3 text-xs text-slate-400 border border-white/5">
-                    <a href="tel:+97441464546" className="flex items-center gap-1.5 hover:text-sky-400">
-                      <Phone className="size-3.5 text-sky-400" />
+                  <div className="flex items-center justify-around rounded-xl bg-[#202A32] p-3 text-xs text-[#9AA6B2] border border-[#334756]">
+                    <a href="tel:+97441464546" className="flex items-center gap-1.5 hover:text-[#EAB526]">
+                      <Phone className="size-3.5 text-[#EAB526]" />
                       <span>Tel: 4146 4546</span>
                     </a>
                     <span>|</span>
-                    <a href="tel:+97430245384" className="flex items-center gap-1.5 hover:text-sky-400">
+                    <a href="tel:+97430245384" className="flex items-center gap-1.5 hover:text-[#EAB526]">
                       <span>Mob: 3024 5384</span>
                     </a>
                   </div>

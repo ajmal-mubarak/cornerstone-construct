@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { HardHat, ShieldCheck, BadgeCheck, Clock, Users, Wrench, ArrowUpRight, CheckCircle2, FileCheck } from "lucide-react";
+import { HardHat, ShieldCheck, BadgeCheck, Clock, Users, Wrench, ArrowUpRight, CheckCircle2 } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/site/Reveal";
@@ -81,25 +81,25 @@ function ManpowerPage() {
       />
 
       {/* ── 1. Operational Overview ──────────────────────────────────── */}
-      <section className="section-spacing bg-slate-950">
+      <section className="section-spacing bg-[#182026]">
         <div className="container-custom">
           <div className="grid items-center gap-14 lg:grid-cols-12">
             <Reveal direction="right" className="lg:col-span-6">
               <SectionLabel>Deployment & Compliance</SectionLabel>
-              <h2 className="font-display text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
+              <h2 className="font-display text-3xl font-extrabold tracking-tight text-[#F0F3F6] sm:text-4xl">
                 Eliminate Workforce Shortages & Administrative Friction
               </h2>
 
-              <p className="mt-5 text-base leading-relaxed text-slate-300">
+              <p className="mt-5 text-base leading-relaxed text-[#D3D6DB]">
                 At Terrestrial Contracting, every tradesperson and engineer is thoroughly interviewed, skill-tested, and verified before deployment. We assume complete administrative responsibility — including sponsorship, visa processing, payroll, accommodation, transportation, and medical coverage.
               </p>
 
-              <p className="mt-4 text-base leading-relaxed text-slate-400">
+              <p className="mt-4 text-base leading-relaxed text-[#9AA6B2]">
                 With a dedicated standby talent pool in Doha, we enable main contractors and project managers to scale site strength up or down dynamically without risking project milestone penalties.
               </p>
 
               <div className="mt-8 flex flex-wrap gap-4">
-                <Button asChild size="lg" className="bg-sky-500 text-white hover:bg-sky-400 font-bold">
+                <Button asChild size="lg" className="bg-[#EAB526] text-[#182026] hover:bg-[#f3c64c] font-bold">
                   <Link to="/contact">
                     Request Manpower Proposal <ArrowUpRight className="ml-1.5 size-4" />
                   </Link>
@@ -108,7 +108,7 @@ function ManpowerPage() {
             </Reveal>
 
             <Reveal direction="left" className="lg:col-span-6">
-              <div className="relative overflow-hidden rounded-3xl border border-white/10 shadow-2xl">
+              <div className="relative overflow-hidden rounded-3xl border border-[#334756] shadow-xl">
                 <img
                   src={manpowerImage}
                   alt="Certified manpower workforce on project site in Qatar"
@@ -117,7 +117,7 @@ function ManpowerPage() {
                   height={912}
                   className="size-full object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#182026]/70 via-transparent to-transparent" />
               </div>
             </Reveal>
           </div>
@@ -125,37 +125,37 @@ function ManpowerPage() {
       </section>
 
       {/* ── 2. Trade Categories ─────────────────────────────────────── */}
-      <section className="section-spacing bg-slate-900/40">
+      <section className="section-spacing bg-[#141A1F]">
         <div className="container-custom">
           <Reveal className="max-w-2xl mb-14">
             <SectionLabel>Available Categories</SectionLabel>
-            <h2 className="font-display text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
+            <h2 className="font-display text-3xl font-extrabold tracking-tight text-[#F0F3F6] sm:text-4xl">
               Specialized Trades & Professional Categories
             </h2>
           </Reveal>
 
           <div className="grid gap-6 md:grid-cols-3">
             {CATEGORIES.map((cat, i) => (
-              <Reveal key={cat.title} delay={i * 0.08}>
-                <div className="glass-card glass-card-hover group relative flex h-full flex-col justify-between rounded-2xl p-7 lg:p-8">
+              <Reveal key={cat.title} delay={i * 0.06}>
+                <div className="palette-card palette-card-hover group relative flex h-full flex-col justify-between rounded-2xl p-7 lg:p-8">
                   <div>
                     <div className="flex items-center justify-between">
-                      <div className="flex size-14 items-center justify-center rounded-2xl bg-sky-500/10 text-sky-400 ring-1 ring-sky-500/20 group-hover:scale-110 transition-transform">
+                      <div className="flex size-14 items-center justify-center rounded-2xl bg-[#285A7E]/20 text-[#EAB526] border border-[#334756] group-hover:scale-105 transition-transform">
                         <cat.icon className="size-7" strokeWidth={1.8} />
                       </div>
-                      <span className="rounded-full bg-slate-800/80 px-3 py-1 text-[0.6875rem] font-semibold text-slate-300 border border-white/5">
+                      <span className="rounded-full bg-[#182026] px-3 py-1 text-[0.6875rem] font-semibold text-[#D3D6DB] border border-[#334756]">
                         {cat.badge}
                       </span>
                     </div>
 
-                    <h3 className="mt-6 font-display text-xl font-bold tracking-tight text-white group-hover:text-sky-400 transition-colors">
+                    <h3 className="mt-6 font-display text-xl font-bold tracking-tight text-[#F0F3F6] group-hover:text-[#EAB526] transition-colors">
                       {cat.title}
                     </h3>
 
-                    <ul className="mt-6 space-y-2.5 border-t border-white/[0.06] pt-5">
+                    <ul className="mt-6 space-y-2.5 border-t border-[#334756] pt-5">
                       {cat.items.map((item) => (
-                        <li key={item} className="flex items-center gap-2.5 text-xs text-slate-300">
-                          <CheckCircle2 className="size-3.5 text-sky-400 shrink-0" />
+                        <li key={item} className="flex items-center gap-2.5 text-xs text-[#D3D6DB]">
+                          <CheckCircle2 className="size-3.5 text-[#EAB526] shrink-0" />
                           <span>{item}</span>
                         </li>
                       ))}
@@ -165,7 +165,7 @@ function ManpowerPage() {
                   <div className="mt-8 pt-4">
                     <Link
                       to="/contact"
-                      className="inline-flex items-center gap-1 text-xs font-bold uppercase tracking-wider text-sky-400 hover:text-sky-300"
+                      className="inline-flex items-center gap-1 text-xs font-bold uppercase tracking-wider text-[#EAB526] hover:text-[#f3c64c]"
                     >
                       <span>Inquire Rate Card</span>
                       <ArrowUpRight className="size-3.5" />
@@ -179,24 +179,24 @@ function ManpowerPage() {
       </section>
 
       {/* ── 3. Our Guarantee ─────────────────────────────────────────── */}
-      <section className="section-spacing bg-slate-950">
+      <section className="section-spacing bg-[#182026]">
         <div className="container-custom">
           <Reveal className="max-w-2xl mb-12">
             <SectionLabel>Our Commitment</SectionLabel>
-            <h2 className="font-display text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
+            <h2 className="font-display text-3xl font-extrabold tracking-tight text-[#F0F3F6] sm:text-4xl">
               Compliance & Reliability Assurance
             </h2>
           </Reveal>
 
           <div className="grid gap-6 md:grid-cols-3">
             {ASSURANCE.map((item, i) => (
-              <Reveal key={item.title} delay={i * 0.08}>
-                <div className="glass-card rounded-2xl p-7 border border-white/5 h-full">
-                  <div className="flex size-12 items-center justify-center rounded-xl bg-sky-500/10 text-sky-400 mb-5">
+              <Reveal key={item.title} delay={i * 0.06}>
+                <div className="palette-card rounded-2xl p-7 border border-[#334756] h-full">
+                  <div className="flex size-12 items-center justify-center rounded-xl bg-[#285A7E]/20 text-[#EAB526] border border-[#334756] mb-5">
                     <item.icon className="size-6" strokeWidth={1.8} />
                   </div>
-                  <h3 className="font-display text-lg font-bold text-white">{item.title}</h3>
-                  <p className="mt-2 text-xs leading-relaxed text-slate-400">{item.text}</p>
+                  <h3 className="font-display text-lg font-bold text-[#F0F3F6]">{item.title}</h3>
+                  <p className="mt-2 text-xs leading-relaxed text-[#9AA6B2]">{item.text}</p>
                 </div>
               </Reveal>
             ))}

@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { CheckCircle2, ArrowUpRight, Award, ShieldCheck, Target, Eye, Compass, Building2, Users } from "lucide-react";
+import { CheckCircle2, ArrowUpRight, Eye, Target } from "lucide-react";
 
 import { PageHero, SectionLabel } from "@/components/site/PageHero";
 import { Reveal } from "@/components/site/Reveal";
@@ -49,29 +49,29 @@ function AboutPage() {
       />
 
       {/* ── Story Section ────────────────────────────────────────────── */}
-      <section className="section-spacing bg-slate-950">
+      <section className="section-spacing bg-[#182026]">
         <div className="container-custom">
           <div className="grid items-center gap-14 lg:grid-cols-12">
             <Reveal direction="right" className="lg:col-span-6">
               <SectionLabel>Our Story & Journey</SectionLabel>
-              <h2 className="font-display text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
+              <h2 className="font-display text-3xl font-extrabold tracking-tight text-[#F0F3F6] sm:text-4xl">
                 A Decade of Dependable Construction Delivery
               </h2>
 
-              <p className="mt-5 text-base leading-relaxed text-slate-300">
+              <p className="mt-5 text-base leading-relaxed text-[#D3D6DB]">
                 Founded in 2014, <strong className="text-white">Terrestrial Contracting W.L.L.</strong> was established with a singular objective: to provide developers, hospitality brands, and industrial clients in Qatar with a truly dependable, single-source construction and trading partner.
               </p>
 
-              <p className="mt-4 text-base leading-relaxed text-slate-400">
+              <p className="mt-4 text-base leading-relaxed text-[#9AA6B2]">
                 Over the past 10+ years, we have built a solid reputation across Doha by bridging the gap between international supply specifications and local construction demands — delivering turn-key civil, MEP, fit-out, and manpower solutions on time and on budget.
               </p>
 
               <div className="mt-8 grid gap-4 sm:grid-cols-2">
                 {PILLARS.map((item) => (
-                  <div key={item.title} className="glass-card rounded-xl p-5 border border-white/5">
-                    <div className="mb-2.5 h-1 w-6 rounded-full bg-sky-400" />
-                    <h3 className="font-display text-sm font-bold uppercase text-white">{item.title}</h3>
-                    <p className="mt-1.5 text-xs text-slate-400 leading-relaxed">{item.desc}</p>
+                  <div key={item.title} className="palette-card rounded-xl p-5 border border-[#334756]">
+                    <div className="mb-2.5 h-1 w-6 rounded-full bg-[#EAB526]" />
+                    <h3 className="font-display text-sm font-bold uppercase text-[#F0F3F6]">{item.title}</h3>
+                    <p className="mt-1.5 text-xs text-[#9AA6B2] leading-relaxed">{item.desc}</p>
                   </div>
                 ))}
               </div>
@@ -79,7 +79,7 @@ function AboutPage() {
 
             <Reveal direction="left" className="lg:col-span-6">
               <div className="relative">
-                <div className="relative overflow-hidden rounded-3xl border border-white/10 shadow-2xl">
+                <div className="relative overflow-hidden rounded-3xl border border-[#334756] shadow-xl">
                   <img
                     src={fitoutImage}
                     alt="Luxury hospitality interior fit-out by Terrestrial Contracting"
@@ -88,12 +88,12 @@ function AboutPage() {
                     height={912}
                     className="size-full object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#182026]/70 via-transparent to-transparent" />
                 </div>
 
-                <div className="absolute -bottom-6 -right-6 rounded-2xl border border-sky-500/30 bg-slate-900/90 p-5 shadow-2xl backdrop-blur-xl">
-                  <p className="font-display text-3xl font-black text-sky-400">2014</p>
-                  <p className="text-xs font-semibold text-slate-300">Founded in Doha, Qatar</p>
+                <div className="absolute -bottom-6 -right-6 rounded-2xl border border-[#334756] bg-[#202A32] p-5 shadow-xl">
+                  <p className="font-display text-3xl font-black text-[#EAB526]">2014</p>
+                  <p className="text-xs font-semibold text-[#D3D6DB]">Founded in Doha, Qatar</p>
                 </div>
               </div>
             </Reveal>
@@ -102,30 +102,28 @@ function AboutPage() {
       </section>
 
       {/* ── Vision & Mission ────────────────────────────────────────── */}
-      <section className="section-spacing bg-slate-900/40 relative">
+      <section className="section-spacing bg-[#141A1F] relative">
         <div className="container-custom">
           <div className="grid gap-8 lg:grid-cols-2">
             <Reveal>
-              <div className="glass-card h-full rounded-2xl p-8 lg:p-10 border border-sky-500/20 relative overflow-hidden">
-                <div className="absolute right-0 top-0 size-32 bg-sky-500/5 rounded-full blur-2xl" />
-                <div className="flex size-12 items-center justify-center rounded-xl bg-sky-500/10 text-sky-400 mb-6">
+              <div className="palette-card h-full rounded-2xl p-8 lg:p-10 border border-[#334756] relative overflow-hidden">
+                <div className="flex size-12 items-center justify-center rounded-xl bg-[#285A7E]/30 text-[#EAB526] border border-[#334756] mb-6">
                   <Eye className="size-6" />
                 </div>
-                <h3 className="font-display text-2xl font-bold text-white">Our Strategic Vision</h3>
-                <p className="mt-4 text-sm leading-relaxed text-slate-300">
+                <h3 className="font-display text-2xl font-bold text-[#F0F3F6]">Our Strategic Vision</h3>
+                <p className="mt-4 text-sm leading-relaxed text-[#D3D6DB]">
                   To stand as Qatar’s most reliable, single-source engineering, contracting, and trading partner — recognized across the GCC for uncompromising technical precision, safety integrity, and seamless project execution.
                 </p>
               </div>
             </Reveal>
 
             <Reveal delay={0.1}>
-              <div className="glass-card h-full rounded-2xl p-8 lg:p-10 border border-blue-500/20 relative overflow-hidden">
-                <div className="absolute right-0 top-0 size-32 bg-blue-500/5 rounded-full blur-2xl" />
-                <div className="flex size-12 items-center justify-center rounded-xl bg-blue-500/10 text-blue-400 mb-6">
+              <div className="palette-card h-full rounded-2xl p-8 lg:p-10 border border-[#334756] relative overflow-hidden">
+                <div className="flex size-12 items-center justify-center rounded-xl bg-[#285A7E]/30 text-[#EAB526] border border-[#334756] mb-6">
                   <Target className="size-6" />
                 </div>
-                <h3 className="font-display text-2xl font-bold text-white">Our Core Mission</h3>
-                <p className="mt-4 text-sm leading-relaxed text-slate-300">
+                <h3 className="font-display text-2xl font-bold text-[#F0F3F6]">Our Core Mission</h3>
+                <p className="mt-4 text-sm leading-relaxed text-[#D3D6DB]">
                   To execute every commercial, hospitality, and civil assignment safely, on schedule, and strictly to specification by deploying certified professionals, disciplined controls, and transparent commercial practices.
                 </p>
               </div>
@@ -136,10 +134,10 @@ function AboutPage() {
           <div className="mt-16">
             <Reveal className="text-center max-w-2xl mx-auto">
               <SectionLabel>Guiding Principles</SectionLabel>
-              <h3 className="font-display text-3xl font-extrabold text-white">
+              <h3 className="font-display text-3xl font-extrabold text-[#F0F3F6]">
                 The "U & I CARE" Operating Code
               </h3>
-              <p className="mt-3 text-sm text-slate-400">
+              <p className="mt-3 text-sm text-[#9AA6B2]">
                 Our workforce values govern all client agreements, safety practices, and site operations.
               </p>
             </Reveal>
@@ -147,12 +145,12 @@ function AboutPage() {
             <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {VALUES.map((val, idx) => (
                 <Reveal key={val.name} delay={idx * 0.05}>
-                  <div className="glass-card rounded-xl p-5 transition-all hover:border-sky-500/30">
+                  <div className="palette-card rounded-xl p-5 border border-[#334756] transition-all hover:border-[#EAB526]/40">
                     <div className="flex items-center gap-2.5">
-                      <CheckCircle2 className="size-4 shrink-0 text-sky-400" />
-                      <h4 className="font-display text-base font-bold text-white">{val.name}</h4>
+                      <CheckCircle2 className="size-4 shrink-0 text-[#EAB526]" />
+                      <h4 className="font-display text-base font-bold text-[#F0F3F6]">{val.name}</h4>
                     </div>
-                    <p className="mt-2 text-xs text-slate-400 leading-relaxed pl-6.5">
+                    <p className="mt-2 text-xs text-[#9AA6B2] leading-relaxed pl-6.5">
                       {val.desc}
                     </p>
                   </div>
@@ -164,17 +162,17 @@ function AboutPage() {
       </section>
 
       {/* ── Ready to Work CTA ────────────────────────────────────────── */}
-      <section className="section-spacing bg-slate-950">
+      <section className="section-spacing bg-[#182026]">
         <div className="container-custom text-center max-w-3xl">
           <Reveal>
-            <h2 className="font-display text-3xl font-extrabold text-white sm:text-4xl">
+            <h2 className="font-display text-3xl font-extrabold text-[#F0F3F6] sm:text-4xl">
               Partner With Terrestrial Contracting in Qatar
             </h2>
-            <p className="mt-4 text-base text-slate-400">
+            <p className="mt-4 text-base text-[#9AA6B2]">
               Let's evaluate your upcoming project requirements. Our technical estimation team is ready to assist with detailed BOQ and site analysis.
             </p>
             <div className="mt-8 flex justify-center gap-4">
-              <Button asChild size="lg" className="bg-sky-500 text-white hover:bg-sky-400 font-bold">
+              <Button asChild size="lg" className="bg-[#EAB526] text-[#182026] hover:bg-[#f3c64c] font-bold">
                 <Link to="/contact">
                   Initiate RFP / Contact <ArrowUpRight className="ml-1.5 size-4" />
                 </Link>

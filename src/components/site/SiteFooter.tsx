@@ -3,7 +3,6 @@ import {
   MapPin,
   Phone,
   Mail,
-  FileText,
   ArrowUp,
   ShieldCheck,
   Building2,
@@ -36,30 +35,26 @@ export function SiteFooter() {
   };
 
   return (
-    <footer className="relative border-t border-white/[0.08] bg-slate-950 text-slate-300">
-      {/* Ambient background glow */}
-      <div className="absolute left-1/2 top-0 -z-10 h-px w-3/4 -translate-x-1/2 bg-gradient-to-r from-transparent via-sky-500/50 to-transparent" />
-      <div className="absolute left-1/4 top-10 -z-10 size-72 rounded-full bg-sky-600/5 blur-[120px]" />
-
+    <footer className="relative border-t border-white/[0.08] bg-[#141A1F] text-[#D3D6DB]">
       {/* Top CTA Banner */}
-      <div className="border-b border-white/[0.06] bg-slate-900/40">
+      <div className="border-b border-white/[0.06] bg-[#182026]">
         <div className="container-custom py-12">
-          <div className="flex flex-col items-start justify-between gap-6 rounded-2xl border border-sky-500/20 bg-gradient-to-r from-slate-900 via-sky-950/40 to-slate-900 p-8 shadow-2xl backdrop-blur-md md:flex-row md:items-center lg:p-10">
+          <div className="flex flex-col items-start justify-between gap-6 rounded-2xl border border-[#334756] bg-[#1E2730] p-8 shadow-xl md:flex-row md:items-center lg:p-10">
             <div>
-              <div className="mb-2 flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-sky-400">
+              <div className="mb-2 flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-[#EAB526]">
                 <Sparkles className="size-4" />
                 <span>Ready to Execute in Qatar?</span>
               </div>
-              <h3 className="font-display text-2xl font-bold text-white sm:text-3xl">
+              <h3 className="font-display text-2xl font-bold text-[#F0F3F6] sm:text-3xl">
                 Partner with an established single-source contractor
               </h3>
-              <p className="mt-2 max-w-xl text-sm text-slate-400">
+              <p className="mt-2 max-w-xl text-sm text-[#9AA6B2]">
                 Receive comprehensive technical proposals, bill of quantities (BOQ) review, and dedicated Qatar project mobilization.
               </p>
             </div>
             <Link
               to="/contact"
-              className="inline-flex shrink-0 items-center gap-2 rounded-xl bg-gradient-to-r from-sky-500 to-blue-600 px-6 py-3.5 text-sm font-bold text-white shadow-lg shadow-sky-500/25 transition-all hover:scale-105 hover:shadow-sky-500/40"
+              className="inline-flex shrink-0 items-center gap-2 rounded-xl bg-[#EAB526] px-6 py-3.5 text-sm font-bold text-[#182026] shadow-md transition-all hover:bg-[#f3c64c] hover:scale-105"
             >
               <span>Get Immediate Quotation</span>
               <ExternalLink className="size-4" />
@@ -71,41 +66,41 @@ export function SiteFooter() {
       {/* Main Footer Links */}
       <div className="container-custom py-16 lg:py-20">
         <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
-          {/* Company identity */}
+          {/* Company Identity */}
           <div className="space-y-5">
             <Link to="/" className="flex items-center gap-3">
-              <div className="flex size-10 items-center justify-center rounded-xl bg-gradient-to-br from-sky-500 to-blue-600 font-display text-base font-bold text-white shadow-md shadow-sky-500/20">
+              <div className="flex size-10 items-center justify-center rounded-xl bg-[#285A7E] border border-[#334756] font-display text-base font-bold text-white shadow-md">
                 TC
               </div>
               <div className="flex flex-col">
-                <span className="font-display text-base font-bold tracking-tight text-white">
+                <span className="font-display text-base font-bold tracking-tight text-[#F0F3F6]">
                   TERRESTRIAL
                 </span>
-                <span className="text-[0.6875rem] font-medium uppercase tracking-[0.16em] text-slate-400">
+                <span className="text-[0.6875rem] font-medium uppercase tracking-[0.16em] text-[#9AA6B2]">
                   Contracting W.L.L.
                 </span>
               </div>
             </Link>
 
-            <p className="text-sm leading-relaxed text-slate-400">
+            <p className="text-sm leading-relaxed text-[#9AA6B2]">
               Doha-based contracting & general trading leader delivering world-class civil, electro-mechanical, turnkey luxury interiors, and project workforce solutions across Qatar since 2014.
             </p>
 
             <div className="flex flex-wrap gap-2 pt-2">
-              <span className="inline-flex items-center gap-1.5 rounded-lg border border-white/10 bg-slate-900 px-2.5 py-1 text-[0.6875rem] font-medium text-slate-300">
-                <ShieldCheck className="size-3.5 text-sky-400" />
+              <span className="inline-flex items-center gap-1.5 rounded-lg border border-[#334756] bg-[#1E2730] px-2.5 py-1 text-[0.6875rem] font-medium text-[#D3D6DB]">
+                <ShieldCheck className="size-3.5 text-[#EAB526]" />
                 <span>C.R. 65663</span>
               </span>
-              <span className="inline-flex items-center gap-1.5 rounded-lg border border-white/10 bg-slate-900 px-2.5 py-1 text-[0.6875rem] font-medium text-slate-300">
-                <Building2 className="size-3.5 text-sky-400" />
+              <span className="inline-flex items-center gap-1.5 rounded-lg border border-[#334756] bg-[#1E2730] px-2.5 py-1 text-[0.6875rem] font-medium text-[#D3D6DB]">
+                <Building2 className="size-3.5 text-[#EAB526]" />
                 <span>Doha, Qatar</span>
               </span>
             </div>
           </div>
 
-          {/* Quick navigation */}
+          {/* Quick Navigation */}
           <div>
-            <h4 className="font-display text-sm font-bold uppercase tracking-wider text-white">
+            <h4 className="font-display text-sm font-bold uppercase tracking-wider text-[#F0F3F6]">
               Navigation
             </h4>
             <ul className="mt-5 space-y-3">
@@ -113,7 +108,7 @@ export function SiteFooter() {
                 <li key={item.to}>
                   <Link
                     to={item.to}
-                    className="text-sm text-slate-400 transition-colors hover:text-sky-400"
+                    className="text-sm text-[#9AA6B2] transition-colors hover:text-[#EAB526]"
                   >
                     {item.label}
                   </Link>
@@ -122,9 +117,9 @@ export function SiteFooter() {
             </ul>
           </div>
 
-          {/* Core Services */}
+          {/* Core Capabilities */}
           <div>
-            <h4 className="font-display text-sm font-bold uppercase tracking-wider text-white">
+            <h4 className="font-display text-sm font-bold uppercase tracking-wider text-[#F0F3F6]">
               Core Capabilities
             </h4>
             <ul className="mt-5 space-y-3">
@@ -132,7 +127,7 @@ export function SiteFooter() {
                 <li key={s.label}>
                   <Link
                     to={s.to}
-                    className="text-sm text-slate-400 transition-colors hover:text-sky-400"
+                    className="text-sm text-[#9AA6B2] transition-colors hover:text-[#EAB526]"
                   >
                     {s.label}
                   </Link>
@@ -143,30 +138,30 @@ export function SiteFooter() {
 
           {/* Contact & Doha HQ */}
           <div>
-            <h4 className="font-display text-sm font-bold uppercase tracking-wider text-white">
+            <h4 className="font-display text-sm font-bold uppercase tracking-wider text-[#F0F3F6]">
               Qatar Head Office
             </h4>
-            <ul className="mt-5 space-y-3.5 text-sm text-slate-400">
+            <ul className="mt-5 space-y-3.5 text-sm text-[#9AA6B2]">
               <li className="flex items-start gap-3">
-                <MapPin className="mt-1 size-4 shrink-0 text-sky-400" />
+                <MapPin className="mt-1 size-4 shrink-0 text-[#EAB526]" />
                 <span>
                   P.O. Box 35371<br />
                   Doha, State of Qatar
                 </span>
               </li>
               <li className="flex items-center gap-3">
-                <Phone className="size-4 shrink-0 text-sky-400" />
+                <Phone className="size-4 shrink-0 text-[#EAB526]" />
                 <div className="flex flex-col">
                   <a href="tel:+97441464546" className="hover:text-white transition-colors">
                     Tel: +974 4146 4546
                   </a>
-                  <a href="tel:+97430245384" className="text-xs text-slate-400 hover:text-white transition-colors">
+                  <a href="tel:+97430245384" className="text-xs text-[#9AA6B2] hover:text-white transition-colors">
                     Mob: +974 3024 5384
                   </a>
                 </div>
               </li>
               <li className="flex items-center gap-3">
-                <Mail className="size-4 shrink-0 text-sky-400" />
+                <Mail className="size-4 shrink-0 text-[#EAB526]" />
                 <a
                   href="mailto:info@terrestrialqatar.com"
                   className="hover:text-white transition-colors"
@@ -175,7 +170,7 @@ export function SiteFooter() {
                 </a>
               </li>
               <li className="flex items-center gap-3">
-                <Clock className="size-4 shrink-0 text-sky-400" />
+                <Clock className="size-4 shrink-0 text-[#EAB526]" />
                 <span>Sun - Thu: 07:30 - 17:30</span>
               </li>
             </ul>
@@ -184,15 +179,15 @@ export function SiteFooter() {
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-white/[0.06] bg-slate-950 py-6">
-        <div className="container-custom flex flex-col items-center justify-between gap-4 text-xs text-slate-500 sm:flex-row">
+      <div className="border-t border-white/[0.06] bg-[#101519] py-6">
+        <div className="container-custom flex flex-col items-center justify-between gap-4 text-xs text-[#9AA6B2] sm:flex-row">
           <p>© {new Date().getFullYear()} Terrestrial Contracting W.L.L. All rights reserved.</p>
           <div className="flex items-center gap-6">
             <span>HSEQ & ISO Standards Aligned</span>
             <span>·</span>
             <button
               onClick={scrollToTop}
-              className="flex items-center gap-1 font-semibold text-slate-400 transition-colors hover:text-sky-400"
+              className="flex items-center gap-1 font-semibold text-[#D3D6DB] transition-colors hover:text-[#EAB526]"
             >
               <span>Back to Top</span>
               <ArrowUp className="size-3.5" />
