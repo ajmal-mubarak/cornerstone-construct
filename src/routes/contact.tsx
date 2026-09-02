@@ -4,9 +4,6 @@ import { motion } from "motion/react";
 import { MapPin, Phone, Mail, FileText, Send, Clock, CheckCircle2, Sparkles, Building2, ChevronRight, PhoneCall } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
 import { Reveal } from "@/components/site/Reveal";
 import { SectionLabel } from "@/components/site/PageHero";
 import heroImage from "@/assets/hero-construction.jpg";
@@ -110,7 +107,7 @@ function ContactPage() {
               </div>
             </motion.div>
 
-            {/* Right Architectural Square Card */}
+            {/* Right Architectural Card */}
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -232,6 +229,7 @@ function ContactPage() {
                         For immediate urgent requirements, please call: +974 4146 4546
                       </p>
                       <Button
+                        type="button"
                         onClick={() => setSent(false)}
                         variant="outline"
                         size="sm"
@@ -250,9 +248,9 @@ function ContactPage() {
                     >
                       {/* Division selection */}
                       <div className="space-y-2">
-                        <Label className="text-xs font-semibold text-[#202930]">
+                        <label className="text-xs font-semibold text-[#202930] block">
                           Select Relevant Division / Scope *
-                        </Label>
+                        </label>
                         <select
                           value={selectedDept}
                           onChange={(e) => setSelectedDept(e.target.value)}
@@ -268,70 +266,63 @@ function ContactPage() {
 
                       <div className="grid gap-5 sm:grid-cols-2">
                         <div className="space-y-2">
-                          <Label htmlFor="name" className="text-xs font-semibold text-[#202930]">
+                          <label className="text-xs font-semibold text-[#202930] block">
                             Your Full Name *
-                          </Label>
-                          <Input
-                            id="name"
-                            name="name"
+                          </label>
+                          <input
                             required
+                            type="text"
                             placeholder="e.g. Eng. Khalid Al-Marri"
-                            className="border-[#CBD2D9] bg-[#EAEFF2] text-[#202930] placeholder:text-[#8D9CA8] rounded-xl py-3 focus-visible:ring-[#285A7E]"
+                            className="w-full rounded-xl border border-[#CBD2D9] bg-[#EAEFF2] px-4 py-3 text-sm text-[#202930] placeholder:text-[#8D9CA8] focus:border-[#285A7E] focus:outline-none focus:ring-1 focus:ring-[#285A7E]"
                           />
                         </div>
                         <div className="space-y-2">
-                          <Label htmlFor="company" className="text-xs font-semibold text-[#202930]">
+                          <label className="text-xs font-semibold text-[#202930] block">
                             Company / Organization *
-                          </Label>
-                          <Input
-                            id="company"
-                            name="company"
+                          </label>
+                          <input
                             required
+                            type="text"
                             placeholder="e.g. Qatari Diar / Main Contractor"
-                            className="border-[#CBD2D9] bg-[#EAEFF2] text-[#202930] placeholder:text-[#8D9CA8] rounded-xl py-3 focus-visible:ring-[#285A7E]"
+                            className="w-full rounded-xl border border-[#CBD2D9] bg-[#EAEFF2] px-4 py-3 text-sm text-[#202930] placeholder:text-[#8D9CA8] focus:border-[#285A7E] focus:outline-none focus:ring-1 focus:ring-[#285A7E]"
                           />
                         </div>
                       </div>
 
                       <div className="grid gap-5 sm:grid-cols-2">
                         <div className="space-y-2">
-                          <Label htmlFor="email" className="text-xs font-semibold text-[#202930]">
+                          <label className="text-xs font-semibold text-[#202930] block">
                             Corporate Email *
-                          </Label>
-                          <Input
-                            id="email"
-                            name="email"
-                            type="email"
+                          </label>
+                          <input
                             required
+                            type="email"
                             placeholder="name@company.com"
-                            className="border-[#CBD2D9] bg-[#EAEFF2] text-[#202930] placeholder:text-[#8D9CA8] rounded-xl py-3 focus-visible:ring-[#285A7E]"
+                            className="w-full rounded-xl border border-[#CBD2D9] bg-[#EAEFF2] px-4 py-3 text-sm text-[#202930] placeholder:text-[#8D9CA8] focus:border-[#285A7E] focus:outline-none focus:ring-1 focus:ring-[#285A7E]"
                           />
                         </div>
                         <div className="space-y-2">
-                          <Label htmlFor="phone" className="text-xs font-semibold text-[#202930]">
+                          <label className="text-xs font-semibold text-[#202930] block">
                             Qatar Contact Number *
-                          </Label>
-                          <Input
-                            id="phone"
-                            name="phone"
+                          </label>
+                          <input
                             required
+                            type="tel"
                             placeholder="+974 5500 0000"
-                            className="border-[#CBD2D9] bg-[#EAEFF2] text-[#202930] placeholder:text-[#8D9CA8] rounded-xl py-3 focus-visible:ring-[#285A7E]"
+                            className="w-full rounded-xl border border-[#CBD2D9] bg-[#EAEFF2] px-4 py-3 text-sm text-[#202930] placeholder:text-[#8D9CA8] focus:border-[#285A7E] focus:outline-none focus:ring-1 focus:ring-[#285A7E]"
                           />
                         </div>
                       </div>
 
                       <div className="space-y-2">
-                        <Label htmlFor="message" className="text-xs font-semibold text-[#202930]">
+                        <label className="text-xs font-semibold text-[#202930] block">
                           Project Details, Site Location & Scope *
-                        </Label>
-                        <Textarea
-                          id="message"
-                          name="message"
+                        </label>
+                        <textarea
                           required
                           rows={4}
                           placeholder="Provide overview of scope of work, approximate quantities, location in Qatar (e.g. Lusail, West Bay, Ras Laffan), and expected start date..."
-                          className="border-[#CBD2D9] bg-[#EAEFF2] text-[#202930] placeholder:text-[#8D9CA8] rounded-xl focus-visible:ring-[#285A7E]"
+                          className="w-full rounded-xl border border-[#CBD2D9] bg-[#EAEFF2] px-4 py-3 text-sm text-[#202930] placeholder:text-[#8D9CA8] focus:border-[#285A7E] focus:outline-none focus:ring-1 focus:ring-[#285A7E]"
                         />
                       </div>
 

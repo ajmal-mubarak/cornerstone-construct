@@ -124,8 +124,21 @@ const ADVANTAGES = [
 function HomePage() {
   return (
     <>
-      {/* ── 1. HERO SECTION (Architectural Platinum Mist Theme) ─────────── */}
+      {/* ── 1. HERO SECTION WITH RICH BACKGROUND BANNER IMAGE ──────────── */}
       <section className="relative isolate overflow-hidden bg-[#DFE5EA] py-16 sm:py-24 lg:py-28 border-b border-[#CBD2D9]">
+        {/* Full Background Banner Image */}
+        <img
+          src={heroImage}
+          alt="Modern construction and engineering project banner in Doha Qatar"
+          width={1920}
+          height={1088}
+          className="absolute inset-0 -z-30 size-full object-cover object-center opacity-30 brightness-95 filter"
+        />
+
+        {/* Architectural Palette Gradient Overlay */}
+        <div className="absolute inset-0 -z-20 bg-gradient-to-r from-[#DFE5EA] via-[#DFE5EA]/92 to-[#DFE5EA]/80" />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-t from-[#DFE5EA] via-transparent to-transparent" />
+
         <div className="container-custom relative z-10 w-full">
           <div className="grid items-center gap-12 lg:grid-cols-12">
             {/* Left Hero Content */}
@@ -196,13 +209,13 @@ function HomePage() {
               transition={{ duration: 0.7, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
               className="lg:col-span-5 xl:col-span-5"
             >
-              <div className="relative rounded-3xl overflow-hidden border border-[#CBD2D9] shadow-md bg-[#F5F7F9] p-2">
+              <div className="relative rounded-3xl overflow-hidden border border-[#CBD2D9] shadow-md bg-[#F5F7F9] p-2.5">
                 <img
                   src={heroImage}
                   alt="Modern construction and engineering project in Doha Qatar"
                   width={800}
                   height={600}
-                  className="rounded-2xl w-full h-80 sm:h-96 object-cover"
+                  className="rounded-2xl w-full aspect-[4/3] object-cover"
                 />
 
                 {/* Floating summary badge */}
