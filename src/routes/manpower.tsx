@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { HardHat, ShieldCheck, BadgeCheck, Clock, Users, Wrench } from "lucide-react";
+import { HardHat, ShieldCheck, BadgeCheck, Clock, Users, Wrench, ArrowRight } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/site/Reveal";
@@ -9,7 +9,6 @@ import manpowerImage from "@/assets/manpower.jpg";
 export const Route = createFileRoute("/manpower")({
   component: ManpowerPage,
 });
-
 
 const CATEGORIES = [
   {
@@ -44,24 +43,25 @@ function ManpowerPage() {
         text="We supply reliable skilled, semi-skilled and professional manpower to construction, industrial and hospitality projects across Qatar."
       />
 
-      <section className="py-20 lg:py-24">
-        <div className="mx-auto grid max-w-7xl items-center gap-14 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
+      {/* How we work */}
+      <section className="section-pad">
+        <div className="container-pad grid items-center gap-14 lg:grid-cols-2">
           <Reveal>
             <SectionLabel>How We Work</SectionLabel>
-            <h2 className="mt-4 text-3xl font-semibold uppercase text-foreground sm:text-4xl">
+            <h2 className="mt-5 text-3xl font-semibold uppercase text-foreground sm:text-4xl">
               Screened, documented and site-ready
             </h2>
-            <p className="mt-5 text-muted-foreground">
+            <p className="mt-5 text-muted-foreground leading-relaxed">
               Every candidate is interviewed and trade-tested before deployment. We handle
               sponsorship, accommodation, transport and payroll so your team can focus on delivery
               instead of administration.
             </p>
-            <p className="mt-4 text-muted-foreground">
+            <p className="mt-4 text-muted-foreground leading-relaxed">
               Requirements change — so we keep a standby pool that lets us scale crews up or down
               without disrupting your programme.
             </p>
           </Reveal>
-          <Reveal delay={0.1}>
+          <Reveal delay={0.12}>
             <img
               src={manpowerImage}
               alt="Construction team of engineers and workers on a project site in Qatar"
@@ -74,27 +74,30 @@ function ManpowerPage() {
         </div>
       </section>
 
-      <section className="bg-secondary py-20 lg:py-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <Reveal className="max-w-3xl">
+      {/* Categories */}
+      <section className="section-pad bg-secondary">
+        <div className="container-pad">
+          <Reveal className="max-w-2xl">
             <SectionLabel>Categories</SectionLabel>
-            <h2 className="mt-4 text-3xl font-semibold uppercase text-foreground sm:text-4xl">
+            <h2 className="mt-5 text-3xl font-semibold uppercase text-foreground sm:text-4xl">
               Trades we supply
             </h2>
           </Reveal>
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
+
+          <div className="mt-14 grid gap-6 md:grid-cols-3">
             {CATEGORIES.map((cat, i) => (
-              <Reveal key={cat.title} delay={i * 0.06}>
-                <article className="h-full rounded-2xl border border-border bg-card p-7 shadow-[var(--shadow-card)] transition-transform duration-300 hover:-translate-y-1.5">
-                  <span className="inline-flex size-12 items-center justify-center rounded-xl bg-accent/10">
-                    <cat.icon className="size-6 text-accent" strokeWidth={1.6} />
+              <Reveal key={cat.title} delay={i * 0.08}>
+                <article className="h-full rounded-xl border border-border bg-card p-7 shadow-[var(--shadow-card)] transition-all duration-200 hover:border-accent/40 hover:shadow-[var(--shadow-elevated)] hover:-translate-y-1">
+                  <span className="inline-flex size-12 items-center justify-center rounded-xl bg-accent/10 ring-1 ring-accent/20">
+                    <cat.icon className="size-5 text-accent" strokeWidth={1.8} />
                   </span>
-                  <h3 className="mt-5 text-xl font-semibold uppercase text-foreground">
-                    {cat.title}
-                  </h3>
-                  <ul className="mt-3 space-y-1.5 text-sm text-muted-foreground">
+                  <h3 className="mt-5 text-lg font-semibold uppercase text-foreground">{cat.title}</h3>
+                  <ul className="mt-4 space-y-2">
                     {cat.items.map((item) => (
-                      <li key={item}>{item}</li>
+                      <li key={item} className="flex items-center gap-2 text-sm text-muted-foreground">
+                        <span className="size-1.5 shrink-0 rounded-full bg-accent/60" />
+                        {item}
+                      </li>
                     ))}
                   </ul>
                 </article>
@@ -104,14 +107,24 @@ function ManpowerPage() {
         </div>
       </section>
 
-      <section className="py-20 lg:py-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-6 md:grid-cols-3">
+      {/* Assurance */}
+      <section className="section-pad">
+        <div className="container-pad">
+          <Reveal className="max-w-2xl mb-12">
+            <SectionLabel>Our Assurance</SectionLabel>
+            <h2 className="mt-5 text-3xl font-semibold uppercase text-foreground sm:text-4xl">
+              Quality and compliance, guaranteed
+            </h2>
+          </Reveal>
+
+          <div className="grid gap-5 md:grid-cols-3">
             {ASSURANCE.map((item, i) => (
-              <Reveal key={item.title} delay={i * 0.06}>
-                <div className="h-full rounded-2xl border border-border bg-card px-6 py-7 transition-colors hover:border-accent/60">
-                  <item.icon className="size-6 text-accent" strokeWidth={1.6} />
-                  <h3 className="mt-4 font-display text-lg font-semibold uppercase text-foreground">
+              <Reveal key={item.title} delay={i * 0.08}>
+                <div className="h-full rounded-xl border border-border bg-card px-7 py-7 shadow-[var(--shadow-card)] transition-all duration-200 hover:border-accent/40">
+                  <span className="inline-flex size-11 items-center justify-center rounded-xl bg-accent/10">
+                    <item.icon className="size-5 text-accent" strokeWidth={1.8} />
+                  </span>
+                  <h3 className="mt-5 font-display text-lg font-semibold uppercase text-foreground">
                     {item.title}
                   </h3>
                   <p className="mt-2 text-sm text-muted-foreground">{item.text}</p>
@@ -119,9 +132,12 @@ function ManpowerPage() {
               </Reveal>
             ))}
           </div>
+
           <Reveal delay={0.1}>
-            <Button asChild className="mt-10">
-              <Link to="/contact">Request manpower</Link>
+            <Button asChild className="mt-12">
+              <Link to="/contact">
+                Request manpower <ArrowRight className="ml-1 size-4" />
+              </Link>
             </Button>
           </Reveal>
         </div>

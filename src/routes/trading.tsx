@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Warehouse, Cog, Zap, Gauge, Truck, Waves } from "lucide-react";
+import { Warehouse, Cog, Zap, Gauge, Truck, Waves, ArrowRight } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/site/Reveal";
@@ -8,7 +8,6 @@ import { PageHero, SectionLabel } from "@/components/site/PageHero";
 export const Route = createFileRoute("/trading")({
   component: TradingPage,
 });
-
 
 const CATEGORIES = [
   {
@@ -43,6 +42,13 @@ const CATEGORIES = [
   },
 ];
 
+const WHY = [
+  { title: "Vetted Vendors", text: "Established local and international supplier network." },
+  { title: "Competitive Pricing", text: "Transparent quotations with no hidden charges." },
+  { title: "Quality Checked", text: "Material inspection and documentation on delivery." },
+  { title: "Reliable Delivery", text: "Scheduled dispatch aligned to your site programme." },
+];
+
 function TradingPage() {
   return (
     <>
@@ -52,25 +58,24 @@ function TradingPage() {
         text="We bridge global suppliers and local project needs — sourcing quality materials at competitive prices and getting them to site when they are needed."
       />
 
-      <section className="py-20 lg:py-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <Reveal className="max-w-3xl">
+      {/* Categories */}
+      <section className="section-pad">
+        <div className="container-pad">
+          <Reveal className="max-w-2xl mb-14">
             <SectionLabel>Supply Categories</SectionLabel>
-            <h2 className="mt-4 text-3xl font-semibold uppercase text-foreground sm:text-4xl">
+            <h2 className="mt-5 text-3xl font-semibold uppercase text-foreground sm:text-4xl">
               What we supply
             </h2>
           </Reveal>
 
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {CATEGORIES.map((cat, i) => (
-              <Reveal key={cat.title} delay={i * 0.05}>
-                <article className="h-full rounded-2xl border border-border bg-card p-7 shadow-[var(--shadow-card)] transition-transform duration-300 hover:-translate-y-1.5">
-                  <span className="inline-flex size-12 items-center justify-center rounded-xl bg-accent/10">
-                    <cat.icon className="size-6 text-accent" strokeWidth={1.6} />
+              <Reveal key={cat.title} delay={i * 0.06}>
+                <article className="h-full rounded-xl border border-border bg-card p-7 shadow-[var(--shadow-card)] transition-all duration-200 hover:border-accent/40 hover:shadow-[var(--shadow-elevated)] hover:-translate-y-1 cursor-default">
+                  <span className="inline-flex size-12 items-center justify-center rounded-xl bg-accent/10 ring-1 ring-accent/20">
+                    <cat.icon className="size-5 text-accent" strokeWidth={1.8} />
                   </span>
-                  <h3 className="mt-5 text-xl font-semibold uppercase text-foreground">
-                    {cat.title}
-                  </h3>
+                  <h3 className="mt-5 text-lg font-semibold uppercase text-foreground">{cat.title}</h3>
                   <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{cat.text}</p>
                 </article>
               </Reveal>
@@ -79,34 +84,35 @@ function TradingPage() {
         </div>
       </section>
 
-      <section className="bg-secondary py-20 lg:py-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <Reveal className="max-w-3xl">
+      {/* Why source with us */}
+      <section className="section-pad bg-secondary">
+        <div className="container-pad">
+          <Reveal className="max-w-2xl mb-12">
             <SectionLabel>Why Source With Us</SectionLabel>
-            <h2 className="mt-4 text-3xl font-semibold uppercase text-foreground sm:text-4xl">
+            <h2 className="mt-5 text-3xl font-semibold uppercase text-foreground sm:text-4xl">
               One supplier, fewer delays
             </h2>
           </Reveal>
-          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {[
-              ["Vetted Vendors", "Established local and international supplier network."],
-              ["Competitive Pricing", "Transparent quotations with no hidden charges."],
-              ["Quality Checked", "Material inspection and documentation on delivery."],
-              ["Reliable Delivery", "Scheduled dispatch aligned to your site programme."],
-            ].map(([title, text], i) => (
-              <Reveal key={title} delay={i * 0.05}>
-                <div className="h-full rounded-2xl border border-border bg-card px-6 py-6">
-                  <h3 className="font-display text-lg font-semibold uppercase text-foreground">
-                    {title}
+
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {WHY.map((item, i) => (
+              <Reveal key={item.title} delay={i * 0.07}>
+                <div className="h-full rounded-xl border border-border bg-card px-6 py-7 shadow-[var(--shadow-sm)] transition-all duration-200 hover:border-accent/40">
+                  <div className="mb-4 h-0.5 w-8 rounded-full bg-accent" />
+                  <h3 className="font-display text-base font-semibold uppercase text-foreground">
+                    {item.title}
                   </h3>
-                  <p className="mt-2 text-sm text-muted-foreground">{text}</p>
+                  <p className="mt-2 text-sm text-muted-foreground">{item.text}</p>
                 </div>
               </Reveal>
             ))}
           </div>
-          <Reveal delay={0.1}>
-            <Button asChild className="mt-10">
-              <Link to="/contact">Request a quotation</Link>
+
+          <Reveal delay={0.12}>
+            <Button asChild className="mt-12">
+              <Link to="/contact">
+                Request a quotation <ArrowRight className="ml-1 size-4" />
+              </Link>
             </Button>
           </Reveal>
         </div>

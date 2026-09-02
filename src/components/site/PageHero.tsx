@@ -11,18 +11,20 @@ export function PageHero({
 }) {
   return (
     <section className="border-b border-border bg-secondary">
-      <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
+      <div className="container-pad py-14 lg:py-20">
         <motion.div
-          initial={{ opacity: 0, y: 16 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
           className="max-w-3xl"
         >
           <span className="section-label">{eyebrow}</span>
-          <h1 className="mt-4 text-4xl font-semibold uppercase text-foreground sm:text-5xl">
+          <h1 className="mt-5 text-4xl font-semibold uppercase text-foreground sm:text-5xl lg:text-[3.25rem]">
             {title}
           </h1>
-          {text ? <p className="mt-5 text-lg text-muted-foreground">{text}</p> : null}
+          {text ? (
+            <p className="mt-5 max-w-2xl text-lg leading-relaxed text-muted-foreground">{text}</p>
+          ) : null}
         </motion.div>
       </div>
     </section>
