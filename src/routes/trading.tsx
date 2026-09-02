@@ -6,26 +6,9 @@ import { Reveal } from "@/components/site/Reveal";
 import { PageHero, SectionLabel } from "@/components/site/PageHero";
 
 export const Route = createFileRoute("/trading")({
-  head: () => ({
-    meta: [
-      { title: "General Trading & Supply in Qatar | Terrestrial Contracting W.L.L." },
-      {
-        name: "description",
-        content:
-          "Mechanical, electrical and instrumentation supply, hardware, aggregates, safety items and project logistics sourced for Qatar projects.",
-      },
-      { property: "og:title", content: "General Trading & Supply | Terrestrial Contracting" },
-      {
-        property: "og:description",
-        content:
-          "Single-source supply of MEP components, hardware, building materials and site services across Qatar.",
-      },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
-  }),
   component: TradingPage,
 });
+
 
 const CATEGORIES = [
   {

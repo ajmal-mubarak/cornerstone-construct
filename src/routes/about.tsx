@@ -6,25 +6,9 @@ import { Reveal } from "@/components/site/Reveal";
 import fitoutImage from "@/assets/fitout-interior.jpg";
 
 export const Route = createFileRoute("/about")({
-  head: () => ({
-    meta: [
-      { title: "About Us | Terrestrial Contracting W.L.L. Qatar" },
-      {
-        name: "description",
-        content:
-          "Established in Doha in 2014, Terrestrial Contracting W.L.L. delivers civil, MEP, fit-out and manpower solutions with a single-source approach.",
-      },
-      { property: "og:title", content: "About Terrestrial Contracting W.L.L." },
-      {
-        property: "og:description",
-        content: "Our story, vision, mission and the U & I CARE values that guide our work in Qatar.",
-      },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
-  }),
   component: AboutPage,
 });
+
 
 const PILLARS = [
   [

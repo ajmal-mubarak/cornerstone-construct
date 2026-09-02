@@ -7,25 +7,9 @@ import { Reveal } from "@/components/site/Reveal";
 import mepImage from "@/assets/mep-services.jpg";
 
 export const Route = createFileRoute("/services")({
-  head: () => ({
-    meta: [
-      { title: "Services | Civil, MEP & Interior Fit-Out in Qatar" },
-      {
-        name: "description",
-        content:
-          "Civil contracting, MEP and electrical systems, turnkey interior fit-out, facility management, waste and water services across Doha, Qatar.",
-      },
-      { property: "og:title", content: "Services | Terrestrial Contracting W.L.L." },
-      {
-        property: "og:description",
-        content: "Comprehensive contracting solutions across every phase of your project.",
-      },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
-  }),
   component: ServicesPage,
 });
+
 
 const SERVICES = [
   {

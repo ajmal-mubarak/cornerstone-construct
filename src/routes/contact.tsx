@@ -10,25 +10,9 @@ import { Reveal } from "@/components/site/Reveal";
 import { PageHero, SectionLabel } from "@/components/site/PageHero";
 
 export const Route = createFileRoute("/contact")({
-  head: () => ({
-    meta: [
-      { title: "Contact Terrestrial Contracting W.L.L. | Doha, Qatar" },
-      {
-        name: "description",
-        content:
-          "Contact our Doha office for civil, MEP, fit-out, manpower and trading enquiries. P.O. Box 35371, Doha, Qatar. Tel 4146 4546.",
-      },
-      { property: "og:title", content: "Contact Terrestrial Contracting W.L.L." },
-      {
-        property: "og:description",
-        content: "Share your project scope and our Doha team will respond with a clear proposal.",
-      },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
-  }),
   component: ContactPage,
 });
+
 
 const DETAILS = [
   { icon: MapPin, title: "Office", lines: ["P.O. Box 35371", "Doha, State of Qatar"] },

@@ -7,26 +7,9 @@ import { PageHero, SectionLabel } from "@/components/site/PageHero";
 import manpowerImage from "@/assets/manpower.jpg";
 
 export const Route = createFileRoute("/manpower")({
-  head: () => ({
-    meta: [
-      { title: "Manpower Supply in Qatar | Terrestrial Contracting W.L.L." },
-      {
-        name: "description",
-        content:
-          "Skilled, semi-skilled and professional manpower supply in Doha, Qatar — certified trades, valid Qatar ID, insurance and full HSEQ compliance.",
-      },
-      { property: "og:title", content: "Manpower Supply in Qatar | Terrestrial Contracting" },
-      {
-        property: "og:description",
-        content:
-          "Certified electricians, technicians, engineers and general labour available on short- or long-term contracts across Qatar.",
-      },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
-  }),
   component: ManpowerPage,
 });
+
 
 const CATEGORIES = [
   {

@@ -22,29 +22,9 @@ import heroImage from "@/assets/hero-construction.jpg";
 import fitoutImage from "@/assets/fitout-interior.jpg";
 
 export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "Terrestrial Contracting W.L.L. | Civil, MEP & Fit-Out in Qatar" },
-      {
-        name: "description",
-        content:
-          "Doha-based contractor since 2014: civil construction, MEP systems, luxury interior fit-out, manpower supply, facility management and general trading.",
-      },
-      {
-        property: "og:title",
-        content: "Terrestrial Contracting W.L.L. | Civil, MEP & Fit-Out in Qatar",
-      },
-      {
-        property: "og:description",
-        content:
-          "Integrated construction, trading and project support solutions across Qatar since 2014.",
-      },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
-  }),
   component: HomePage,
 });
+
 
 const SERVICES = [
   {
