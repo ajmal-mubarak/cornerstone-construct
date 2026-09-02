@@ -12,11 +12,13 @@
   --radius-3xl: 1.75rem;
   --radius-full: 9999px;
 
-  /* Strict User Palette Integration */
+  /* Combined Architectural Palette */
   --color-slate-steel: #334756;
   --color-gold-mustard: #EAB526;
-  --color-silver-light: #D3D6DB;
-  --color-charcoal-dark: #1E2730;
+  --color-platinum-light: #EAEFF2;
+  --color-platinum-card: #F5F7F9;
+  --color-platinum-border: #CBD2D9;
+  --color-charcoal-dark: #202930;
   --color-blue-steel: #285A7E;
 
   --color-background: var(--background);
@@ -44,50 +46,49 @@
   --font-display: "Outfit", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 
-  --shadow-card: 0 1px 3px rgba(30, 39, 48, 0.04), 0 6px 24px -2px rgba(30, 39, 48, 0.06);
-  --shadow-elevated: 0 4px 6px -1px rgba(30, 39, 48, 0.05), 0 20px 35px -5px rgba(30, 39, 48, 0.1);
-  --shadow-navbar: 0 1px 0 rgba(51, 71, 86, 0.08), 0 4px 16px rgba(51, 71, 86, 0.04);
+  --shadow-card: 0 2px 10px -2px rgba(32, 41, 48, 0.07), 0 0 1px 1px rgba(203, 210, 217, 0.6);
+  --shadow-elevated: 0 12px 30px -6px rgba(32, 41, 48, 0.12), 0 0 1px 1px rgba(203, 210, 217, 0.8);
 }
 
 :root {
   --radius: 0.75rem;
 
-  /* Crisp White Background */
-  --background: #FFFFFF;
-  --foreground: #1E2730;
+  /* Architectural Warm Platinum Grey Background (Zero pure white glare) */
+  --background: #EAEFF2;
+  --foreground: #202930;
 
-  /* White Card Surfaces */
-  --card: #FFFFFF;
-  --card-foreground: #1E2730;
+  /* Card Surfaces: Architectural Cement/Platinum */
+  --card: #F5F7F9;
+  --card-foreground: #202930;
 
-  --popover: #FFFFFF;
-  --popover-foreground: #1E2730;
+  --popover: #F5F7F9;
+  --popover-foreground: #202930;
 
   /* Steel Blue Primary (#285A7E) */
   --primary: #285A7E;
   --primary-foreground: #FFFFFF;
 
-  /* Light Platinum Secondary */
-  --secondary: #F1F5F9;
-  --secondary-foreground: #1E2730;
+  /* Slate Steel Secondary (#334756) */
+  --secondary: #DFE5EA;
+  --secondary-foreground: #202930;
 
-  --muted: #F8FAFC;
-  --muted-foreground: #64748B;
+  --muted: #DFE5EA;
+  --muted-foreground: #52606D;
 
   /* Warm Golden Mustard Accent (#EAB526) */
   --accent: #EAB526;
-  --accent-foreground: #182026;
+  --accent-foreground: #202930;
 
   --destructive: #DC2626;
   --destructive-foreground: #FFFFFF;
 
-  /* Soft Slate-Silver Borders */
-  --border: #E2E8F0;
-  --input: #E2E8F0;
+  /* Refined Platinum Borders (#CBD2D9) */
+  --border: #CBD2D9;
+  --input: #CBD2D9;
   --ring: #285A7E;
 
-  --surface: #182026;
-  --surface-foreground: #F8FAFC;
+  --surface: #202930;
+  --surface-foreground: #EAEFF2;
 }
 
 @layer base {
@@ -107,12 +108,12 @@
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-display);
     letter-spacing: -0.015em;
-    color: #1E2730;
+    color: #202930;
     text-wrap: balance;
   }
 }
 
-/* ── Clean White Theme Utilities ─────────────────────────────────────── */
+/* ── Custom Combined Utilities ───────────────────────────────────────── */
 
 @utility container-custom {
   margin-left: auto;
@@ -142,9 +143,9 @@
 }
 
 @utility palette-card {
-  background-color: #FFFFFF;
-  border: 1px solid #E2E8F0;
-  box-shadow: 0 2px 12px -2px rgba(30, 39, 48, 0.05);
+  background-color: #F5F7F9;
+  border: 1px solid #CBD2D9;
+  box-shadow: 0 2px 10px -2px rgba(32, 41, 48, 0.07);
 }
 
 @utility palette-card-hover {
@@ -152,7 +153,7 @@
   &:hover {
     transform: translateY(-4px);
     border-color: #285A7E;
-    box-shadow: 0 16px 32px -6px rgba(40, 90, 126, 0.12);
+    box-shadow: 0 14px 28px -6px rgba(40, 90, 126, 0.16);
   }
 }
 
@@ -166,9 +167,9 @@
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  background: rgba(40, 90, 126, 0.08);
+  background: rgba(40, 90, 126, 0.1);
   color: #285A7E;
-  border: 1px solid rgba(40, 90, 126, 0.2);
+  border: 1px solid rgba(40, 90, 126, 0.25);
 }
 
 @utility gold-dot {

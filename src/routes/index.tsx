@@ -124,8 +124,8 @@ const ADVANTAGES = [
 function HomePage() {
   return (
     <>
-      {/* ── 1. HERO SECTION (Clean White / Luminous Theme) ───────────────── */}
-      <section className="relative isolate overflow-hidden bg-[#F8FAFC] py-16 sm:py-24 lg:py-28 border-b border-[#E2E8F0]">
+      {/* ── 1. HERO SECTION (Architectural Platinum Mist Theme) ─────────── */}
+      <section className="relative isolate overflow-hidden bg-[#DFE5EA] py-16 sm:py-24 lg:py-28 border-b border-[#CBD2D9]">
         <div className="container-custom relative z-10 w-full">
           <div className="grid items-center gap-12 lg:grid-cols-12">
             {/* Left Hero Content */}
@@ -136,12 +136,12 @@ function HomePage() {
               className="lg:col-span-7 xl:col-span-7"
             >
               {/* Status Badge */}
-              <div className="mb-5 inline-flex items-center gap-2.5 rounded-full border border-[#285A7E]/25 bg-[#285A7E]/8 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.14em] text-[#285A7E]">
+              <div className="mb-5 inline-flex items-center gap-2.5 rounded-full border border-[#285A7E]/25 bg-[#285A7E]/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.14em] text-[#285A7E]">
                 <span className="gold-dot" />
                 <span>Premier Contracting & Trading · Doha, Qatar</span>
               </div>
 
-              <h1 className="font-display text-4xl font-extrabold tracking-tight text-[#1E2730] sm:text-6xl xl:text-7xl">
+              <h1 className="font-display text-4xl font-extrabold tracking-tight text-[#202930] sm:text-6xl xl:text-7xl">
                 Engineering Integrity.{" "}
                 <span className="text-[#285A7E]">
                   Building Qatar’s
@@ -149,8 +149,8 @@ function HomePage() {
                 Future.
               </h1>
 
-              <p className="mt-6 max-w-2xl text-base leading-relaxed text-[#475569] sm:text-lg font-normal">
-                Established in 2014, <strong className="text-[#1E2730] font-semibold">Terrestrial Contracting W.L.L.</strong> is Qatar’s trusted single-source partner for Grade-A civil construction, turnkey MEP systems, five-star hotel fit-outs, and certified manpower.
+              <p className="mt-6 max-w-2xl text-base leading-relaxed text-[#52606D] sm:text-lg font-normal">
+                Established in 2014, <strong className="text-[#202930] font-semibold">Terrestrial Contracting W.L.L.</strong> is Qatar’s trusted single-source partner for Grade-A civil construction, turnkey MEP systems, five-star hotel fit-outs, and certified manpower.
               </p>
 
               {/* Action Buttons */}
@@ -165,7 +165,7 @@ function HomePage() {
 
                 <Link
                   to="/services"
-                  className="inline-flex items-center gap-2 rounded-xl border border-[#E2E8F0] bg-white px-6 py-4 text-base font-semibold text-[#1E2730] shadow-sm transition-all duration-200 hover:bg-[#F1F5F9] hover:text-[#285A7E]"
+                  className="inline-flex items-center gap-2 rounded-xl border border-[#CBD2D9] bg-[#F5F7F9] px-6 py-4 text-base font-semibold text-[#202930] shadow-sm transition-all duration-200 hover:bg-[#DFE5EA] hover:text-[#285A7E]"
                 >
                   <span>Explore Capabilities</span>
                   <ChevronRight className="size-4 text-[#285A7E]" />
@@ -173,7 +173,7 @@ function HomePage() {
               </div>
 
               {/* Trust highlights under CTA */}
-              <div className="mt-10 flex flex-wrap items-center gap-6 text-xs text-[#64748B] sm:gap-8">
+              <div className="mt-10 flex flex-wrap items-center gap-6 text-xs text-[#52606D] sm:gap-8">
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="size-4 text-[#285A7E]" />
                   <span>C.R. No. 65663 Validated</span>
@@ -196,7 +196,7 @@ function HomePage() {
               transition={{ duration: 0.7, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
               className="lg:col-span-5 xl:col-span-5"
             >
-              <div className="relative rounded-3xl overflow-hidden border border-[#E2E8F0] shadow-xl bg-white p-2">
+              <div className="relative rounded-3xl overflow-hidden border border-[#CBD2D9] shadow-md bg-[#F5F7F9] p-2">
                 <img
                   src={heroImage}
                   alt="Modern construction and engineering project in Doha Qatar"
@@ -206,11 +206,11 @@ function HomePage() {
                 />
 
                 {/* Floating summary badge */}
-                <div className="absolute bottom-5 left-5 right-5 rounded-2xl bg-white/95 p-4 shadow-lg border border-[#E2E8F0] backdrop-blur-md">
+                <div className="absolute bottom-5 left-5 right-5 rounded-2xl bg-[#F5F7F9]/95 p-4 shadow-md border border-[#CBD2D9] backdrop-blur-md">
                   <div className="flex items-center justify-between">
                     <div>
                       <p className="text-xs font-bold uppercase tracking-wider text-[#285A7E]">Operations Desk</p>
-                      <p className="text-sm font-extrabold text-[#1E2730] mt-0.5">Doha, Qatar · 24/7 Support</p>
+                      <p className="text-sm font-extrabold text-[#202930] mt-0.5">Doha, Qatar · 24/7 Support</p>
                     </div>
                     <a
                       href="tel:+97441464546"
@@ -239,8 +239,8 @@ function HomePage() {
                 <dt className="font-display text-3xl font-extrabold tracking-tight text-[#285A7E] sm:text-4xl">
                   {metric.value}
                 </dt>
-                <dd className="mt-1 text-sm font-bold text-[#1E2730]">{metric.label}</dd>
-                <p className="mt-1 text-xs text-[#64748B]">{metric.detail}</p>
+                <dd className="mt-1 text-sm font-bold text-[#202930]">{metric.label}</dd>
+                <p className="mt-1 text-xs text-[#52606D]">{metric.detail}</p>
               </div>
             ))}
           </motion.div>
@@ -248,15 +248,15 @@ function HomePage() {
       </section>
 
       {/* ── 2. CORE CAPABILITIES (GRID) ──────────────────────────────────── */}
-      <section className="section-spacing bg-white">
+      <section className="section-spacing bg-[#EAEFF2]">
         <div className="container-custom">
           <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
             <Reveal className="max-w-2xl">
               <SectionLabel>Core Capabilities</SectionLabel>
-              <h2 className="font-display text-3xl font-extrabold tracking-tight text-[#1E2730] sm:text-4xl lg:text-5xl">
+              <h2 className="font-display text-3xl font-extrabold tracking-tight text-[#202930] sm:text-4xl lg:text-5xl">
                 Comprehensive Engineering & Project Solutions
               </h2>
-              <p className="mt-4 text-base text-[#64748B] leading-relaxed">
+              <p className="mt-4 text-base text-[#52606D] leading-relaxed">
                 From initial ground-breaking to final commissioning, our integrated divisions deliver turnkey execution without third-party bottlenecks.
               </p>
             </Reveal>
@@ -264,7 +264,7 @@ function HomePage() {
             <Reveal delay={0.1}>
               <Link
                 to="/services"
-                className="group inline-flex items-center gap-2 rounded-xl border border-[#E2E8F0] bg-[#F8FAFC] px-5 py-3 text-sm font-bold text-[#285A7E] transition-all hover:bg-[#285A7E] hover:text-white hover:border-[#285A7E]"
+                className="group inline-flex items-center gap-2 rounded-xl border border-[#CBD2D9] bg-[#F5F7F9] px-5 py-3 text-sm font-bold text-[#285A7E] transition-all hover:bg-[#285A7E] hover:text-white hover:border-[#285A7E]"
               >
                 <span>View Full Service Catalog</span>
                 <ArrowUpRight className="size-4 text-[#EAB526] transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
@@ -281,21 +281,21 @@ function HomePage() {
                       <div className="flex size-14 items-center justify-center rounded-2xl bg-[#285A7E]/10 text-[#285A7E] border border-[#285A7E]/20 transition-transform duration-200 group-hover:scale-105 group-hover:bg-[#285A7E] group-hover:text-white">
                         <service.icon className="size-7" strokeWidth={1.8} />
                       </div>
-                      <span className="rounded-full bg-[#F1F5F9] px-3 py-1 text-[0.6875rem] font-bold text-[#334756] border border-[#E2E8F0]">
+                      <span className="rounded-full bg-[#DFE5EA] px-3 py-1 text-[0.6875rem] font-bold text-[#334756] border border-[#CBD2D9]">
                         {service.tag}
                       </span>
                     </div>
 
-                    <h3 className="mt-6 font-display text-xl font-bold tracking-tight text-[#1E2730] group-hover:text-[#285A7E] transition-colors">
+                    <h3 className="mt-6 font-display text-xl font-bold tracking-tight text-[#202930] group-hover:text-[#285A7E] transition-colors">
                       {service.title}
                     </h3>
 
-                    <p className="mt-3 text-sm leading-relaxed text-[#64748B]">
+                    <p className="mt-3 text-sm leading-relaxed text-[#52606D]">
                       {service.text}
                     </p>
                   </div>
 
-                  <div className="mt-8 pt-5 border-t border-[#E2E8F0]">
+                  <div className="mt-8 pt-5 border-t border-[#CBD2D9]">
                     <Link
                       to={service.link}
                       className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#285A7E] transition-colors hover:text-[#1f4764]"
@@ -312,12 +312,12 @@ function HomePage() {
       </section>
 
       {/* ── 3. SHOWCASE SECTION ─────────────────────────────────────────── */}
-      <section className="section-spacing bg-[#F8FAFC] border-y border-[#E2E8F0]">
+      <section className="section-spacing bg-[#DFE5EA] border-y border-[#CBD2D9]">
         <div className="container-custom">
           <div className="grid items-center gap-14 lg:grid-cols-12">
             <Reveal direction="right" className="lg:col-span-6">
               <div className="relative">
-                <div className="relative overflow-hidden rounded-3xl border border-[#E2E8F0] shadow-xl bg-white">
+                <div className="relative overflow-hidden rounded-3xl border border-[#CBD2D9] shadow-md bg-[#F5F7F9]">
                   <img
                     src={fitoutImage}
                     alt="Luxury hospitality interior fit-out by Terrestrial Contracting Qatar"
@@ -328,14 +328,14 @@ function HomePage() {
                   />
                 </div>
 
-                <div className="absolute -bottom-6 -left-6 rounded-2xl border border-[#E2E8F0] bg-white p-5 shadow-xl sm:-bottom-8 sm:-left-8">
+                <div className="absolute -bottom-6 -left-6 rounded-2xl border border-[#CBD2D9] bg-[#F5F7F9] p-5 shadow-md sm:-bottom-8 sm:-left-8">
                   <div className="flex items-center gap-4">
                     <div className="flex size-12 items-center justify-center rounded-xl bg-[#285A7E]/10 text-[#285A7E] border border-[#285A7E]/20">
                       <Award className="size-6 text-[#EAB526]" />
                     </div>
                     <div>
-                      <p className="font-display text-2xl font-black text-[#1E2730]">5-Star</p>
-                      <p className="text-xs font-semibold text-[#64748B]">Hospitality Grade Standards</p>
+                      <p className="font-display text-2xl font-black text-[#202930]">5-Star</p>
+                      <p className="text-xs font-semibold text-[#52606D]">Hospitality Grade Standards</p>
                     </div>
                   </div>
                 </div>
@@ -344,11 +344,11 @@ function HomePage() {
 
             <Reveal direction="left" className="lg:col-span-6 lg:pl-6">
               <SectionLabel>Single-Source Execution</SectionLabel>
-              <h2 className="font-display text-3xl font-extrabold tracking-tight text-[#1E2730] sm:text-4xl lg:text-5xl">
+              <h2 className="font-display text-3xl font-extrabold tracking-tight text-[#202930] sm:text-4xl lg:text-5xl">
                 Bridging Global Engineering With Local Qatar Needs
               </h2>
 
-              <p className="mt-5 text-base leading-relaxed text-[#475569]">
+              <p className="mt-5 text-base leading-relaxed text-[#52606D]">
                 Since 2014, we have eliminated the complexity of coordinating multiple subcontractors. Terrestrial Contracting brings engineering depth, certified talent, and supply-chain sovereignty under one accountable roof.
               </p>
 
@@ -369,14 +369,14 @@ function HomePage() {
                 ].map((item) => (
                   <div
                     key={item.title}
-                    className="flex items-start gap-3.5 rounded-xl border border-[#E2E8F0] bg-white p-4 shadow-sm"
+                    className="flex items-start gap-3.5 rounded-xl border border-[#CBD2D9] bg-[#F5F7F9] p-4 shadow-sm"
                   >
                     <div className="mt-0.5 flex size-6 shrink-0 items-center justify-center rounded-full bg-[#285A7E]/10 text-[#285A7E]">
                       <CheckCircle2 className="size-4 text-[#285A7E]" />
                     </div>
                     <div>
-                      <h4 className="font-display text-base font-bold text-[#1E2730]">{item.title}</h4>
-                      <p className="mt-1 text-xs leading-relaxed text-[#64748B]">{item.desc}</p>
+                      <h4 className="font-display text-base font-bold text-[#202930]">{item.title}</h4>
+                      <p className="mt-1 text-xs leading-relaxed text-[#52606D]">{item.desc}</p>
                     </div>
                   </div>
                 ))}
@@ -401,14 +401,14 @@ function HomePage() {
       </section>
 
       {/* ── 4. SECTORS SERVED ────────────────────────────────────────────── */}
-      <section className="section-spacing bg-white">
+      <section className="section-spacing bg-[#EAEFF2]">
         <div className="container-custom">
           <Reveal className="text-center max-w-3xl mx-auto">
             <SectionLabel>Multi-Sector Reach</SectionLabel>
-            <h2 className="font-display text-3xl font-extrabold tracking-tight text-[#1E2730] sm:text-4xl">
+            <h2 className="font-display text-3xl font-extrabold tracking-tight text-[#202930] sm:text-4xl">
               Proven Track Record Across Key Qatar Sectors
             </h2>
-            <p className="mt-4 text-base text-[#64748B]">
+            <p className="mt-4 text-base text-[#52606D]">
               Trusted by leading development groups, luxury operators, institutions, and industrial clients.
             </p>
           </Reveal>
@@ -420,10 +420,10 @@ function HomePage() {
                   <div className="mb-4 flex size-10 items-center justify-center rounded-xl bg-[#285A7E]/10 text-[#285A7E] font-display font-bold border border-[#285A7E]/20">
                     0{i + 1}
                   </div>
-                  <h3 className="font-display text-lg font-bold text-[#1E2730] group-hover:text-[#285A7E] transition-colors">
+                  <h3 className="font-display text-lg font-bold text-[#202930] group-hover:text-[#285A7E] transition-colors">
                     {sector.title}
                   </h3>
-                  <p className="mt-2 text-xs leading-relaxed text-[#64748B]">{sector.desc}</p>
+                  <p className="mt-2 text-xs leading-relaxed text-[#52606D]">{sector.desc}</p>
                 </div>
               </Reveal>
             ))}
@@ -432,14 +432,14 @@ function HomePage() {
       </section>
 
       {/* ── 5. WHY TERRESTRIAL CONTRACTING ────────────────────────────────── */}
-      <section className="section-spacing bg-[#F8FAFC] border-t border-[#E2E8F0]">
+      <section className="section-spacing bg-[#DFE5EA] border-t border-[#CBD2D9]">
         <div className="container-custom">
           <Reveal className="max-w-3xl">
             <SectionLabel>Why Choose Terrestrial</SectionLabel>
-            <h2 className="font-display text-3xl font-extrabold tracking-tight text-[#1E2730] sm:text-4xl lg:text-5xl">
+            <h2 className="font-display text-3xl font-extrabold tracking-tight text-[#202930] sm:text-4xl lg:text-5xl">
               Built On Integrity. Defined By Quality.
             </h2>
-            <p className="mt-4 text-base text-[#64748B]">
+            <p className="mt-4 text-base text-[#52606D]">
               Our core values guide every site instruction, procurement order, and client interaction in Doha.
             </p>
           </Reveal>
@@ -451,10 +451,10 @@ function HomePage() {
                   <div className="flex size-12 items-center justify-center rounded-xl bg-[#285A7E]/10 text-[#285A7E] border border-[#285A7E]/20">
                     <item.icon className="size-6" strokeWidth={1.8} />
                   </div>
-                  <h3 className="mt-5 font-display text-lg font-bold text-[#1E2730] group-hover:text-[#285A7E] transition-colors">
+                  <h3 className="mt-5 font-display text-lg font-bold text-[#202930] group-hover:text-[#285A7E] transition-colors">
                     {item.title}
                   </h3>
-                  <p className="mt-2 text-xs leading-relaxed text-[#64748B]">
+                  <p className="mt-2 text-xs leading-relaxed text-[#52606D]">
                     {item.desc}
                   </p>
                 </div>
@@ -465,20 +465,20 @@ function HomePage() {
       </section>
 
       {/* ── 6. DIRECT ACTION QUOTATION CTA ──────────────────────────────── */}
-      <section className="bg-white py-20 border-t border-[#E2E8F0]">
+      <section className="bg-[#EAEFF2] py-20 border-t border-[#CBD2D9]">
         <div className="container-custom">
-          <div className="rounded-3xl border border-[#E2E8F0] bg-[#F8FAFC] p-8 shadow-sm sm:p-12 lg:p-16">
+          <div className="rounded-3xl border border-[#CBD2D9] bg-[#F5F7F9] p-8 shadow-sm sm:p-12 lg:p-16">
             <div className="max-w-3xl">
               <span className="section-badge mb-4">
                 <span className="gold-dot" />
                 <span>RFP & Tender Submissions</span>
               </span>
 
-              <h2 className="font-display text-3xl font-extrabold tracking-tight text-[#1E2730] sm:text-4xl lg:text-5xl">
+              <h2 className="font-display text-3xl font-extrabold tracking-tight text-[#202930] sm:text-4xl lg:text-5xl">
                 Ready to Discuss Your Project Scope in Qatar?
               </h2>
 
-              <p className="mt-5 text-base leading-relaxed text-[#475569] sm:text-lg">
+              <p className="mt-5 text-base leading-relaxed text-[#52606D] sm:text-lg">
                 Submit your project drawings, BOQ, or manpower requisition. Our engineering & estimating team in Doha will revert with a competitive, compliant commercial proposal.
               </p>
 
@@ -493,7 +493,7 @@ function HomePage() {
 
                 <a
                   href="tel:+97441464546"
-                  className="inline-flex items-center gap-2 rounded-xl border border-[#E2E8F0] bg-white px-6 py-4 text-base font-semibold text-[#1E2730] shadow-sm transition-all hover:bg-[#F1F5F9]"
+                  className="inline-flex items-center gap-2 rounded-xl border border-[#CBD2D9] bg-[#EAEFF2] px-6 py-4 text-base font-semibold text-[#202930] shadow-sm transition-all hover:bg-[#DFE5EA]"
                 >
                   <PhoneCall className="size-4 text-[#285A7E]" />
                   <span>Call +974 4146 4546</span>

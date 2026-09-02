@@ -83,11 +83,11 @@ function TradingPage() {
       />
 
       {/* ── 1. Supply Categories ─────────────────────────────────────── */}
-      <section className="section-spacing bg-white">
+      <section className="section-spacing bg-[#EAEFF2]">
         <div className="container-custom">
           <Reveal className="max-w-2xl mb-12">
             <SectionLabel>Procurement Divisions</SectionLabel>
-            <h2 className="font-display text-3xl font-extrabold tracking-tight text-[#1E2730] sm:text-4xl">
+            <h2 className="font-display text-3xl font-extrabold tracking-tight text-[#202930] sm:text-4xl">
               Materials & Equipment Sourced to Exacting Technical Standards
             </h2>
           </Reveal>
@@ -101,22 +101,22 @@ function TradingPage() {
                       <div className="flex size-14 items-center justify-center rounded-2xl bg-[#285A7E]/10 text-[#285A7E] border border-[#285A7E]/20 group-hover:scale-105 group-hover:bg-[#285A7E] group-hover:text-white transition-all">
                         <cat.icon className="size-7" strokeWidth={1.8} />
                       </div>
-                      <span className="rounded-full bg-[#F1F5F9] px-3 py-1 text-[0.6875rem] font-bold text-[#334756] border border-[#E2E8F0]">
+                      <span className="rounded-full bg-[#DFE5EA] px-3 py-1 text-[0.6875rem] font-bold text-[#334756] border border-[#CBD2D9]">
                         {cat.tag}
                       </span>
                     </div>
 
-                    <h3 className="mt-6 font-display text-xl font-bold tracking-tight text-[#1E2730] group-hover:text-[#285A7E] transition-colors">
+                    <h3 className="mt-6 font-display text-xl font-bold tracking-tight text-[#202930] group-hover:text-[#285A7E] transition-colors">
                       {cat.title}
                     </h3>
 
-                    <p className="mt-3 text-xs leading-relaxed text-[#64748B]">
+                    <p className="mt-3 text-xs leading-relaxed text-[#52606D]">
                       {cat.text}
                     </p>
 
-                    <div className="mt-6 space-y-2 border-t border-[#E2E8F0] pt-5">
+                    <div className="mt-6 space-y-2 border-t border-[#CBD2D9] pt-5">
                       {cat.specs.map((item) => (
-                        <div key={item} className="flex items-center gap-2 text-xs text-[#475569]">
+                        <div key={item} className="flex items-center gap-2 text-xs text-[#52606D]">
                           <CheckCircle2 className="size-3.5 text-[#285A7E] shrink-0" />
                           <span>{item}</span>
                         </div>
@@ -141,11 +141,11 @@ function TradingPage() {
       </section>
 
       {/* ── 2. Why Source With TC ───────────────────────────────────── */}
-      <section className="section-spacing bg-[#F8FAFC] border-y border-[#E2E8F0]">
+      <section className="section-spacing bg-[#DFE5EA] border-y border-[#CBD2D9]">
         <div className="container-custom">
           <Reveal className="max-w-2xl mb-12">
             <SectionLabel>Supply Chain Integrity</SectionLabel>
-            <h2 className="font-display text-3xl font-extrabold tracking-tight text-[#1E2730] sm:text-4xl">
+            <h2 className="font-display text-3xl font-extrabold tracking-tight text-[#202930] sm:text-4xl">
               Why Qatar Contractors Choose Terrestrial For Procurement
             </h2>
           </Reveal>
@@ -153,12 +153,12 @@ function TradingPage() {
           <div className="grid gap-6 md:grid-cols-3">
             {REASONS.map((reason, i) => (
               <Reveal key={reason.title} delay={i * 0.05}>
-                <div className="palette-card rounded-2xl p-7 border border-[#E2E8F0] h-full">
+                <div className="palette-card rounded-2xl p-7 border border-[#CBD2D9] h-full">
                   <div className="flex size-12 items-center justify-center rounded-xl bg-[#285A7E]/10 text-[#285A7E] border border-[#285A7E]/20 mb-5">
                     <reason.icon className="size-6" strokeWidth={1.8} />
                   </div>
-                  <h3 className="font-display text-lg font-bold text-[#1E2730]">{reason.title}</h3>
-                  <p className="mt-2 text-xs leading-relaxed text-[#64748B]">{reason.text}</p>
+                  <h3 className="font-display text-lg font-bold text-[#202930]">{reason.title}</h3>
+                  <p className="mt-2 text-xs leading-relaxed text-[#52606D]">{reason.text}</p>
                 </div>
               </Reveal>
             ))}

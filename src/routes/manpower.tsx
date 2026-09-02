@@ -81,20 +81,20 @@ function ManpowerPage() {
       />
 
       {/* ── 1. Operational Overview ──────────────────────────────────── */}
-      <section className="section-spacing bg-white">
+      <section className="section-spacing bg-[#EAEFF2]">
         <div className="container-custom">
           <div className="grid items-center gap-14 lg:grid-cols-12">
             <Reveal direction="right" className="lg:col-span-6">
               <SectionLabel>Deployment & Compliance</SectionLabel>
-              <h2 className="font-display text-3xl font-extrabold tracking-tight text-[#1E2730] sm:text-4xl">
+              <h2 className="font-display text-3xl font-extrabold tracking-tight text-[#202930] sm:text-4xl">
                 Eliminate Workforce Shortages & Administrative Friction
               </h2>
 
-              <p className="mt-5 text-base leading-relaxed text-[#475569]">
+              <p className="mt-5 text-base leading-relaxed text-[#52606D]">
                 At Terrestrial Contracting, every tradesperson and engineer is thoroughly interviewed, skill-tested, and verified before deployment. We assume complete administrative responsibility — including sponsorship, visa processing, payroll, accommodation, transportation, and medical coverage.
               </p>
 
-              <p className="mt-4 text-base leading-relaxed text-[#64748B]">
+              <p className="mt-4 text-base leading-relaxed text-[#52606D]">
                 With a dedicated standby talent pool in Doha, we enable main contractors and project managers to scale site strength up or down dynamically without risking project milestone penalties.
               </p>
 
@@ -108,7 +108,7 @@ function ManpowerPage() {
             </Reveal>
 
             <Reveal direction="left" className="lg:col-span-6">
-              <div className="relative overflow-hidden rounded-3xl border border-[#E2E8F0] shadow-xl bg-white">
+              <div className="relative overflow-hidden rounded-3xl border border-[#CBD2D9] shadow-md bg-[#F5F7F9]">
                 <img
                   src={manpowerImage}
                   alt="Certified manpower workforce on project site in Qatar"
@@ -124,11 +124,11 @@ function ManpowerPage() {
       </section>
 
       {/* ── 2. Trade Categories ─────────────────────────────────────── */}
-      <section className="section-spacing bg-[#F8FAFC] border-y border-[#E2E8F0]">
+      <section className="section-spacing bg-[#DFE5EA] border-y border-[#CBD2D9]">
         <div className="container-custom">
           <Reveal className="max-w-2xl mb-14">
             <SectionLabel>Available Categories</SectionLabel>
-            <h2 className="font-display text-3xl font-extrabold tracking-tight text-[#1E2730] sm:text-4xl">
+            <h2 className="font-display text-3xl font-extrabold tracking-tight text-[#202930] sm:text-4xl">
               Specialized Trades & Professional Categories
             </h2>
           </Reveal>
@@ -142,18 +142,18 @@ function ManpowerPage() {
                       <div className="flex size-14 items-center justify-center rounded-2xl bg-[#285A7E]/10 text-[#285A7E] border border-[#285A7E]/20 group-hover:scale-105 group-hover:bg-[#285A7E] group-hover:text-white transition-all">
                         <cat.icon className="size-7" strokeWidth={1.8} />
                       </div>
-                      <span className="rounded-full bg-[#F1F5F9] px-3 py-1 text-[0.6875rem] font-bold text-[#334756] border border-[#E2E8F0]">
+                      <span className="rounded-full bg-[#DFE5EA] px-3 py-1 text-[0.6875rem] font-bold text-[#334756] border border-[#CBD2D9]">
                         {cat.badge}
                       </span>
                     </div>
 
-                    <h3 className="mt-6 font-display text-xl font-bold tracking-tight text-[#1E2730] group-hover:text-[#285A7E] transition-colors">
+                    <h3 className="mt-6 font-display text-xl font-bold tracking-tight text-[#202930] group-hover:text-[#285A7E] transition-colors">
                       {cat.title}
                     </h3>
 
-                    <ul className="mt-6 space-y-2.5 border-t border-[#E2E8F0] pt-5">
+                    <ul className="mt-6 space-y-2.5 border-t border-[#CBD2D9] pt-5">
                       {cat.items.map((item) => (
-                        <li key={item} className="flex items-center gap-2.5 text-xs text-[#475569]">
+                        <li key={item} className="flex items-center gap-2.5 text-xs text-[#52606D]">
                           <CheckCircle2 className="size-3.5 text-[#285A7E] shrink-0" />
                           <span>{item}</span>
                         </li>
@@ -178,11 +178,11 @@ function ManpowerPage() {
       </section>
 
       {/* ── 3. Our Guarantee ─────────────────────────────────────────── */}
-      <section className="section-spacing bg-white">
+      <section className="section-spacing bg-[#EAEFF2]">
         <div className="container-custom">
           <Reveal className="max-w-2xl mb-12">
             <SectionLabel>Our Commitment</SectionLabel>
-            <h2 className="font-display text-3xl font-extrabold tracking-tight text-[#1E2730] sm:text-4xl">
+            <h2 className="font-display text-3xl font-extrabold tracking-tight text-[#202930] sm:text-4xl">
               Compliance & Reliability Assurance
             </h2>
           </Reveal>
@@ -190,12 +190,12 @@ function ManpowerPage() {
           <div className="grid gap-6 md:grid-cols-3">
             {ASSURANCE.map((item, i) => (
               <Reveal key={item.title} delay={i * 0.05}>
-                <div className="palette-card rounded-2xl p-7 border border-[#E2E8F0] h-full">
+                <div className="palette-card rounded-2xl p-7 border border-[#CBD2D9] h-full">
                   <div className="flex size-12 items-center justify-center rounded-xl bg-[#285A7E]/10 text-[#285A7E] border border-[#285A7E]/20 mb-5">
                     <item.icon className="size-6" strokeWidth={1.8} />
                   </div>
-                  <h3 className="font-display text-lg font-bold text-[#1E2730]">{item.title}</h3>
-                  <p className="mt-2 text-xs leading-relaxed text-[#64748B]">{item.text}</p>
+                  <h3 className="font-display text-lg font-bold text-[#202930]">{item.title}</h3>
+                  <p className="mt-2 text-xs leading-relaxed text-[#52606D]">{item.text}</p>
                 </div>
               </Reveal>
             ))}

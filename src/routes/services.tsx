@@ -95,11 +95,11 @@ function ServicesPage() {
       />
 
       {/* ── 1. Services Grid ────────────────────────────────────────── */}
-      <section className="section-spacing bg-white">
+      <section className="section-spacing bg-[#EAEFF2]">
         <div className="container-custom">
           <Reveal className="max-w-2xl mb-12">
             <SectionLabel>Core Disciplines</SectionLabel>
-            <h2 className="font-display text-3xl font-extrabold tracking-tight text-[#1E2730] sm:text-4xl">
+            <h2 className="font-display text-3xl font-extrabold tracking-tight text-[#202930] sm:text-4xl">
               Turnkey Contracting Without Subcontractor Gaps
             </h2>
           </Reveal>
@@ -113,20 +113,20 @@ function ServicesPage() {
                       <div className="flex size-14 items-center justify-center rounded-2xl bg-[#285A7E]/10 text-[#285A7E] border border-[#285A7E]/20 group-hover:scale-105 group-hover:bg-[#285A7E] group-hover:text-white transition-all">
                         <service.icon className="size-7" strokeWidth={1.8} />
                       </div>
-                      <span className="rounded-full bg-[#F1F5F9] px-3 py-1 text-[0.6875rem] font-bold text-[#334756] border border-[#E2E8F0]">
+                      <span className="rounded-full bg-[#DFE5EA] px-3 py-1 text-[0.6875rem] font-bold text-[#334756] border border-[#CBD2D9]">
                         {service.tag}
                       </span>
                     </div>
 
-                    <h3 className="mt-6 font-display text-xl font-bold tracking-tight text-[#1E2730] group-hover:text-[#285A7E] transition-colors">
+                    <h3 className="mt-6 font-display text-xl font-bold tracking-tight text-[#202930] group-hover:text-[#285A7E] transition-colors">
                       {service.title}
                     </h3>
 
-                    <p className="mt-3 text-xs leading-relaxed text-[#64748B]">
+                    <p className="mt-3 text-xs leading-relaxed text-[#52606D]">
                       {service.text}
                     </p>
 
-                    <div className="mt-6 space-y-2 border-t border-[#E2E8F0] pt-5">
+                    <div className="mt-6 space-y-2 border-t border-[#CBD2D9] pt-5">
                       {service.items.map((item) => (
                         <div key={item} className="flex items-center gap-2 text-xs text-[#334756]">
                           <CheckCircle2 className="size-3.5 text-[#285A7E] shrink-0" />
@@ -153,11 +153,11 @@ function ServicesPage() {
       </section>
 
       {/* ── 2. Civil & MEP Engineering Deep-Dive ──────────────────────── */}
-      <section className="section-spacing bg-[#F8FAFC] border-y border-[#E2E8F0] relative overflow-hidden">
+      <section className="section-spacing bg-[#DFE5EA] border-y border-[#CBD2D9] relative overflow-hidden">
         <div className="container-custom">
           <div className="grid items-center gap-14 lg:grid-cols-12">
             <Reveal direction="right" className="lg:col-span-6">
-              <div className="relative overflow-hidden rounded-3xl border border-[#E2E8F0] shadow-xl bg-white">
+              <div className="relative overflow-hidden rounded-3xl border border-[#CBD2D9] shadow-md bg-[#F5F7F9]">
                 <img
                   src={mepImage}
                   alt="MEP plant room and electrical engineering in Doha Qatar"
@@ -171,18 +171,18 @@ function ServicesPage() {
 
             <Reveal direction="left" className="lg:col-span-6">
               <SectionLabel>Civil & MEP Specialization</SectionLabel>
-              <h2 className="font-display text-3xl font-extrabold tracking-tight text-[#1E2730] sm:text-4xl">
+              <h2 className="font-display text-3xl font-extrabold tracking-tight text-[#202930] sm:text-4xl">
                 Technical Rigor & Authority-Compliant Engineering
               </h2>
 
               <div className="mt-8 grid gap-8 sm:grid-cols-2">
                 {/* Civil */}
-                <div className="palette-card rounded-2xl p-6 border border-[#E2E8F0]">
+                <div className="palette-card rounded-2xl p-6 border border-[#CBD2D9]">
                   <div className="flex items-center gap-2.5 mb-4 text-[#285A7E] font-display font-bold text-base uppercase">
                     <Building2 className="size-5" />
                     <span>Civil Contracting</span>
                   </div>
-                  <ul className="space-y-2.5 text-xs text-[#475569]">
+                  <ul className="space-y-2.5 text-xs text-[#52606D]">
                     {CIVIL_SPECS.map((s) => (
                       <li key={s} className="flex items-start gap-2">
                         <span className="mt-1 size-1.5 shrink-0 rounded-full bg-[#285A7E]" />
@@ -193,12 +193,12 @@ function ServicesPage() {
                 </div>
 
                 {/* MEP */}
-                <div className="palette-card rounded-2xl p-6 border border-[#E2E8F0]">
+                <div className="palette-card rounded-2xl p-6 border border-[#CBD2D9]">
                   <div className="flex items-center gap-2.5 mb-4 text-[#285A7E] font-display font-bold text-base uppercase">
                     <Cog className="size-5" />
                     <span>MEP & Electrical</span>
                   </div>
-                  <ul className="space-y-2.5 text-xs text-[#475569]">
+                  <ul className="space-y-2.5 text-xs text-[#52606D]">
                     {MEP_SPECS.map((s) => (
                       <li key={s} className="flex items-start gap-2">
                         <span className="mt-1 size-1.5 shrink-0 rounded-full bg-[#285A7E]" />
@@ -214,26 +214,26 @@ function ServicesPage() {
       </section>
 
       {/* ── 3. Facility Management (FM) ──────────────────────────────── */}
-      <section className="section-spacing bg-white">
+      <section className="section-spacing bg-[#EAEFF2]">
         <div className="container-custom">
           <Reveal className="max-w-2xl">
             <SectionLabel>Integrated FM</SectionLabel>
-            <h2 className="font-display text-3xl font-extrabold tracking-tight text-[#1E2730] sm:text-4xl">
+            <h2 className="font-display text-3xl font-extrabold tracking-tight text-[#202930] sm:text-4xl">
               Hard & Soft Facility Management Under One Service Contract
             </h2>
-            <p className="mt-3 text-sm text-[#64748B]">
+            <p className="mt-3 text-sm text-[#52606D]">
               Proactive preventative maintenance, building life-cycle protection, and round-the-clock emergency response for commercial and hospitality properties.
             </p>
           </Reveal>
 
           <div className="mt-12 grid gap-6 lg:grid-cols-2">
             <Reveal>
-              <div className="palette-card rounded-2xl p-8 border border-[#E2E8F0]">
+              <div className="palette-card rounded-2xl p-8 border border-[#CBD2D9]">
                 <div className="flex items-center gap-3 text-[#285A7E] font-display font-bold text-lg uppercase mb-4">
                   <Wrench className="size-5" />
                   <span>Hard FM — Physical Asset Maintenance</span>
                 </div>
-                <ul className="space-y-3 text-sm text-[#475569]">
+                <ul className="space-y-3 text-sm text-[#52606D]">
                   <li className="flex items-start gap-2">
                     <span className="mt-1.5 size-1.5 rounded-full bg-[#285A7E] shrink-0" />
                     <span>HVAC chiller plant servicing, duct cleaning & filter replacements</span>
@@ -255,12 +255,12 @@ function ServicesPage() {
             </Reveal>
 
             <Reveal delay={0.1}>
-              <div className="palette-card rounded-2xl p-8 border border-[#E2E8F0]">
+              <div className="palette-card rounded-2xl p-8 border border-[#CBD2D9]">
                 <div className="flex items-center gap-3 text-[#285A7E] font-display font-bold text-lg uppercase mb-4">
                   <ShieldCheck className="size-5" />
                   <span>Soft FM — Operational & People Services</span>
                 </div>
-                <ul className="space-y-3 text-sm text-[#475569]">
+                <ul className="space-y-3 text-sm text-[#52606D]">
                   <li className="flex items-start gap-2">
                     <span className="mt-1.5 size-1.5 rounded-full bg-[#285A7E] shrink-0" />
                     <span>Comprehensive janitorial, commercial deep cleaning & sanitization</span>
