@@ -124,21 +124,8 @@ const ADVANTAGES = [
 function HomePage() {
   return (
     <>
-      {/* ── 1. HERO SECTION ──────────────────────────────────────────────── */}
-      <section className="relative isolate min-h-[92vh] flex items-center overflow-hidden bg-[#182026] py-20 lg:py-28">
-        {/* Background hero image */}
-        <img
-          src={heroImage}
-          alt="Modern construction and engineering project in Doha Qatar"
-          width={1920}
-          height={1088}
-          className="absolute inset-0 -z-30 size-full object-cover object-center brightness-[0.55] filter"
-        />
-
-        {/* Palette Gradient Overlay */}
-        <div className="absolute inset-0 -z-20 bg-gradient-to-r from-[#182026] via-[#182026]/90 to-[#182026]/60" />
-        <div className="absolute inset-0 -z-10 bg-gradient-to-t from-[#182026] via-transparent to-transparent" />
-
+      {/* ── 1. HERO SECTION (Clean White / Luminous Theme) ───────────────── */}
+      <section className="relative isolate overflow-hidden bg-[#F8FAFC] py-16 sm:py-24 lg:py-28 border-b border-[#E2E8F0]">
         <div className="container-custom relative z-10 w-full">
           <div className="grid items-center gap-12 lg:grid-cols-12">
             {/* Left Hero Content */}
@@ -146,117 +133,90 @@ function HomePage() {
               initial={{ opacity: 0, y: 25 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-              className="lg:col-span-7 xl:col-span-8"
+              className="lg:col-span-7 xl:col-span-7"
             >
               {/* Status Badge */}
-              <div className="mb-6 inline-flex items-center gap-2.5 rounded-full border border-[#EAB526]/35 bg-[#EAB526]/12 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.14em] text-[#EAB526]">
+              <div className="mb-5 inline-flex items-center gap-2.5 rounded-full border border-[#285A7E]/25 bg-[#285A7E]/8 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.14em] text-[#285A7E]">
                 <span className="gold-dot" />
                 <span>Premier Contracting & Trading · Doha, Qatar</span>
               </div>
 
-              <h1 className="font-display text-4xl font-extrabold tracking-tight text-[#F0F3F6] sm:text-6xl xl:text-7xl">
+              <h1 className="font-display text-4xl font-extrabold tracking-tight text-[#1E2730] sm:text-6xl xl:text-7xl">
                 Engineering Integrity.{" "}
-                <span className="text-[#EAB526]">
+                <span className="text-[#285A7E]">
                   Building Qatar’s
                 </span>{" "}
                 Future.
               </h1>
 
-              <p className="mt-6 max-w-2xl text-base leading-relaxed text-[#D3D6DB] sm:text-lg lg:text-xl font-normal">
-                Established in 2014, <strong className="text-white font-semibold">Terrestrial Contracting W.L.L.</strong> is Qatar’s trusted single-source partner for Grade-A civil construction, turnkey MEP systems, five-star hotel fit-outs, and certified manpower.
+              <p className="mt-6 max-w-2xl text-base leading-relaxed text-[#475569] sm:text-lg font-normal">
+                Established in 2014, <strong className="text-[#1E2730] font-semibold">Terrestrial Contracting W.L.L.</strong> is Qatar’s trusted single-source partner for Grade-A civil construction, turnkey MEP systems, five-star hotel fit-outs, and certified manpower.
               </p>
 
               {/* Action Buttons */}
-              <div className="mt-9 flex flex-wrap items-center gap-4">
+              <div className="mt-8 flex flex-wrap items-center gap-4">
                 <Link
                   to="/contact"
-                  className="group inline-flex items-center gap-2.5 rounded-xl bg-[#EAB526] px-7 py-4 text-base font-bold text-[#182026] shadow-md transition-all duration-200 hover:bg-[#f3c64c] hover:scale-[1.02] active:scale-95"
+                  className="group inline-flex items-center gap-2.5 rounded-xl bg-[#285A7E] px-7 py-4 text-base font-bold text-white shadow-sm transition-all duration-200 hover:bg-[#1f4764] hover:shadow-md active:scale-95"
                 >
                   <span>Request a Quotation</span>
-                  <ArrowUpRight className="size-5 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                  <ArrowUpRight className="size-5 text-[#EAB526] transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </Link>
 
                 <Link
                   to="/services"
-                  className="inline-flex items-center gap-2 rounded-xl border border-[#334756] bg-[#202A32]/90 px-6 py-4 text-base font-semibold text-[#D3D6DB] transition-all duration-200 hover:bg-[#285A7E] hover:text-white"
+                  className="inline-flex items-center gap-2 rounded-xl border border-[#E2E8F0] bg-white px-6 py-4 text-base font-semibold text-[#1E2730] shadow-sm transition-all duration-200 hover:bg-[#F1F5F9] hover:text-[#285A7E]"
                 >
                   <span>Explore Capabilities</span>
-                  <ChevronRight className="size-4 text-[#EAB526]" />
+                  <ChevronRight className="size-4 text-[#285A7E]" />
                 </Link>
               </div>
 
               {/* Trust highlights under CTA */}
-              <div className="mt-10 flex flex-wrap items-center gap-6 text-xs text-[#9AA6B2] sm:gap-8">
+              <div className="mt-10 flex flex-wrap items-center gap-6 text-xs text-[#64748B] sm:gap-8">
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 className="size-4 text-[#EAB526]" />
+                  <CheckCircle2 className="size-4 text-[#285A7E]" />
                   <span>C.R. No. 65663 Validated</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 className="size-4 text-[#EAB526]" />
+                  <CheckCircle2 className="size-4 text-[#285A7E]" />
                   <span>Licensed Civil & MEP Contractor</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 className="size-4 text-[#EAB526]" />
+                  <CheckCircle2 className="size-4 text-[#285A7E]" />
                   <span>Direct Qatar ID Workforce</span>
                 </div>
               </div>
             </motion.div>
 
-            {/* Right Hero Floating Card */}
+            {/* Right Hero Image Card */}
             <motion.div
               initial={{ opacity: 0, x: 25 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.7, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
-              className="lg:col-span-5 xl:col-span-4"
+              className="lg:col-span-5 xl:col-span-5"
             >
-              <div className="relative rounded-2xl border border-[#334756] bg-[#202A32] p-6 shadow-xl">
-                <div className="absolute -top-3 right-6 rounded-full bg-[#EAB526] px-3 py-0.5 text-[0.6875rem] font-bold uppercase tracking-wider text-[#182026]">
-                  Active Division
-                </div>
+              <div className="relative rounded-3xl overflow-hidden border border-[#E2E8F0] shadow-xl bg-white p-2">
+                <img
+                  src={heroImage}
+                  alt="Modern construction and engineering project in Doha Qatar"
+                  width={800}
+                  height={600}
+                  className="rounded-2xl w-full h-80 sm:h-96 object-cover"
+                />
 
-                <div className="flex items-center gap-3 border-b border-[#334756] pb-4">
-                  <div className="flex size-11 items-center justify-center rounded-xl bg-[#285A7E]/30 text-[#EAB526] border border-[#334756]">
-                    <Building2 className="size-6" />
-                  </div>
-                  <div>
-                    <h3 className="font-display text-lg font-bold text-white">Full-Scope Delivery</h3>
-                    <p className="text-xs text-[#9AA6B2]">Civil · MEP · Fit-Out · Manpower</p>
-                  </div>
-                </div>
-
-                <div className="mt-4 space-y-2.5">
-                  {[
-                    { label: "Turnkey MEP & HVAC Installation", tag: "Certified" },
-                    { label: "Hospitality & Commercial Interiors", tag: "Turnkey" },
-                    { label: "Manpower Rental & Site Crews", tag: "Site-Ready" },
-                    { label: "General & Industrial Trading", tag: "Fast Sourcing" },
-                  ].map((item) => (
-                    <div
-                      key={item.label}
-                      className="flex items-center justify-between rounded-lg bg-[#182026] p-2.5 text-xs text-[#D3D6DB] border border-[#334756]/50"
-                    >
-                      <span className="flex items-center gap-2">
-                        <span className="size-1.5 rounded-full bg-[#EAB526]" />
-                        {item.label}
-                      </span>
-                      <span className="rounded bg-[#EAB526]/12 px-2 py-0.5 text-[0.625rem] font-semibold text-[#EAB526]">
-                        {item.tag}
-                      </span>
-                    </div>
-                  ))}
-                </div>
-
-                <div className="mt-6 rounded-xl bg-[#182026] p-4 border border-[#334756]">
+                {/* Floating summary badge */}
+                <div className="absolute bottom-5 left-5 right-5 rounded-2xl bg-white/95 p-4 shadow-lg border border-[#E2E8F0] backdrop-blur-md">
                   <div className="flex items-center justify-between">
                     <div>
-                      <p className="text-xs font-semibold text-[#EAB526]">Direct Hotline Support</p>
-                      <p className="text-sm font-bold text-white mt-0.5">+974 4146 4546</p>
+                      <p className="text-xs font-bold uppercase tracking-wider text-[#285A7E]">Operations Desk</p>
+                      <p className="text-sm font-extrabold text-[#1E2730] mt-0.5">Doha, Qatar · 24/7 Support</p>
                     </div>
                     <a
                       href="tel:+97441464546"
-                      className="flex size-9 items-center justify-center rounded-lg bg-[#285A7E] text-white hover:bg-[#334756] transition-colors"
+                      className="flex size-10 items-center justify-center rounded-xl bg-[#285A7E] text-white hover:bg-[#1f4764] transition-colors"
                     >
-                      <PhoneCall className="size-4" />
+                      <PhoneCall className="size-4 text-[#EAB526]" />
                     </a>
                   </div>
                 </div>
@@ -274,13 +234,13 @@ function HomePage() {
             {METRICS.map((metric) => (
               <div
                 key={metric.label}
-                className="palette-card group rounded-2xl p-5 transition-all duration-200 hover:border-[#EAB526]/40"
+                className="palette-card group rounded-2xl p-5 transition-all duration-200 hover:border-[#285A7E]"
               >
-                <dt className="font-display text-3xl font-extrabold tracking-tight text-[#EAB526] sm:text-4xl">
+                <dt className="font-display text-3xl font-extrabold tracking-tight text-[#285A7E] sm:text-4xl">
                   {metric.value}
                 </dt>
-                <dd className="mt-1 text-sm font-semibold text-[#F0F3F6]">{metric.label}</dd>
-                <p className="mt-1 text-xs text-[#9AA6B2]">{metric.detail}</p>
+                <dd className="mt-1 text-sm font-bold text-[#1E2730]">{metric.label}</dd>
+                <p className="mt-1 text-xs text-[#64748B]">{metric.detail}</p>
               </div>
             ))}
           </motion.div>
@@ -288,15 +248,15 @@ function HomePage() {
       </section>
 
       {/* ── 2. CORE CAPABILITIES (GRID) ──────────────────────────────────── */}
-      <section className="section-spacing bg-[#141A1F]">
+      <section className="section-spacing bg-white">
         <div className="container-custom">
           <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
             <Reveal className="max-w-2xl">
               <SectionLabel>Core Capabilities</SectionLabel>
-              <h2 className="font-display text-3xl font-extrabold tracking-tight text-[#F0F3F6] sm:text-4xl lg:text-5xl">
+              <h2 className="font-display text-3xl font-extrabold tracking-tight text-[#1E2730] sm:text-4xl lg:text-5xl">
                 Comprehensive Engineering & Project Solutions
               </h2>
-              <p className="mt-4 text-base text-[#9AA6B2] leading-relaxed">
+              <p className="mt-4 text-base text-[#64748B] leading-relaxed">
                 From initial ground-breaking to final commissioning, our integrated divisions deliver turnkey execution without third-party bottlenecks.
               </p>
             </Reveal>
@@ -304,10 +264,10 @@ function HomePage() {
             <Reveal delay={0.1}>
               <Link
                 to="/services"
-                className="group inline-flex items-center gap-2 rounded-xl border border-[#334756] bg-[#202A32] px-5 py-3 text-sm font-bold text-[#EAB526] transition-all hover:bg-[#285A7E] hover:text-white"
+                className="group inline-flex items-center gap-2 rounded-xl border border-[#E2E8F0] bg-[#F8FAFC] px-5 py-3 text-sm font-bold text-[#285A7E] transition-all hover:bg-[#285A7E] hover:text-white hover:border-[#285A7E]"
               >
                 <span>View Full Service Catalog</span>
-                <ArrowUpRight className="size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                <ArrowUpRight className="size-4 text-[#EAB526] transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </Link>
             </Reveal>
           </div>
@@ -318,30 +278,30 @@ function HomePage() {
                 <div className="palette-card palette-card-hover group relative flex h-full flex-col justify-between rounded-2xl p-7 lg:p-8">
                   <div>
                     <div className="flex items-center justify-between">
-                      <div className="flex size-13 items-center justify-center rounded-2xl bg-[#285A7E]/20 text-[#EAB526] border border-[#334756] transition-transform duration-200 group-hover:scale-105">
-                        <service.icon className="size-6" strokeWidth={1.8} />
+                      <div className="flex size-14 items-center justify-center rounded-2xl bg-[#285A7E]/10 text-[#285A7E] border border-[#285A7E]/20 transition-transform duration-200 group-hover:scale-105 group-hover:bg-[#285A7E] group-hover:text-white">
+                        <service.icon className="size-7" strokeWidth={1.8} />
                       </div>
-                      <span className="rounded-full bg-[#182026] px-3 py-1 text-[0.6875rem] font-semibold text-[#D3D6DB] border border-[#334756]">
+                      <span className="rounded-full bg-[#F1F5F9] px-3 py-1 text-[0.6875rem] font-bold text-[#334756] border border-[#E2E8F0]">
                         {service.tag}
                       </span>
                     </div>
 
-                    <h3 className="mt-6 font-display text-xl font-bold tracking-tight text-[#F0F3F6] group-hover:text-[#EAB526] transition-colors">
+                    <h3 className="mt-6 font-display text-xl font-bold tracking-tight text-[#1E2730] group-hover:text-[#285A7E] transition-colors">
                       {service.title}
                     </h3>
 
-                    <p className="mt-3 text-sm leading-relaxed text-[#9AA6B2]">
+                    <p className="mt-3 text-sm leading-relaxed text-[#64748B]">
                       {service.text}
                     </p>
                   </div>
 
-                  <div className="mt-8 pt-5 border-t border-[#334756]">
+                  <div className="mt-8 pt-5 border-t border-[#E2E8F0]">
                     <Link
                       to={service.link}
-                      className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#EAB526] transition-colors hover:text-[#f3c64c]"
+                      className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#285A7E] transition-colors hover:text-[#1f4764]"
                     >
                       <span>Explore Capability</span>
-                      <ArrowUpRight className="size-3.5" />
+                      <ArrowUpRight className="size-3.5 text-[#EAB526]" />
                     </Link>
                   </div>
                 </div>
@@ -352,12 +312,12 @@ function HomePage() {
       </section>
 
       {/* ── 3. SHOWCASE SECTION ─────────────────────────────────────────── */}
-      <section className="section-spacing bg-[#182026]">
+      <section className="section-spacing bg-[#F8FAFC] border-y border-[#E2E8F0]">
         <div className="container-custom">
           <div className="grid items-center gap-14 lg:grid-cols-12">
             <Reveal direction="right" className="lg:col-span-6">
               <div className="relative">
-                <div className="relative overflow-hidden rounded-3xl border border-[#334756] shadow-xl">
+                <div className="relative overflow-hidden rounded-3xl border border-[#E2E8F0] shadow-xl bg-white">
                   <img
                     src={fitoutImage}
                     alt="Luxury hospitality interior fit-out by Terrestrial Contracting Qatar"
@@ -366,17 +326,16 @@ function HomePage() {
                     height={912}
                     className="size-full object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#182026]/80 via-transparent to-transparent" />
                 </div>
 
-                <div className="absolute -bottom-6 -left-6 rounded-2xl border border-[#334756] bg-[#202A32] p-5 shadow-xl sm:-bottom-8 sm:-left-8">
+                <div className="absolute -bottom-6 -left-6 rounded-2xl border border-[#E2E8F0] bg-white p-5 shadow-xl sm:-bottom-8 sm:-left-8">
                   <div className="flex items-center gap-4">
-                    <div className="flex size-12 items-center justify-center rounded-xl bg-[#285A7E]/30 text-[#EAB526] border border-[#334756]">
-                      <Award className="size-6" />
+                    <div className="flex size-12 items-center justify-center rounded-xl bg-[#285A7E]/10 text-[#285A7E] border border-[#285A7E]/20">
+                      <Award className="size-6 text-[#EAB526]" />
                     </div>
                     <div>
-                      <p className="font-display text-2xl font-black text-[#F0F3F6]">5-Star</p>
-                      <p className="text-xs font-medium text-[#D3D6DB]">Hospitality Grade Standards</p>
+                      <p className="font-display text-2xl font-black text-[#1E2730]">5-Star</p>
+                      <p className="text-xs font-semibold text-[#64748B]">Hospitality Grade Standards</p>
                     </div>
                   </div>
                 </div>
@@ -385,11 +344,11 @@ function HomePage() {
 
             <Reveal direction="left" className="lg:col-span-6 lg:pl-6">
               <SectionLabel>Single-Source Execution</SectionLabel>
-              <h2 className="font-display text-3xl font-extrabold tracking-tight text-[#F0F3F6] sm:text-4xl lg:text-5xl">
+              <h2 className="font-display text-3xl font-extrabold tracking-tight text-[#1E2730] sm:text-4xl lg:text-5xl">
                 Bridging Global Engineering With Local Qatar Needs
               </h2>
 
-              <p className="mt-5 text-base leading-relaxed text-[#D3D6DB]">
+              <p className="mt-5 text-base leading-relaxed text-[#475569]">
                 Since 2014, we have eliminated the complexity of coordinating multiple subcontractors. Terrestrial Contracting brings engineering depth, certified talent, and supply-chain sovereignty under one accountable roof.
               </p>
 
@@ -410,28 +369,28 @@ function HomePage() {
                 ].map((item) => (
                   <div
                     key={item.title}
-                    className="flex items-start gap-3.5 rounded-xl border border-[#334756] bg-[#202A32] p-4"
+                    className="flex items-start gap-3.5 rounded-xl border border-[#E2E8F0] bg-white p-4 shadow-sm"
                   >
-                    <div className="mt-0.5 flex size-6 shrink-0 items-center justify-center rounded-full bg-[#EAB526]/15 text-[#EAB526]">
-                      <CheckCircle2 className="size-4" />
+                    <div className="mt-0.5 flex size-6 shrink-0 items-center justify-center rounded-full bg-[#285A7E]/10 text-[#285A7E]">
+                      <CheckCircle2 className="size-4 text-[#285A7E]" />
                     </div>
                     <div>
-                      <h4 className="font-display text-base font-bold text-[#F0F3F6]">{item.title}</h4>
-                      <p className="mt-1 text-xs leading-relaxed text-[#9AA6B2]">{item.desc}</p>
+                      <h4 className="font-display text-base font-bold text-[#1E2730]">{item.title}</h4>
+                      <p className="mt-1 text-xs leading-relaxed text-[#64748B]">{item.desc}</p>
                     </div>
                   </div>
                 ))}
               </div>
 
               <div className="mt-8 flex items-center gap-4">
-                <Button asChild size="lg" className="bg-[#EAB526] text-[#182026] hover:bg-[#f3c64c] font-bold">
+                <Button asChild size="lg" className="bg-[#285A7E] text-white hover:bg-[#1f4764] font-bold">
                   <Link to="/about">
-                    Learn More About TC <ChevronRight className="ml-1 size-4" />
+                    Learn More About TC <ChevronRight className="ml-1 size-4 text-[#EAB526]" />
                   </Link>
                 </Button>
                 <Link
                   to="/contact"
-                  className="text-sm font-semibold text-[#EAB526] hover:text-[#f3c64c] transition-colors"
+                  className="text-sm font-bold text-[#285A7E] hover:text-[#1f4764] transition-colors"
                 >
                   Direct Inquiry →
                 </Link>
@@ -442,14 +401,14 @@ function HomePage() {
       </section>
 
       {/* ── 4. SECTORS SERVED ────────────────────────────────────────────── */}
-      <section className="section-spacing bg-[#141A1F]">
+      <section className="section-spacing bg-white">
         <div className="container-custom">
           <Reveal className="text-center max-w-3xl mx-auto">
             <SectionLabel>Multi-Sector Reach</SectionLabel>
-            <h2 className="font-display text-3xl font-extrabold tracking-tight text-[#F0F3F6] sm:text-4xl">
+            <h2 className="font-display text-3xl font-extrabold tracking-tight text-[#1E2730] sm:text-4xl">
               Proven Track Record Across Key Qatar Sectors
             </h2>
-            <p className="mt-4 text-base text-[#9AA6B2]">
+            <p className="mt-4 text-base text-[#64748B]">
               Trusted by leading development groups, luxury operators, institutions, and industrial clients.
             </p>
           </Reveal>
@@ -457,14 +416,14 @@ function HomePage() {
           <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {SECTORS.map((sector, i) => (
               <Reveal key={sector.title} delay={i * 0.06}>
-                <div className="palette-card group h-full rounded-2xl p-6 transition-all duration-200 hover:border-[#EAB526]/40 hover:shadow-lg">
-                  <div className="mb-4 flex size-10 items-center justify-center rounded-xl bg-[#285A7E]/25 text-[#EAB526] font-display font-bold border border-[#334756]">
+                <div className="palette-card group h-full rounded-2xl p-6 transition-all duration-200 hover:border-[#285A7E] hover:shadow-md">
+                  <div className="mb-4 flex size-10 items-center justify-center rounded-xl bg-[#285A7E]/10 text-[#285A7E] font-display font-bold border border-[#285A7E]/20">
                     0{i + 1}
                   </div>
-                  <h3 className="font-display text-lg font-bold text-[#F0F3F6] group-hover:text-[#EAB526] transition-colors">
+                  <h3 className="font-display text-lg font-bold text-[#1E2730] group-hover:text-[#285A7E] transition-colors">
                     {sector.title}
                   </h3>
-                  <p className="mt-2 text-xs leading-relaxed text-[#9AA6B2]">{sector.desc}</p>
+                  <p className="mt-2 text-xs leading-relaxed text-[#64748B]">{sector.desc}</p>
                 </div>
               </Reveal>
             ))}
@@ -473,14 +432,14 @@ function HomePage() {
       </section>
 
       {/* ── 5. WHY TERRESTRIAL CONTRACTING ────────────────────────────────── */}
-      <section className="section-spacing bg-[#182026]">
+      <section className="section-spacing bg-[#F8FAFC] border-t border-[#E2E8F0]">
         <div className="container-custom">
           <Reveal className="max-w-3xl">
             <SectionLabel>Why Choose Terrestrial</SectionLabel>
-            <h2 className="font-display text-3xl font-extrabold tracking-tight text-[#F0F3F6] sm:text-4xl lg:text-5xl">
+            <h2 className="font-display text-3xl font-extrabold tracking-tight text-[#1E2730] sm:text-4xl lg:text-5xl">
               Built On Integrity. Defined By Quality.
             </h2>
-            <p className="mt-4 text-base text-[#9AA6B2]">
+            <p className="mt-4 text-base text-[#64748B]">
               Our core values guide every site instruction, procurement order, and client interaction in Doha.
             </p>
           </Reveal>
@@ -488,14 +447,14 @@ function HomePage() {
           <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {ADVANTAGES.map((item, index) => (
               <Reveal key={item.title} delay={index * 0.05}>
-                <div className="palette-card group h-full rounded-2xl p-7 transition-all duration-200 hover:border-[#EAB526]/40">
-                  <div className="flex size-12 items-center justify-center rounded-xl bg-[#285A7E]/20 text-[#EAB526] border border-[#334756]">
+                <div className="palette-card group h-full rounded-2xl p-7 transition-all duration-200 hover:border-[#285A7E]">
+                  <div className="flex size-12 items-center justify-center rounded-xl bg-[#285A7E]/10 text-[#285A7E] border border-[#285A7E]/20">
                     <item.icon className="size-6" strokeWidth={1.8} />
                   </div>
-                  <h3 className="mt-5 font-display text-lg font-bold text-[#F0F3F6] group-hover:text-[#EAB526] transition-colors">
+                  <h3 className="mt-5 font-display text-lg font-bold text-[#1E2730] group-hover:text-[#285A7E] transition-colors">
                     {item.title}
                   </h3>
-                  <p className="mt-2 text-xs leading-relaxed text-[#9AA6B2]">
+                  <p className="mt-2 text-xs leading-relaxed text-[#64748B]">
                     {item.desc}
                   </p>
                 </div>
@@ -506,37 +465,37 @@ function HomePage() {
       </section>
 
       {/* ── 6. DIRECT ACTION QUOTATION CTA ──────────────────────────────── */}
-      <section className="bg-[#141A1F] py-20">
+      <section className="bg-white py-20 border-t border-[#E2E8F0]">
         <div className="container-custom">
-          <div className="rounded-3xl border border-[#334756] bg-[#202A32] p-8 shadow-xl sm:p-12 lg:p-16">
+          <div className="rounded-3xl border border-[#E2E8F0] bg-[#F8FAFC] p-8 shadow-sm sm:p-12 lg:p-16">
             <div className="max-w-3xl">
               <span className="section-badge mb-4">
                 <span className="gold-dot" />
                 <span>RFP & Tender Submissions</span>
               </span>
 
-              <h2 className="font-display text-3xl font-extrabold tracking-tight text-[#F0F3F6] sm:text-4xl lg:text-5xl">
+              <h2 className="font-display text-3xl font-extrabold tracking-tight text-[#1E2730] sm:text-4xl lg:text-5xl">
                 Ready to Discuss Your Project Scope in Qatar?
               </h2>
 
-              <p className="mt-5 text-base leading-relaxed text-[#D3D6DB] sm:text-lg">
+              <p className="mt-5 text-base leading-relaxed text-[#475569] sm:text-lg">
                 Submit your project drawings, BOQ, or manpower requisition. Our engineering & estimating team in Doha will revert with a competitive, compliant commercial proposal.
               </p>
 
-              <div className="mt-9 flex flex-wrap items-center gap-4">
+              <div className="mt-8 flex flex-wrap items-center gap-4">
                 <Link
                   to="/contact"
-                  className="inline-flex items-center gap-2.5 rounded-xl bg-[#EAB526] px-8 py-4 text-base font-bold text-[#182026] shadow-md transition-all hover:bg-[#f3c64c] hover:scale-105"
+                  className="inline-flex items-center gap-2.5 rounded-xl bg-[#285A7E] px-8 py-4 text-base font-bold text-white shadow-sm transition-all hover:bg-[#1f4764] hover:scale-105"
                 >
                   <span>Submit RFP / Inquiry</span>
-                  <ArrowUpRight className="size-5" />
+                  <ArrowUpRight className="size-5 text-[#EAB526]" />
                 </Link>
 
                 <a
                   href="tel:+97441464546"
-                  className="inline-flex items-center gap-2 rounded-xl border border-[#334756] bg-[#182026] px-6 py-4 text-base font-semibold text-[#D3D6DB] transition-all hover:bg-[#285A7E] hover:text-white"
+                  className="inline-flex items-center gap-2 rounded-xl border border-[#E2E8F0] bg-white px-6 py-4 text-base font-semibold text-[#1E2730] shadow-sm transition-all hover:bg-[#F1F5F9]"
                 >
-                  <PhoneCall className="size-4 text-[#EAB526]" />
+                  <PhoneCall className="size-4 text-[#285A7E]" />
                   <span>Call +974 4146 4546</span>
                 </a>
               </div>

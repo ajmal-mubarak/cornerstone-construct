@@ -95,11 +95,11 @@ function ServicesPage() {
       />
 
       {/* ── 1. Services Grid ────────────────────────────────────────── */}
-      <section className="section-spacing bg-[#182026]">
+      <section className="section-spacing bg-white">
         <div className="container-custom">
           <Reveal className="max-w-2xl mb-12">
             <SectionLabel>Core Disciplines</SectionLabel>
-            <h2 className="font-display text-3xl font-extrabold tracking-tight text-[#F0F3F6] sm:text-4xl">
+            <h2 className="font-display text-3xl font-extrabold tracking-tight text-[#1E2730] sm:text-4xl">
               Turnkey Contracting Without Subcontractor Gaps
             </h2>
           </Reveal>
@@ -110,26 +110,26 @@ function ServicesPage() {
                 <div className="palette-card palette-card-hover group relative flex h-full flex-col justify-between rounded-2xl p-7 lg:p-8">
                   <div>
                     <div className="flex items-center justify-between">
-                      <div className="flex size-14 items-center justify-center rounded-2xl bg-[#285A7E]/20 text-[#EAB526] border border-[#334756] group-hover:scale-105 transition-transform">
+                      <div className="flex size-14 items-center justify-center rounded-2xl bg-[#285A7E]/10 text-[#285A7E] border border-[#285A7E]/20 group-hover:scale-105 group-hover:bg-[#285A7E] group-hover:text-white transition-all">
                         <service.icon className="size-7" strokeWidth={1.8} />
                       </div>
-                      <span className="rounded-full bg-[#182026] px-3 py-1 text-[0.6875rem] font-semibold text-[#D3D6DB] border border-[#334756]">
+                      <span className="rounded-full bg-[#F1F5F9] px-3 py-1 text-[0.6875rem] font-bold text-[#334756] border border-[#E2E8F0]">
                         {service.tag}
                       </span>
                     </div>
 
-                    <h3 className="mt-6 font-display text-xl font-bold tracking-tight text-[#F0F3F6] group-hover:text-[#EAB526] transition-colors">
+                    <h3 className="mt-6 font-display text-xl font-bold tracking-tight text-[#1E2730] group-hover:text-[#285A7E] transition-colors">
                       {service.title}
                     </h3>
 
-                    <p className="mt-3 text-xs leading-relaxed text-[#9AA6B2]">
+                    <p className="mt-3 text-xs leading-relaxed text-[#64748B]">
                       {service.text}
                     </p>
 
-                    <div className="mt-6 space-y-2 border-t border-[#334756] pt-5">
+                    <div className="mt-6 space-y-2 border-t border-[#E2E8F0] pt-5">
                       {service.items.map((item) => (
-                        <div key={item} className="flex items-center gap-2 text-xs text-[#D3D6DB]">
-                          <CheckCircle2 className="size-3.5 text-[#EAB526] shrink-0" />
+                        <div key={item} className="flex items-center gap-2 text-xs text-[#334756]">
+                          <CheckCircle2 className="size-3.5 text-[#285A7E] shrink-0" />
                           <span>{item}</span>
                         </div>
                       ))}
@@ -139,10 +139,10 @@ function ServicesPage() {
                   <div className="mt-8 pt-4">
                     <Link
                       to="/contact"
-                      className="inline-flex items-center gap-1 text-xs font-bold uppercase tracking-wider text-[#EAB526] hover:text-[#f3c64c]"
+                      className="inline-flex items-center gap-1 text-xs font-bold uppercase tracking-wider text-[#285A7E] hover:text-[#1f4764]"
                     >
                       <span>Inquire About This Service</span>
-                      <ArrowUpRight className="size-3.5" />
+                      <ArrowUpRight className="size-3.5 text-[#EAB526]" />
                     </Link>
                   </div>
                 </div>
@@ -153,11 +153,11 @@ function ServicesPage() {
       </section>
 
       {/* ── 2. Civil & MEP Engineering Deep-Dive ──────────────────────── */}
-      <section className="section-spacing bg-[#141A1F] relative overflow-hidden">
+      <section className="section-spacing bg-[#F8FAFC] border-y border-[#E2E8F0] relative overflow-hidden">
         <div className="container-custom">
           <div className="grid items-center gap-14 lg:grid-cols-12">
             <Reveal direction="right" className="lg:col-span-6">
-              <div className="relative overflow-hidden rounded-3xl border border-[#334756] shadow-xl">
+              <div className="relative overflow-hidden rounded-3xl border border-[#E2E8F0] shadow-xl bg-white">
                 <img
                   src={mepImage}
                   alt="MEP plant room and electrical engineering in Doha Qatar"
@@ -166,27 +166,26 @@ function ServicesPage() {
                   height={912}
                   className="size-full object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#141A1F]/75 via-transparent to-transparent" />
               </div>
             </Reveal>
 
             <Reveal direction="left" className="lg:col-span-6">
               <SectionLabel>Civil & MEP Specialization</SectionLabel>
-              <h2 className="font-display text-3xl font-extrabold tracking-tight text-[#F0F3F6] sm:text-4xl">
+              <h2 className="font-display text-3xl font-extrabold tracking-tight text-[#1E2730] sm:text-4xl">
                 Technical Rigor & Authority-Compliant Engineering
               </h2>
 
               <div className="mt-8 grid gap-8 sm:grid-cols-2">
                 {/* Civil */}
-                <div className="palette-card rounded-2xl p-6 border border-[#334756]">
-                  <div className="flex items-center gap-2.5 mb-4 text-[#EAB526] font-display font-bold text-base uppercase">
+                <div className="palette-card rounded-2xl p-6 border border-[#E2E8F0]">
+                  <div className="flex items-center gap-2.5 mb-4 text-[#285A7E] font-display font-bold text-base uppercase">
                     <Building2 className="size-5" />
                     <span>Civil Contracting</span>
                   </div>
-                  <ul className="space-y-2.5 text-xs text-[#D3D6DB]">
+                  <ul className="space-y-2.5 text-xs text-[#475569]">
                     {CIVIL_SPECS.map((s) => (
                       <li key={s} className="flex items-start gap-2">
-                        <span className="mt-1 size-1.5 shrink-0 rounded-full bg-[#EAB526]" />
+                        <span className="mt-1 size-1.5 shrink-0 rounded-full bg-[#285A7E]" />
                         <span>{s}</span>
                       </li>
                     ))}
@@ -194,15 +193,15 @@ function ServicesPage() {
                 </div>
 
                 {/* MEP */}
-                <div className="palette-card rounded-2xl p-6 border border-[#334756]">
-                  <div className="flex items-center gap-2.5 mb-4 text-[#EAB526] font-display font-bold text-base uppercase">
+                <div className="palette-card rounded-2xl p-6 border border-[#E2E8F0]">
+                  <div className="flex items-center gap-2.5 mb-4 text-[#285A7E] font-display font-bold text-base uppercase">
                     <Cog className="size-5" />
                     <span>MEP & Electrical</span>
                   </div>
-                  <ul className="space-y-2.5 text-xs text-[#D3D6DB]">
+                  <ul className="space-y-2.5 text-xs text-[#475569]">
                     {MEP_SPECS.map((s) => (
                       <li key={s} className="flex items-start gap-2">
-                        <span className="mt-1 size-1.5 shrink-0 rounded-full bg-[#EAB526]" />
+                        <span className="mt-1 size-1.5 shrink-0 rounded-full bg-[#285A7E]" />
                         <span>{s}</span>
                       </li>
                     ))}
@@ -215,40 +214,40 @@ function ServicesPage() {
       </section>
 
       {/* ── 3. Facility Management (FM) ──────────────────────────────── */}
-      <section className="section-spacing bg-[#182026]">
+      <section className="section-spacing bg-white">
         <div className="container-custom">
           <Reveal className="max-w-2xl">
             <SectionLabel>Integrated FM</SectionLabel>
-            <h2 className="font-display text-3xl font-extrabold tracking-tight text-[#F0F3F6] sm:text-4xl">
+            <h2 className="font-display text-3xl font-extrabold tracking-tight text-[#1E2730] sm:text-4xl">
               Hard & Soft Facility Management Under One Service Contract
             </h2>
-            <p className="mt-3 text-sm text-[#9AA6B2]">
+            <p className="mt-3 text-sm text-[#64748B]">
               Proactive preventative maintenance, building life-cycle protection, and round-the-clock emergency response for commercial and hospitality properties.
             </p>
           </Reveal>
 
           <div className="mt-12 grid gap-6 lg:grid-cols-2">
             <Reveal>
-              <div className="palette-card rounded-2xl p-8 border border-[#334756]">
-                <div className="flex items-center gap-3 text-[#EAB526] font-display font-bold text-lg uppercase mb-4">
+              <div className="palette-card rounded-2xl p-8 border border-[#E2E8F0]">
+                <div className="flex items-center gap-3 text-[#285A7E] font-display font-bold text-lg uppercase mb-4">
                   <Wrench className="size-5" />
                   <span>Hard FM — Physical Asset Maintenance</span>
                 </div>
-                <ul className="space-y-3 text-sm text-[#D3D6DB]">
+                <ul className="space-y-3 text-sm text-[#475569]">
                   <li className="flex items-start gap-2">
-                    <span className="mt-1.5 size-1.5 rounded-full bg-[#EAB526] shrink-0" />
+                    <span className="mt-1.5 size-1.5 rounded-full bg-[#285A7E] shrink-0" />
                     <span>HVAC chiller plant servicing, duct cleaning & filter replacements</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="mt-1.5 size-1.5 rounded-full bg-[#EAB526] shrink-0" />
+                    <span className="mt-1.5 size-1.5 rounded-full bg-[#285A7E] shrink-0" />
                     <span>Electrical load testing, thermal imaging, generator & UPS maintenance</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="mt-1.5 size-1.5 rounded-full bg-[#EAB526] shrink-0" />
+                    <span className="mt-1.5 size-1.5 rounded-full bg-[#285A7E] shrink-0" />
                     <span>Plumbing, booster pumps, sewage ejector & water purification systems</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="mt-1.5 size-1.5 rounded-full bg-[#EAB526] shrink-0" />
+                    <span className="mt-1.5 size-1.5 rounded-full bg-[#285A7E] shrink-0" />
                     <span>Civil structural repairs, facade upkeep, sealant & roof waterproofing</span>
                   </li>
                 </ul>
@@ -256,26 +255,26 @@ function ServicesPage() {
             </Reveal>
 
             <Reveal delay={0.1}>
-              <div className="palette-card rounded-2xl p-8 border border-[#334756]">
-                <div className="flex items-center gap-3 text-[#D3D6DB] font-display font-bold text-lg uppercase mb-4">
-                  <ShieldCheck className="size-5 text-[#EAB526]" />
+              <div className="palette-card rounded-2xl p-8 border border-[#E2E8F0]">
+                <div className="flex items-center gap-3 text-[#285A7E] font-display font-bold text-lg uppercase mb-4">
+                  <ShieldCheck className="size-5" />
                   <span>Soft FM — Operational & People Services</span>
                 </div>
-                <ul className="space-y-3 text-sm text-[#D3D6DB]">
+                <ul className="space-y-3 text-sm text-[#475569]">
                   <li className="flex items-start gap-2">
-                    <span className="mt-1.5 size-1.5 rounded-full bg-[#EAB526] shrink-0" />
+                    <span className="mt-1.5 size-1.5 rounded-full bg-[#285A7E] shrink-0" />
                     <span>Comprehensive janitorial, commercial deep cleaning & sanitization</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="mt-1.5 size-1.5 rounded-full bg-[#EAB526] shrink-0" />
+                    <span className="mt-1.5 size-1.5 rounded-full bg-[#285A7E] shrink-0" />
                     <span>Daily housekeeping, pantry support, and front-of-house attendants</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="mt-1.5 size-1.5 rounded-full bg-[#EAB526] shrink-0" />
+                    <span className="mt-1.5 size-1.5 rounded-full bg-[#285A7E] shrink-0" />
                     <span>Waste disposal, skip bin removal, and environmental compliance</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="mt-1.5 size-1.5 rounded-full bg-[#EAB526] shrink-0" />
+                    <span className="mt-1.5 size-1.5 rounded-full bg-[#285A7E] shrink-0" />
                     <span>Site logistics, pest control coordination, and rapid mobilization</span>
                   </li>
                 </ul>
@@ -284,9 +283,9 @@ function ServicesPage() {
           </div>
 
           <div className="mt-12 text-center">
-            <Button asChild size="lg" className="bg-[#EAB526] text-[#182026] hover:bg-[#f3c64c] font-bold">
+            <Button asChild size="lg" className="bg-[#285A7E] text-white hover:bg-[#1f4764] font-bold">
               <Link to="/contact">
-                Request Facility Management RFP <ArrowUpRight className="ml-1.5 size-4" />
+                Request Facility Management RFP <ArrowUpRight className="ml-1.5 size-4 text-[#EAB526]" />
               </Link>
             </Button>
           </div>

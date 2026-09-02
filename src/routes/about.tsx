@@ -49,29 +49,29 @@ function AboutPage() {
       />
 
       {/* ── Story Section ────────────────────────────────────────────── */}
-      <section className="section-spacing bg-[#182026]">
+      <section className="section-spacing bg-white">
         <div className="container-custom">
           <div className="grid items-center gap-14 lg:grid-cols-12">
             <Reveal direction="right" className="lg:col-span-6">
               <SectionLabel>Our Story & Journey</SectionLabel>
-              <h2 className="font-display text-3xl font-extrabold tracking-tight text-[#F0F3F6] sm:text-4xl">
+              <h2 className="font-display text-3xl font-extrabold tracking-tight text-[#1E2730] sm:text-4xl">
                 A Decade of Dependable Construction Delivery
               </h2>
 
-              <p className="mt-5 text-base leading-relaxed text-[#D3D6DB]">
-                Founded in 2014, <strong className="text-white">Terrestrial Contracting W.L.L.</strong> was established with a singular objective: to provide developers, hospitality brands, and industrial clients in Qatar with a truly dependable, single-source construction and trading partner.
+              <p className="mt-5 text-base leading-relaxed text-[#475569]">
+                Founded in 2014, <strong className="text-[#1E2730] font-semibold">Terrestrial Contracting W.L.L.</strong> was established with a singular objective: to provide developers, hospitality brands, and industrial clients in Qatar with a truly dependable, single-source construction and trading partner.
               </p>
 
-              <p className="mt-4 text-base leading-relaxed text-[#9AA6B2]">
+              <p className="mt-4 text-base leading-relaxed text-[#64748B]">
                 Over the past 10+ years, we have built a solid reputation across Doha by bridging the gap between international supply specifications and local construction demands — delivering turn-key civil, MEP, fit-out, and manpower solutions on time and on budget.
               </p>
 
               <div className="mt-8 grid gap-4 sm:grid-cols-2">
                 {PILLARS.map((item) => (
-                  <div key={item.title} className="palette-card rounded-xl p-5 border border-[#334756]">
-                    <div className="mb-2.5 h-1 w-6 rounded-full bg-[#EAB526]" />
-                    <h3 className="font-display text-sm font-bold uppercase text-[#F0F3F6]">{item.title}</h3>
-                    <p className="mt-1.5 text-xs text-[#9AA6B2] leading-relaxed">{item.desc}</p>
+                  <div key={item.title} className="palette-card rounded-xl p-5 border border-[#E2E8F0]">
+                    <div className="mb-2.5 h-1 w-6 rounded-full bg-[#285A7E]" />
+                    <h3 className="font-display text-sm font-bold uppercase text-[#1E2730]">{item.title}</h3>
+                    <p className="mt-1.5 text-xs text-[#64748B] leading-relaxed">{item.desc}</p>
                   </div>
                 ))}
               </div>
@@ -79,7 +79,7 @@ function AboutPage() {
 
             <Reveal direction="left" className="lg:col-span-6">
               <div className="relative">
-                <div className="relative overflow-hidden rounded-3xl border border-[#334756] shadow-xl">
+                <div className="relative overflow-hidden rounded-3xl border border-[#E2E8F0] shadow-xl bg-white">
                   <img
                     src={fitoutImage}
                     alt="Luxury hospitality interior fit-out by Terrestrial Contracting"
@@ -88,12 +88,11 @@ function AboutPage() {
                     height={912}
                     className="size-full object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#182026]/70 via-transparent to-transparent" />
                 </div>
 
-                <div className="absolute -bottom-6 -right-6 rounded-2xl border border-[#334756] bg-[#202A32] p-5 shadow-xl">
-                  <p className="font-display text-3xl font-black text-[#EAB526]">2014</p>
-                  <p className="text-xs font-semibold text-[#D3D6DB]">Founded in Doha, Qatar</p>
+                <div className="absolute -bottom-6 -right-6 rounded-2xl border border-[#E2E8F0] bg-white p-5 shadow-xl">
+                  <p className="font-display text-3xl font-black text-[#285A7E]">2014</p>
+                  <p className="text-xs font-bold text-[#1E2730]">Founded in Doha, Qatar</p>
                 </div>
               </div>
             </Reveal>
@@ -102,28 +101,28 @@ function AboutPage() {
       </section>
 
       {/* ── Vision & Mission ────────────────────────────────────────── */}
-      <section className="section-spacing bg-[#141A1F] relative">
+      <section className="section-spacing bg-[#F8FAFC] border-y border-[#E2E8F0]">
         <div className="container-custom">
           <div className="grid gap-8 lg:grid-cols-2">
             <Reveal>
-              <div className="palette-card h-full rounded-2xl p-8 lg:p-10 border border-[#334756] relative overflow-hidden">
-                <div className="flex size-12 items-center justify-center rounded-xl bg-[#285A7E]/30 text-[#EAB526] border border-[#334756] mb-6">
+              <div className="palette-card h-full rounded-2xl p-8 lg:p-10 border border-[#E2E8F0]">
+                <div className="flex size-12 items-center justify-center rounded-xl bg-[#285A7E]/10 text-[#285A7E] border border-[#285A7E]/20 mb-6">
                   <Eye className="size-6" />
                 </div>
-                <h3 className="font-display text-2xl font-bold text-[#F0F3F6]">Our Strategic Vision</h3>
-                <p className="mt-4 text-sm leading-relaxed text-[#D3D6DB]">
+                <h3 className="font-display text-2xl font-bold text-[#1E2730]">Our Strategic Vision</h3>
+                <p className="mt-4 text-sm leading-relaxed text-[#475569]">
                   To stand as Qatar’s most reliable, single-source engineering, contracting, and trading partner — recognized across the GCC for uncompromising technical precision, safety integrity, and seamless project execution.
                 </p>
               </div>
             </Reveal>
 
             <Reveal delay={0.1}>
-              <div className="palette-card h-full rounded-2xl p-8 lg:p-10 border border-[#334756] relative overflow-hidden">
-                <div className="flex size-12 items-center justify-center rounded-xl bg-[#285A7E]/30 text-[#EAB526] border border-[#334756] mb-6">
+              <div className="palette-card h-full rounded-2xl p-8 lg:p-10 border border-[#E2E8F0]">
+                <div className="flex size-12 items-center justify-center rounded-xl bg-[#285A7E]/10 text-[#285A7E] border border-[#285A7E]/20 mb-6">
                   <Target className="size-6" />
                 </div>
-                <h3 className="font-display text-2xl font-bold text-[#F0F3F6]">Our Core Mission</h3>
-                <p className="mt-4 text-sm leading-relaxed text-[#D3D6DB]">
+                <h3 className="font-display text-2xl font-bold text-[#1E2730]">Our Core Mission</h3>
+                <p className="mt-4 text-sm leading-relaxed text-[#475569]">
                   To execute every commercial, hospitality, and civil assignment safely, on schedule, and strictly to specification by deploying certified professionals, disciplined controls, and transparent commercial practices.
                 </p>
               </div>
@@ -134,10 +133,10 @@ function AboutPage() {
           <div className="mt-16">
             <Reveal className="text-center max-w-2xl mx-auto">
               <SectionLabel>Guiding Principles</SectionLabel>
-              <h3 className="font-display text-3xl font-extrabold text-[#F0F3F6]">
+              <h3 className="font-display text-3xl font-extrabold text-[#1E2730]">
                 The "U & I CARE" Operating Code
               </h3>
-              <p className="mt-3 text-sm text-[#9AA6B2]">
+              <p className="mt-3 text-sm text-[#64748B]">
                 Our workforce values govern all client agreements, safety practices, and site operations.
               </p>
             </Reveal>
@@ -145,12 +144,12 @@ function AboutPage() {
             <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {VALUES.map((val, idx) => (
                 <Reveal key={val.name} delay={idx * 0.05}>
-                  <div className="palette-card rounded-xl p-5 border border-[#334756] transition-all hover:border-[#EAB526]/40">
+                  <div className="palette-card rounded-xl p-5 border border-[#E2E8F0] transition-all hover:border-[#285A7E]">
                     <div className="flex items-center gap-2.5">
-                      <CheckCircle2 className="size-4 shrink-0 text-[#EAB526]" />
-                      <h4 className="font-display text-base font-bold text-[#F0F3F6]">{val.name}</h4>
+                      <CheckCircle2 className="size-4 shrink-0 text-[#285A7E]" />
+                      <h4 className="font-display text-base font-bold text-[#1E2730]">{val.name}</h4>
                     </div>
-                    <p className="mt-2 text-xs text-[#9AA6B2] leading-relaxed pl-6.5">
+                    <p className="mt-2 text-xs text-[#64748B] leading-relaxed pl-6.5">
                       {val.desc}
                     </p>
                   </div>
@@ -162,19 +161,19 @@ function AboutPage() {
       </section>
 
       {/* ── Ready to Work CTA ────────────────────────────────────────── */}
-      <section className="section-spacing bg-[#182026]">
+      <section className="section-spacing bg-white">
         <div className="container-custom text-center max-w-3xl">
           <Reveal>
-            <h2 className="font-display text-3xl font-extrabold text-[#F0F3F6] sm:text-4xl">
+            <h2 className="font-display text-3xl font-extrabold text-[#1E2730] sm:text-4xl">
               Partner With Terrestrial Contracting in Qatar
             </h2>
-            <p className="mt-4 text-base text-[#9AA6B2]">
+            <p className="mt-4 text-base text-[#64748B]">
               Let's evaluate your upcoming project requirements. Our technical estimation team is ready to assist with detailed BOQ and site analysis.
             </p>
             <div className="mt-8 flex justify-center gap-4">
-              <Button asChild size="lg" className="bg-[#EAB526] text-[#182026] hover:bg-[#f3c64c] font-bold">
+              <Button asChild size="lg" className="bg-[#285A7E] text-white hover:bg-[#1f4764] font-bold">
                 <Link to="/contact">
-                  Initiate RFP / Contact <ArrowUpRight className="ml-1.5 size-4" />
+                  Initiate RFP / Contact <ArrowUpRight className="ml-1.5 size-4 text-[#EAB526]" />
                 </Link>
               </Button>
             </div>

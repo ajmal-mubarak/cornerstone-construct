@@ -35,11 +35,11 @@ export function SiteFooter() {
   };
 
   return (
-    <footer className="relative border-t border-white/[0.08] bg-[#141A1F] text-[#D3D6DB]">
+    <footer className="relative border-t border-[#E2E8F0] bg-[#141A1F] text-[#D3D6DB]">
       {/* Top CTA Banner */}
-      <div className="border-b border-white/[0.06] bg-[#182026]">
+      <div className="border-b border-white/[0.08] bg-[#182026]">
         <div className="container-custom py-12">
-          <div className="flex flex-col items-start justify-between gap-6 rounded-2xl border border-[#334756] bg-[#1E2730] p-8 shadow-xl md:flex-row md:items-center lg:p-10">
+          <div className="flex flex-col items-start justify-between gap-6 rounded-2xl border border-[#334756] bg-[#1E2730] p-8 shadow-md md:flex-row md:items-center lg:p-10">
             <div>
               <div className="mb-2 flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-[#EAB526]">
                 <Sparkles className="size-4" />
@@ -54,10 +54,10 @@ export function SiteFooter() {
             </div>
             <Link
               to="/contact"
-              className="inline-flex shrink-0 items-center gap-2 rounded-xl bg-[#EAB526] px-6 py-3.5 text-sm font-bold text-[#182026] shadow-md transition-all hover:bg-[#f3c64c] hover:scale-105"
+              className="inline-flex shrink-0 items-center gap-2 rounded-xl bg-[#285A7E] px-6 py-3.5 text-sm font-bold text-white shadow-sm transition-all hover:bg-[#1f4764] hover:scale-105"
             >
               <span>Get Immediate Quotation</span>
-              <ExternalLink className="size-4" />
+              <ExternalLink className="size-4 text-[#EAB526]" />
             </Link>
           </div>
         </div>
@@ -69,7 +69,7 @@ export function SiteFooter() {
           {/* Company Identity */}
           <div className="space-y-5">
             <Link to="/" className="flex items-center gap-3">
-              <div className="flex size-10 items-center justify-center rounded-xl bg-[#285A7E] border border-[#334756] font-display text-base font-bold text-white shadow-md">
+              <div className="flex size-10 items-center justify-center rounded-xl bg-[#285A7E] border border-[#334756] font-display text-base font-bold text-white shadow-sm">
                 TC
               </div>
               <div className="flex flex-col">
