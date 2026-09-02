@@ -1,7 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { CheckCircle2, ArrowUpRight, Eye, Target } from "lucide-react";
+import { motion } from "motion/react";
+import { CheckCircle2, ArrowUpRight, Eye, Target, Award, Building2, ChevronRight, PhoneCall } from "lucide-react";
 
-import { PageHero, SectionLabel } from "@/components/site/PageHero";
+import { SectionLabel } from "@/components/site/PageHero";
 import { Reveal } from "@/components/site/Reveal";
 import { Button } from "@/components/ui/button";
 import fitoutImage from "@/assets/fitout-interior.jpg";
@@ -41,66 +42,118 @@ const VALUES = [
 function AboutPage() {
   return (
     <>
-      <PageHero
-        eyebrow="Company Profile"
-        title="Engineering Excellence & Craftsmanship in Qatar"
-        text="Established in Doha in 2014, Terrestrial Contracting W.L.L. has grown into a multi-disciplinary contracting and trading powerhouse trusted across the State of Qatar."
-        badge="CR No. 65663 · Founded 2014 in Doha"
-      />
+      {/* ── 1. About Hero Section with Right-Side Architectural Card ───── */}
+      <section className="relative isolate overflow-hidden bg-[#DFE5EA] py-14 sm:py-20 lg:py-24 border-b border-[#CBD2D9]">
+        <div className="container-custom relative z-10">
+          <div className="grid items-center gap-12 lg:grid-cols-12">
+            {/* Left Header Content */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+              className="lg:col-span-7"
+            >
+              {/* Breadcrumb */}
+              <div className="mb-4 flex items-center gap-2 text-xs font-medium text-[#52606D]">
+                <Link to="/" className="flex items-center gap-1 hover:text-[#285A7E] transition-colors">
+                  <Building2 className="size-3.5" />
+                  <span>Home</span>
+                </Link>
+                <ChevronRight className="size-3 text-[#AAB5BF]" />
+                <span className="text-[#285A7E] font-semibold">About Us</span>
+              </div>
 
-      {/* ── Story Section ────────────────────────────────────────────── */}
-      <section className="section-spacing bg-[#EAEFF2]">
-        <div className="container-custom">
-          <div className="grid items-center gap-14 lg:grid-cols-12">
-            <Reveal direction="right" className="lg:col-span-6">
-              <SectionLabel>Our Story & Journey</SectionLabel>
-              <h2 className="font-display text-3xl font-extrabold tracking-tight text-[#202930] sm:text-4xl">
-                A Decade of Dependable Construction Delivery
-              </h2>
+              {/* Eyebrow badge */}
+              <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#285A7E]/25 bg-[#285A7E]/10 px-3.5 py-1 text-xs font-semibold uppercase tracking-[0.14em] text-[#285A7E]">
+                <span className="gold-dot" />
+                <span>CR No. 65663 · Founded 2014 in Doha</span>
+              </div>
 
-              <p className="mt-5 text-base leading-relaxed text-[#52606D]">
-                Founded in 2014, <strong className="text-[#202930] font-semibold">Terrestrial Contracting W.L.L.</strong> was established with a singular objective: to provide developers, hospitality brands, and industrial clients in Qatar with a truly dependable, single-source construction and trading partner.
+              <h1 className="font-display text-3xl font-extrabold tracking-tight text-[#202930] sm:text-5xl lg:text-6xl">
+                Engineering Excellence & Craftsmanship in Qatar
+              </h1>
+
+              <p className="mt-5 text-base leading-relaxed text-[#52606D] sm:text-lg">
+                Established in Doha in 2014, <strong className="text-[#202930] font-semibold">Terrestrial Contracting W.L.L.</strong> has grown into a multi-disciplinary contracting and trading powerhouse trusted across the State of Qatar.
               </p>
 
-              <p className="mt-4 text-base leading-relaxed text-[#52606D]">
-                Over the past 10+ years, we have built a solid reputation across Doha by bridging the gap between international supply specifications and local construction demands — delivering turn-key civil, MEP, fit-out, and manpower solutions on time and on budget.
-              </p>
+              <div className="mt-8 flex flex-wrap gap-4">
+                <Button asChild size="lg" className="bg-[#285A7E] text-white hover:bg-[#1f4764] font-bold">
+                  <Link to="/contact">
+                    Partner With TC <ArrowUpRight className="ml-1.5 size-4 text-[#EAB526]" />
+                  </Link>
+                </Button>
+                <Button asChild variant="outline" size="lg" className="border-[#CBD2D9] bg-[#F5F7F9] text-[#202930] hover:bg-[#DFE5EA]">
+                  <Link to="/services">Our Divisions</Link>
+                </Button>
+              </div>
+            </motion.div>
 
-              <div className="mt-8 grid gap-4 sm:grid-cols-2">
-                {PILLARS.map((item) => (
-                  <div key={item.title} className="palette-card rounded-xl p-5 border border-[#CBD2D9]">
-                    <div className="mb-2.5 h-1 w-6 rounded-full bg-[#285A7E]" />
-                    <h3 className="font-display text-sm font-bold uppercase text-[#202930]">{item.title}</h3>
-                    <p className="mt-1.5 text-xs text-[#52606D] leading-relaxed">{item.desc}</p>
+            {/* Right Architectural Square Card with Floating Badge */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
+              className="lg:col-span-5"
+            >
+              <div className="relative rounded-3xl overflow-hidden border border-[#CBD2D9] shadow-md bg-[#F5F7F9] p-2.5">
+                <img
+                  src={fitoutImage}
+                  alt="Terrestrial Contracting luxury hospitality interiors Doha"
+                  width={700}
+                  height={700}
+                  className="rounded-2xl w-full aspect-square object-cover"
+                />
+
+                {/* Floating Operations / Division Badge */}
+                <div className="absolute bottom-5 left-5 right-5 rounded-2xl bg-[#F5F7F9]/95 p-4 shadow-md border border-[#CBD2D9] backdrop-blur-md">
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <p className="text-xs font-bold uppercase tracking-wider text-[#285A7E]">Corporate Heritage</p>
+                      <p className="text-sm font-extrabold text-[#202930] mt-0.5">Doha, Qatar · Est. 2014</p>
+                    </div>
+                    <div className="flex size-10 items-center justify-center rounded-xl bg-[#285A7E] text-white">
+                      <Award className="size-5 text-[#EAB526]" />
+                    </div>
                   </div>
-                ))}
-              </div>
-            </Reveal>
-
-            <Reveal direction="left" className="lg:col-span-6">
-              <div className="relative">
-                <div className="relative overflow-hidden rounded-3xl border border-[#CBD2D9] shadow-md bg-[#F5F7F9]">
-                  <img
-                    src={fitoutImage}
-                    alt="Luxury hospitality interior fit-out by Terrestrial Contracting"
-                    loading="lazy"
-                    width={1280}
-                    height={912}
-                    className="size-full object-cover"
-                  />
-                </div>
-
-                <div className="absolute -bottom-6 -right-6 rounded-2xl border border-[#CBD2D9] bg-[#F5F7F9] p-5 shadow-md">
-                  <p className="font-display text-3xl font-black text-[#285A7E]">2014</p>
-                  <p className="text-xs font-bold text-[#202930]">Founded in Doha, Qatar</p>
                 </div>
               </div>
-            </Reveal>
+            </motion.div>
           </div>
         </div>
       </section>
 
-      {/* ── Vision & Mission ────────────────────────────────────────── */}
+      {/* ── 2. Story Section ────────────────────────────────────────── */}
+      <section className="section-spacing bg-[#EAEFF2]">
+        <div className="container-custom">
+          <Reveal>
+            <SectionLabel>Our Story & Journey</SectionLabel>
+            <h2 className="font-display text-3xl font-extrabold tracking-tight text-[#202930] sm:text-4xl max-w-2xl">
+              A Decade of Dependable Construction Delivery
+            </h2>
+
+            <p className="mt-5 text-base leading-relaxed text-[#52606D] max-w-3xl">
+              Founded in 2014, <strong className="text-[#202930] font-semibold">Terrestrial Contracting W.L.L.</strong> was established with a singular objective: to provide developers, hospitality brands, and industrial clients in Qatar with a truly dependable, single-source construction and trading partner.
+            </p>
+
+            <p className="mt-4 text-base leading-relaxed text-[#52606D] max-w-3xl">
+              Over the past 10+ years, we have built a solid reputation across Doha by bridging the gap between international supply specifications and local construction demands — delivering turn-key civil, MEP, fit-out, and manpower solutions on time and on budget.
+            </p>
+
+            <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+              {PILLARS.map((item) => (
+                <div key={item.title} className="palette-card rounded-2xl p-6 border border-[#CBD2D9]">
+                  <div className="mb-3 h-1 w-8 rounded-full bg-[#285A7E]" />
+                  <h3 className="font-display text-base font-bold text-[#202930]">{item.title}</h3>
+                  <p className="mt-2 text-xs text-[#52606D] leading-relaxed">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* ── 3. Vision & Mission ─────────────────────────────────────── */}
       <section className="section-spacing bg-[#DFE5EA] border-y border-[#CBD2D9]">
         <div className="container-custom">
           <div className="grid gap-8 lg:grid-cols-2">
@@ -160,7 +213,7 @@ function AboutPage() {
         </div>
       </section>
 
-      {/* ── Ready to Work CTA ────────────────────────────────────────── */}
+      {/* ── 4. Ready to Work CTA ────────────────────────────────────── */}
       <section className="section-spacing bg-[#EAEFF2]">
         <div className="container-custom text-center max-w-3xl">
           <Reveal>

@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { motion } from "motion/react";
 import {
   Building2,
   Cog,
@@ -9,10 +10,11 @@ import {
   ArrowUpRight,
   CheckCircle2,
   ShieldCheck,
-  Wrench
+  Wrench,
+  ChevronRight
 } from "lucide-react";
 
-import { PageHero, SectionLabel } from "@/components/site/PageHero";
+import { SectionLabel } from "@/components/site/PageHero";
 import { Reveal } from "@/components/site/Reveal";
 import { Button } from "@/components/ui/button";
 import mepImage from "@/assets/mep-services.jpg";
@@ -87,15 +89,89 @@ const MEP_SPECS = [
 function ServicesPage() {
   return (
     <>
-      <PageHero
-        eyebrow="Our Services"
-        title="Comprehensive Contracting & Engineering Solutions"
-        text="From heavy civil construction to high-precision MEP systems, luxury interior fit-outs to environmental logistics — executed to 5-star international standards in Qatar."
-        badge="Full-Scope Civil, MEP & Fit-Out Delivery"
-      />
+      {/* ── 1. Services Hero Section with Right-Side Architectural Card ── */}
+      <section className="relative isolate overflow-hidden bg-[#DFE5EA] py-14 sm:py-20 lg:py-24 border-b border-[#CBD2D9]">
+        <div className="container-custom relative z-10">
+          <div className="grid items-center gap-12 lg:grid-cols-12">
+            {/* Left Header Content */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+              className="lg:col-span-7"
+            >
+              {/* Breadcrumb */}
+              <div className="mb-4 flex items-center gap-2 text-xs font-medium text-[#52606D]">
+                <Link to="/" className="flex items-center gap-1 hover:text-[#285A7E] transition-colors">
+                  <Building2 className="size-3.5" />
+                  <span>Home</span>
+                </Link>
+                <ChevronRight className="size-3 text-[#AAB5BF]" />
+                <span className="text-[#285A7E] font-semibold">Services & Capabilities</span>
+              </div>
 
-      {/* ── 1. Services Grid ────────────────────────────────────────── */}
-      <section className="section-spacing bg-[#EAEFF2]">
+              {/* Eyebrow badge */}
+              <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#285A7E]/25 bg-[#285A7E]/10 px-3.5 py-1 text-xs font-semibold uppercase tracking-[0.14em] text-[#285A7E]">
+                <span className="gold-dot" />
+                <span>Full-Scope Civil, MEP & Fit-Out Delivery</span>
+              </div>
+
+              <h1 className="font-display text-3xl font-extrabold tracking-tight text-[#202930] sm:text-5xl lg:text-6xl">
+                Comprehensive Contracting & Engineering Solutions
+              </h1>
+
+              <p className="mt-5 text-base leading-relaxed text-[#52606D] sm:text-lg">
+                From heavy civil construction to high-precision MEP systems, luxury interior fit-outs to environmental logistics — executed to 5-star international standards in Qatar.
+              </p>
+
+              <div className="mt-8 flex flex-wrap gap-4">
+                <Button asChild size="lg" className="bg-[#285A7E] text-white hover:bg-[#1f4764] font-bold">
+                  <Link to="/contact">
+                    Request Proposal <ArrowUpRight className="ml-1.5 size-4 text-[#EAB526]" />
+                  </Link>
+                </Button>
+                <Button asChild variant="outline" size="lg" className="border-[#CBD2D9] bg-[#F5F7F9] text-[#202930] hover:bg-[#DFE5EA]">
+                  <a href="#divisions">Explore All 6 Disciplines</a>
+                </Button>
+              </div>
+            </motion.div>
+
+            {/* Right Architectural Framed Card */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
+              className="lg:col-span-5"
+            >
+              <div className="relative rounded-3xl overflow-hidden border border-[#CBD2D9] shadow-md bg-[#F5F7F9] p-2.5">
+                <img
+                  src={mepImage}
+                  alt="MEP plant room and electrical engineering in Doha Qatar"
+                  width={700}
+                  height={525}
+                  className="rounded-2xl w-full aspect-[4/3] object-cover"
+                />
+
+                {/* Floating Division Badge */}
+                <div className="absolute bottom-5 left-5 right-5 rounded-2xl bg-[#F5F7F9]/95 p-4 shadow-md border border-[#CBD2D9] backdrop-blur-md">
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <p className="text-xs font-bold uppercase tracking-wider text-[#285A7E]">Technical Standards</p>
+                      <p className="text-sm font-extrabold text-[#202930] mt-0.5">MEP & Civil · QCDD Approved</p>
+                    </div>
+                    <div className="flex size-10 items-center justify-center rounded-xl bg-[#285A7E] text-white">
+                      <Cog className="size-5 text-[#EAB526]" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── 2. Services Grid ────────────────────────────────────────── */}
+      <section id="divisions" className="section-spacing bg-[#EAEFF2]">
         <div className="container-custom">
           <Reveal className="max-w-2xl mb-12">
             <SectionLabel>Core Disciplines</SectionLabel>
@@ -152,7 +228,7 @@ function ServicesPage() {
         </div>
       </section>
 
-      {/* ── 2. Civil & MEP Engineering Deep-Dive ──────────────────────── */}
+      {/* ── 3. Civil & MEP Engineering Deep-Dive ──────────────────────── */}
       <section className="section-spacing bg-[#DFE5EA] border-y border-[#CBD2D9] relative overflow-hidden">
         <div className="container-custom">
           <div className="grid items-center gap-14 lg:grid-cols-12">
@@ -213,7 +289,7 @@ function ServicesPage() {
         </div>
       </section>
 
-      {/* ── 3. Facility Management (FM) ──────────────────────────────── */}
+      {/* ── 4. Facility Management (FM) ──────────────────────────────── */}
       <section className="section-spacing bg-[#EAEFF2]">
         <div className="container-custom">
           <Reveal className="max-w-2xl">
