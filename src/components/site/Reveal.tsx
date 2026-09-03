@@ -13,10 +13,10 @@ interface RevealProps extends HTMLMotionProps<"div"> {
 export function Reveal({
   children,
   delay = 0,
-  duration = 0.6,
+  duration = 0.9,
   direction = "up",
   className = "",
-  distance = 28,
+  distance = 36,
   ...props
 }: RevealProps) {
   const getInitial = () => {

@@ -144,32 +144,36 @@ function HomePage() {
         <div className="container-custom relative z-10 w-full">
           <div className="grid items-center gap-12 lg:grid-cols-12">
             {/* Left Hero Content */}
-            <motion.div
-              initial={{ opacity: 0, y: 25 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-              className="lg:col-span-7 xl:col-span-7"
-            >
-              {/* Status Badge */}
-              <div className="mb-5 inline-flex items-center gap-2.5 rounded-full border border-[#285A7E]/25 bg-[#285A7E]/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.14em] text-[#285A7E]">
-                <span className="gold-dot" />
-                <span>Premier Contracting & Trading · Doha, Qatar</span>
-              </div>
-
-              <h1 className="font-display text-4xl font-extrabold tracking-tight text-[#202930] sm:text-6xl xl:text-7xl">
+            <div className="lg:col-span-7 xl:col-span-7">
+              <motion.h1
+                initial={{ opacity: 0, y: 40 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1.1, ease: [0.16, 1, 0.3, 1] }}
+                className="font-display text-4xl font-extrabold tracking-tight text-[#102A43] sm:text-6xl xl:text-7xl"
+              >
                 Engineering Integrity.{" "}
                 <span className="text-[#285A7E]">
                   Building Qatar’s
                 </span>{" "}
                 Future.
-              </h1>
+              </motion.h1>
 
-              <p className="mt-6 max-w-2xl text-base leading-relaxed text-[#52606D] sm:text-lg font-normal">
-                Established in 2014, <strong className="text-[#202930] font-semibold">Terrestrial Contracting W.L.L.</strong> is Qatar’s trusted single-source partner for Grade-A civil construction, turnkey MEP systems, five-star hotel fit-outs, and certified manpower.
-              </p>
+              <motion.p
+                initial={{ opacity: 0, y: 35 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1.1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+                className="mt-6 max-w-2xl text-base leading-relaxed text-[#0B1A2C] sm:text-lg font-medium"
+              >
+                Established in 2014, <strong className="text-[#000000] font-bold">Terrestrial Contracting W.L.L.</strong> is Qatar’s trusted single-source partner for Grade-A civil construction, turnkey MEP systems, five-star hotel fit-outs, and certified manpower.
+              </motion.p>
 
               {/* Action Buttons */}
-              <div className="mt-8 flex flex-wrap items-center gap-4">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1.0, delay: 0.38, ease: [0.16, 1, 0.3, 1] }}
+                className="mt-8 flex flex-wrap items-center gap-4"
+              >
                 <Link
                   to="/contact"
                   className="group inline-flex items-center gap-2.5 rounded-xl bg-[#285A7E] px-7 py-4 text-base font-bold text-white shadow-sm transition-all duration-200 hover:bg-[#1f4764] hover:shadow-md active:scale-95"
@@ -180,15 +184,20 @@ function HomePage() {
 
                 <Link
                   to="/services"
-                  className="inline-flex items-center gap-2 rounded-xl border border-[#CBD2D9] bg-[#F5F7F9] px-6 py-4 text-base font-semibold text-[#202930] shadow-sm transition-all duration-200 hover:bg-[#DFE5EA] hover:text-[#285A7E]"
+                  className="inline-flex items-center gap-2 rounded-xl border border-[#CBD2D9] bg-[#F5F7F9] px-6 py-4 text-base font-semibold text-[#102A43] shadow-sm transition-all duration-200 hover:bg-[#DFE5EA] hover:text-[#285A7E]"
                 >
                   <span>Explore Capabilities</span>
                   <ChevronRight className="size-4 text-[#285A7E]" />
                 </Link>
-              </div>
+              </motion.div>
 
               {/* Trust highlights under CTA */}
-              <div className="mt-10 flex flex-wrap items-center gap-6 text-xs text-[#52606D] sm:gap-8">
+              <motion.div
+                initial={{ opacity: 0, y: 25 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.9, delay: 0.52, ease: [0.16, 1, 0.3, 1] }}
+                className="mt-10 flex flex-wrap items-center gap-6 text-xs font-bold text-[#0B1A2C] sm:gap-8"
+              >
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="size-4 text-[#285A7E]" />
                   <span>C.R. No. 65663 Validated</span>
@@ -201,14 +210,14 @@ function HomePage() {
                   <CheckCircle2 className="size-4 text-[#285A7E]" />
                   <span>Direct Qatar ID Workforce</span>
                 </div>
-              </div>
-            </motion.div>
+              </motion.div>
+            </div>
 
             {/* Right Hero Image Card */}
             <motion.div
-              initial={{ opacity: 0, x: 25 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.7, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
+              initial={{ opacity: 0, y: 50, scale: 0.96 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ duration: 1.2, delay: 0.25, ease: [0.16, 1, 0.3, 1] }}
               className="lg:col-span-5 xl:col-span-5"
             >
               <div className="relative rounded-3xl overflow-hidden border border-[#CBD2D9] shadow-md bg-[#F5F7F9] p-2.5">
@@ -241,9 +250,9 @@ function HomePage() {
 
           {/* Bottom Live Metrics Banner */}
           <motion.div
-            initial={{ opacity: 0, y: 15 }}
+            initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
+            transition={{ duration: 1.1, delay: 0.65, ease: [0.16, 1, 0.3, 1] }}
             className="mt-14 grid grid-cols-2 gap-4 sm:grid-cols-2 lg:grid-cols-4"
           >
             {METRICS.map((metric) => (
